@@ -33,12 +33,9 @@ exports.remotecontent = function() {
         'xsltFormat': ['xml', 'xml']
     }
 }
-
-exports.extention = function() {
+exports.contenttype = function() {
     return {
-        '_includes': { 'file': ['.css', '.js', '.jpg', 'png', '.scss', '.less'] },
-        '_cms': { 'scriptFormat': ['vm', 'xslt'] },
-        '': { 'page': '.html' },
-        'front-end': { 'page': '.html' }
+        'buffer': ['png', 'jpg', 'jpeg', 'pdf', 'doc', 'xls', 'csv'],
+        'data': ['css', 'js']
     }
 }

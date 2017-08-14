@@ -13,7 +13,6 @@ For detailed workflow, please check **cascade** project in Basecamp. See **Docum
     - [How to use program](#how-to-use-program)
     - [Introduction](#introduction)
         - [Cascade API](#cascade-api)
-            - [Todos](#todos)
         - [Gulp](#gulp)
             - [Order of gulp.js](#order-of-gulpjs)
             - [Todos](#todos)
@@ -54,17 +53,9 @@ For internal process, see <a href="#gulp">gulp</a> part.
 
 ### Cascade API
 
-- *Till Aug 11th, apis that work:* file (`css`, `js`), folder, script (`vm`), xslt(`xslt`)
+- *Till Aug 11th, apis that work:* file (`css`, `js`, `image`,etc), folder, script (`vm`), xslt(`xslt`)
 
 - May want to add api in the future: page
-
-#### Todos
-
-- File encoding problem for:
-
-1. image: current `base64` encoding not work. Should a separate API being written for it? What image encoding cascade is using?
-
-2. documents: similar to image, documents like `PDF`, `doc` need to have separate encoding, otherwise content is wiped after being transferred to server.
 
 ### Gulp
 
@@ -79,8 +70,6 @@ For internal process, see <a href="#gulp">gulp</a> part.
 4. Remote - For **each** file in destination folder, overwrite the content of its remote sibling in remote server
 
 #### Todos
-
-- **Problem1**: putting process files (module folder, data folder, log folder, index.js and process.js) to sub-folder make gulp fail to process.
 
 - **Problem2**: after re-adjusting folder structure, the 'no such file or directory problem comes back'.
 

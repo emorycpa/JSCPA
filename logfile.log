@@ -387,3 +387,354 @@
 [2017-08-14 2:25:09 ]INFO - Finish write /_includes/css/style.min.css to cascade server.
 [2017-08-14 2:25:09 ]INFO - Finish write /_includes/documents/test.pdf to cascade server.
 [2017-08-14 2:25:09 ]ERROR - Problem in writing /_includes/images/test.png: Could not execute JDBC batch update; SQL [update cxml_foldercontent set name=?, lockId=?, isCurrentVersion=?, versionDate=?, metadataId=?, permissionsId=?, workflowId=?, isWorkingCopy=?, parentFolderId=?, relativeOrder=?, cachePath=?, isRecycled=?, recycleRecordId=?, workflowComment=?, draftUserId=?, draftAssetFactoryId=?, siteId=?, ownedBy=?, prevVersionId=?, nextVersionId=?, originalCopyId=?, workingCopyId=?, displayName=?, title=?, summary=?, teaser=?, keywords=?, description=?, author=?, startDate=?, endDate=?, reviewDate=?, metadataSetId=?, expirationNoticeSent=?, firstExpirationWarningSent=?, secondExpirationWarningSent=?, expirationFolderId=?, fileRewriteFileContents=?, maintainAbsoluteLinks=?, fileBlobId=?, shouldBeIndexed=?, shouldBePublished=?, lastDatePublished=?, lastPublishedBy=?, byteLength=?, draftOriginalId=? where id=?]; constraint [CASCADE.UQ_FCE_NEXTVERSION]; nested exception is org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+[2017-08-14 2:49:54 ]INFO - pshan2 start updating files in JSTest---------------
+[2017-08-14 2:49:54 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 2:49:54 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 2:49:54 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 2:49:54 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 2:49:54 ]INFO - Begin writing dest/_cms/xslt/local.xslt in cascade server
+[2017-08-14 2:49:54 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 2:49:54 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 2:49:54 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 2:49:54 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 2:49:54 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 2:49:54 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 2:49:54 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 2:49:54 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 2:49:54 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 2:49:54 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 2:49:54 ]ERROR - Problem in writing /_cms/xslt/local.xslt: TypeError: Cannot read property 'parentFolderId' of undefined
+[2017-08-14 2:49:55 ]INFO - Finish write /_includes/js/main.min.js to cascade server.
+[2017-08-14 2:49:55 ]ERROR - Problem in writing /_includes/js/main.min.js: Could not execute JDBC batch update; SQL [update cxml_foldercontent set name=?, lockId=?, isCurrentVersion=?, versionDate=?, metadataId=?, permissionsId=?, workflowId=?, isWorkingCopy=?, parentFolderId=?, relativeOrder=?, cachePath=?, isRecycled=?, recycleRecordId=?, workflowComment=?, draftUserId=?, draftAssetFactoryId=?, siteId=?, ownedBy=?, prevVersionId=?, nextVersionId=?, originalCopyId=?, workingCopyId=?, displayName=?, title=?, summary=?, teaser=?, keywords=?, description=?, author=?, startDate=?, endDate=?, reviewDate=?, metadataSetId=?, expirationNoticeSent=?, firstExpirationWarningSent=?, secondExpirationWarningSent=?, expirationFolderId=?, fileRewriteFileContents=?, maintainAbsoluteLinks=?, fileBlobId=?, shouldBeIndexed=?, shouldBePublished=?, lastDatePublished=?, lastPublishedBy=?, byteLength=?, draftOriginalId=? where id=?]; constraint [CASCADE.UQ_FCE_NEXTVERSION]; nested exception is org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+[2017-08-14 2:49:55 ]INFO - Finish write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-14 2:49:56 ]INFO - Finish write /_includes/documents/test.pdf to cascade server.
+[2017-08-14 2:49:56 ]INFO - Finish write /_includes/images/test.png to cascade server.
+[2017-08-14 2:49:56 ]INFO - Finish write /_includes/css/style.min.css to cascade server.
+[2017-08-14 2:50:42 ]INFO - pshan2 start updating files in JSTest---------------
+[2017-08-14 2:50:42 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 2:50:42 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 2:50:42 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 2:50:42 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 2:50:42 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 2:50:42 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 2:50:42 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 2:50:42 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 2:50:42 ]INFO - Begin writing dest/_cms/xslt/local.xslt in cascade server
+[2017-08-14 2:50:42 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 2:50:42 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 2:50:42 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 2:50:42 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 2:50:42 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 2:50:42 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 2:50:43 ]INFO - Finish write /_includes/js/main.min.js to cascade server.
+[2017-08-14 2:50:43 ]ERROR - Problem in writing /_cms/xslt/local.xslt: TypeError: Cannot read property 'parentFolderId' of undefined
+[2017-08-14 2:50:43 ]INFO - Finish write /_includes/documents/test.pdf to cascade server.
+[2017-08-14 2:50:43 ]INFO - Finish write /_includes/images/test.png to cascade server.
+[2017-08-14 2:50:43 ]INFO - Finish write /_includes/js/main.min.js to cascade server.
+[2017-08-14 2:50:43 ]INFO - Finish write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-14 2:50:44 ]INFO - Finish write /_includes/css/style.min.css to cascade server.
+[2017-08-14 3:20:30 ]INFO - pshan2 start updating files in JSTest---------------
+[2017-08-14 3:20:31 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 3:20:31 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:20:31 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:20:31 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:20:31 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 3:20:31 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:20:31 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:20:31 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:20:31 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 3:20:31 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:20:31 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 3:20:31 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:20:31 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:20:31 ]INFO - Begin writing dest/_cms/xslt/local.xslt in cascade server
+[2017-08-14 3:20:31 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:20:31 ]ERROR - Problem in writing /_cms/xslt/local.xslt: TypeError: Cannot read property 'parentFolderId' of undefined
+[2017-08-14 3:20:31 ]INFO - Finish write /_includes/js/main.min.js to cascade server.
+[2017-08-14 3:20:31 ]ERROR - Problem in writing /_includes/js/main.min.js: Could not execute JDBC batch update; SQL [update cxml_foldercontent set name=?, lockId=?, isCurrentVersion=?, versionDate=?, metadataId=?, permissionsId=?, workflowId=?, isWorkingCopy=?, parentFolderId=?, relativeOrder=?, cachePath=?, isRecycled=?, recycleRecordId=?, workflowComment=?, draftUserId=?, draftAssetFactoryId=?, siteId=?, ownedBy=?, prevVersionId=?, nextVersionId=?, originalCopyId=?, workingCopyId=?, displayName=?, title=?, summary=?, teaser=?, keywords=?, description=?, author=?, startDate=?, endDate=?, reviewDate=?, metadataSetId=?, expirationNoticeSent=?, firstExpirationWarningSent=?, secondExpirationWarningSent=?, expirationFolderId=?, fileRewriteFileContents=?, maintainAbsoluteLinks=?, fileBlobId=?, shouldBeIndexed=?, shouldBePublished=?, lastDatePublished=?, lastPublishedBy=?, byteLength=?, draftOriginalId=? where id=?]; constraint [CASCADE.UQ_FCE_NEXTVERSION]; nested exception is org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+[2017-08-14 3:20:32 ]INFO - Finish write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-14 3:20:32 ]INFO - Finish write /_includes/documents/test.pdf to cascade server.
+[2017-08-14 3:20:32 ]INFO - Finish write /_includes/css/style.min.css to cascade server.
+[2017-08-14 3:20:33 ]INFO - Finish write /_includes/images/test.png to cascade server.
+[2017-08-14 3:22:56 ]INFO - pshan2 start updating files in JSTest---------------
+[2017-08-14 3:22:56 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:22:56 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:22:56 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 3:22:56 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:22:56 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:22:56 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:22:56 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 3:22:56 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:22:56 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:22:56 ]INFO - Begin writing dest/_cms/xslt/local.xslt in cascade server
+[2017-08-14 3:22:56 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 3:22:56 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 3:22:56 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:22:56 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:22:56 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:22:56 ]ERROR - Problem in writing /_cms/xslt/local.xslt: TypeError: Cannot read property 'parentFolderId' of undefined
+[2017-08-14 3:22:57 ]INFO - Finish write /_includes/js/main.min.js to cascade server.
+[2017-08-14 3:22:57 ]INFO - Finish write /_includes/js/main.min.js to cascade server.
+[2017-08-14 3:22:57 ]INFO - Finish write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-14 3:22:57 ]INFO - Finish write /_includes/images/test.png to cascade server.
+[2017-08-14 3:22:57 ]INFO - Finish write /_includes/documents/test.pdf to cascade server.
+[2017-08-14 3:22:58 ]ERROR - Problem in writing /_includes/css/style.min.css: Could not execute JDBC batch update; SQL [update cxml_foldercontent set name=?, lockId=?, isCurrentVersion=?, versionDate=?, metadataId=?, permissionsId=?, workflowId=?, isWorkingCopy=?, parentFolderId=?, relativeOrder=?, cachePath=?, isRecycled=?, recycleRecordId=?, workflowComment=?, draftUserId=?, draftAssetFactoryId=?, siteId=?, ownedBy=?, prevVersionId=?, nextVersionId=?, originalCopyId=?, workingCopyId=?, displayName=?, title=?, summary=?, teaser=?, keywords=?, description=?, author=?, startDate=?, endDate=?, reviewDate=?, metadataSetId=?, expirationNoticeSent=?, firstExpirationWarningSent=?, secondExpirationWarningSent=?, expirationFolderId=?, fileRewriteFileContents=?, maintainAbsoluteLinks=?, fileBlobId=?, shouldBeIndexed=?, shouldBePublished=?, lastDatePublished=?, lastPublishedBy=?, byteLength=?, draftOriginalId=? where id=?]; constraint [CASCADE.UQ_FCE_NEXTVERSION]; nested exception is org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+[2017-08-14 3:23:11 ]INFO - pshan2 start updating files in JSTest---------------
+[2017-08-14 3:23:12 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:23:12 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:23:12 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:23:12 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:23:12 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 3:23:12 ]INFO - Begin writing dest/_cms/xslt/local.xslt in cascade server
+[2017-08-14 3:23:12 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:23:12 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 3:23:12 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:23:12 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:23:12 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:23:12 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 3:23:12 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:23:12 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:23:12 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 3:23:12 ]ERROR - Problem in writing /_cms/xslt/local.xslt: TypeError: Cannot read property 'parentFolderId' of undefined
+[2017-08-14 3:23:12 ]INFO - Finish write /_includes/js/main.min.js to cascade server.
+[2017-08-14 3:23:12 ]ERROR - Problem in writing /_includes/js/main.min.js: Could not execute JDBC batch update; SQL [update cxml_foldercontent set name=?, lockId=?, isCurrentVersion=?, versionDate=?, metadataId=?, permissionsId=?, workflowId=?, isWorkingCopy=?, parentFolderId=?, relativeOrder=?, cachePath=?, isRecycled=?, recycleRecordId=?, workflowComment=?, draftUserId=?, draftAssetFactoryId=?, siteId=?, ownedBy=?, prevVersionId=?, nextVersionId=?, originalCopyId=?, workingCopyId=?, displayName=?, title=?, summary=?, teaser=?, keywords=?, description=?, author=?, startDate=?, endDate=?, reviewDate=?, metadataSetId=?, expirationNoticeSent=?, firstExpirationWarningSent=?, secondExpirationWarningSent=?, expirationFolderId=?, fileRewriteFileContents=?, maintainAbsoluteLinks=?, fileBlobId=?, shouldBeIndexed=?, shouldBePublished=?, lastDatePublished=?, lastPublishedBy=?, byteLength=?, draftOriginalId=? where id=?]; constraint [CASCADE.UQ_FCE_NEXTVERSION]; nested exception is org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+[2017-08-14 3:23:13 ]INFO - Finish write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-14 3:23:13 ]INFO - Finish write /_includes/css/style.min.css to cascade server.
+[2017-08-14 3:23:13 ]ERROR - Problem in writing /_includes/documents/test.pdf: Could not execute JDBC batch update; SQL [update cxml_foldercontent set name=?, lockId=?, isCurrentVersion=?, versionDate=?, metadataId=?, permissionsId=?, workflowId=?, isWorkingCopy=?, parentFolderId=?, relativeOrder=?, cachePath=?, isRecycled=?, recycleRecordId=?, workflowComment=?, draftUserId=?, draftAssetFactoryId=?, siteId=?, ownedBy=?, prevVersionId=?, nextVersionId=?, originalCopyId=?, workingCopyId=?, displayName=?, title=?, summary=?, teaser=?, keywords=?, description=?, author=?, startDate=?, endDate=?, reviewDate=?, metadataSetId=?, expirationNoticeSent=?, firstExpirationWarningSent=?, secondExpirationWarningSent=?, expirationFolderId=?, fileRewriteFileContents=?, maintainAbsoluteLinks=?, fileBlobId=?, shouldBeIndexed=?, shouldBePublished=?, lastDatePublished=?, lastPublishedBy=?, byteLength=?, draftOriginalId=? where id=?]; constraint [CASCADE.UQ_FCE_NEXTVERSION]; nested exception is org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+[2017-08-14 3:23:13 ]ERROR - Problem in writing /_includes/images/test.png: Could not execute JDBC batch update; SQL [update cxml_foldercontent set name=?, lockId=?, isCurrentVersion=?, versionDate=?, metadataId=?, permissionsId=?, workflowId=?, isWorkingCopy=?, parentFolderId=?, relativeOrder=?, cachePath=?, isRecycled=?, recycleRecordId=?, workflowComment=?, draftUserId=?, draftAssetFactoryId=?, siteId=?, ownedBy=?, prevVersionId=?, nextVersionId=?, originalCopyId=?, workingCopyId=?, displayName=?, title=?, summary=?, teaser=?, keywords=?, description=?, author=?, startDate=?, endDate=?, reviewDate=?, metadataSetId=?, expirationNoticeSent=?, firstExpirationWarningSent=?, secondExpirationWarningSent=?, expirationFolderId=?, fileRewriteFileContents=?, maintainAbsoluteLinks=?, fileBlobId=?, shouldBeIndexed=?, shouldBePublished=?, lastDatePublished=?, lastPublishedBy=?, byteLength=?, draftOriginalId=? where id=?]; constraint [CASCADE.UQ_FCE_NEXTVERSION]; nested exception is org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+[2017-08-14 3:40:07 ]INFO - pshan2 start updating files in JSTest---------------
+[2017-08-14 3:40:07 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:40:07 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:40:07 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:40:07 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 3:40:07 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:40:07 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:40:07 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 3:40:07 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:40:07 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:40:07 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:40:08 ]INFO - Finish write /_includes/js/main.min.js to cascade server.
+[2017-08-14 3:40:08 ]INFO - Finish write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-14 3:40:08 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:40:08 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:40:08 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 3:40:08 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 3:40:08 ]INFO - Begin writing dest/_cms/xslt/local.xslt in cascade server
+[2017-08-14 3:40:09 ]ERROR - Problem in writing /_cms/xslt/local.xslt: TypeError: Cannot read property 'parentFolderId' of undefined
+[2017-08-14 3:40:09 ]INFO - Finish write /_includes/js/main.min.js to cascade server.
+[2017-08-14 3:40:09 ]INFO - Finish write /_includes/documents/test.pdf to cascade server.
+[2017-08-14 3:40:09 ]INFO - Finish write /_includes/images/test.png to cascade server.
+[2017-08-14 3:40:09 ]INFO - Finish write /_includes/css/style.min.css to cascade server.
+[2017-08-14 3:46:04 ]INFO - pshan2 start updating files in JSTest---------------
+[2017-08-14 3:46:04 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:46:04 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 3:46:04 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:46:04 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 3:46:04 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:46:04 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:46:04 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:46:04 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:46:04 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 3:46:04 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:46:04 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 3:46:04 ]INFO - Begin writing dest/_cms/xslt/local.xslt in cascade server
+[2017-08-14 3:46:04 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:46:04 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:46:04 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:46:04 ]ERROR - Problem in writing /_cms/xslt/local.xslt: TypeError: Cannot read property 'parentFolderId' of undefined
+[2017-08-14 3:46:04 ]INFO - Finish write /_includes/js/main.min.js to cascade server.
+[2017-08-14 3:46:04 ]ERROR - Problem in writing /_includes/js/main.min.js: Could not execute JDBC batch update; SQL [update cxml_foldercontent set name=?, lockId=?, isCurrentVersion=?, versionDate=?, metadataId=?, permissionsId=?, workflowId=?, isWorkingCopy=?, parentFolderId=?, relativeOrder=?, cachePath=?, isRecycled=?, recycleRecordId=?, workflowComment=?, draftUserId=?, draftAssetFactoryId=?, siteId=?, ownedBy=?, prevVersionId=?, nextVersionId=?, originalCopyId=?, workingCopyId=?, displayName=?, title=?, summary=?, teaser=?, keywords=?, description=?, author=?, startDate=?, endDate=?, reviewDate=?, metadataSetId=?, expirationNoticeSent=?, firstExpirationWarningSent=?, secondExpirationWarningSent=?, expirationFolderId=?, fileRewriteFileContents=?, maintainAbsoluteLinks=?, fileBlobId=?, shouldBeIndexed=?, shouldBePublished=?, lastDatePublished=?, lastPublishedBy=?, byteLength=?, draftOriginalId=? where id=?]; constraint [CASCADE.UQ_FCE_NEXTVERSION]; nested exception is org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+[2017-08-14 3:46:05 ]INFO - Finish write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-14 3:46:05 ]INFO - Finish write /_includes/css/style.min.css to cascade server.
+[2017-08-14 3:46:05 ]INFO - Finish write /_includes/documents/test.pdf to cascade server.
+[2017-08-14 3:46:05 ]INFO - Finish write /_includes/images/test.png to cascade server.
+[2017-08-14 3:47:01 ]INFO - pshan2 start updating files in JSTest---------------
+[2017-08-14 3:47:01 ]INFO - Begin deleting dest/_includes/images/test1.png in cascade server
+[2017-08-14 3:47:01 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:47:01 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:47:01 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:47:01 ]INFO - Begin writing dest/_cms/xslt/local.xslt in cascade server
+[2017-08-14 3:47:01 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:47:01 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 3:47:01 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:47:01 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 3:47:01 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:47:01 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:47:01 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:47:01 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:47:01 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:47:01 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 3:47:01 ]WARN - Problem in deleting dest/_includes/images/test1.png: Unable to identify an entity based on provided entity path 'dest/_includes/images/test1.png' and type 'file'
+[2017-08-14 3:47:01 ]ERROR - Problem in writing /_cms/xslt/local.xslt: TypeError: Cannot read property 'parentFolderId' of undefined
+[2017-08-14 3:47:02 ]INFO - Finish write /_includes/js/main.min.js to cascade server.
+[2017-08-14 3:47:02 ]ERROR - Problem in writing /_includes/js/main.min.js: Could not execute JDBC batch update; SQL [update cxml_foldercontent set name=?, lockId=?, isCurrentVersion=?, versionDate=?, metadataId=?, permissionsId=?, workflowId=?, isWorkingCopy=?, parentFolderId=?, relativeOrder=?, cachePath=?, isRecycled=?, recycleRecordId=?, workflowComment=?, draftUserId=?, draftAssetFactoryId=?, siteId=?, ownedBy=?, prevVersionId=?, nextVersionId=?, originalCopyId=?, workingCopyId=?, displayName=?, title=?, summary=?, teaser=?, keywords=?, description=?, author=?, startDate=?, endDate=?, reviewDate=?, metadataSetId=?, expirationNoticeSent=?, firstExpirationWarningSent=?, secondExpirationWarningSent=?, expirationFolderId=?, fileRewriteFileContents=?, maintainAbsoluteLinks=?, fileBlobId=?, shouldBeIndexed=?, shouldBePublished=?, lastDatePublished=?, lastPublishedBy=?, byteLength=?, draftOriginalId=? where id=?]; constraint [CASCADE.UQ_FCE_NEXTVERSION]; nested exception is org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+[2017-08-14 3:47:02 ]INFO - Finish write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-14 3:47:02 ]INFO - Finish write /_includes/documents/test.pdf to cascade server.
+[2017-08-14 3:47:02 ]INFO - Finish write /_includes/css/style.min.css to cascade server.
+[2017-08-14 3:51:36 ]ERROR - uncaughtException: site.extention is not a function
+	{"date":"Mon Aug 14 2017 16:51:36 GMT-0400 (EDT)","process":{"pid":15505,"uid":786014304,"gid":206888963,"cwd":"/Users/pshan2/JSCPA-master","execPath":"/usr/local/bin/node","version":"v6.11.1","argv":["/usr/local/bin/node","/usr/local/bin/gulp"],"memoryUsage":{"rss":70643712,"heapTotal":43220992,"heapUsed":26693896,"external":210420}},"os":{"loadavg":[1.8828125,2.013671875,2.0732421875],"uptime":26168},"trace":[{"column":22,"file":"/Users/pshan2/JSCPA-master/gulpfile.js","function":null,"line":44,"method":null,"native":false},{"column":32,"file":"module.js","function":"Module._compile","line":570,"method":"_compile","native":false},{"column":10,"file":"module.js","function":"Module._extensions..js","line":579,"method":".js","native":false},{"column":32,"file":"module.js","function":"Module.load","line":487,"method":"load","native":false},{"column":12,"file":"module.js","function":"tryModuleLoad","line":446,"method":null,"native":false},{"column":3,"file":"module.js","function":"Module._load","line":438,"method":"_load","native":false},{"column":17,"file":"module.js","function":"Module.require","line":497,"method":"require","native":false},{"column":19,"file":"internal/module.js","function":"require","line":20,"method":null,"native":false},{"column":3,"file":"/usr/local/lib/node_modules/gulp/bin/gulp.js","function":"Liftoff.handleArguments","line":116,"method":"handleArguments","native":false},{"column":16,"file":"/usr/local/lib/node_modules/gulp/node_modules/liftoff/index.js","function":null,"line":198,"method":null,"native":false},{"column":3,"file":"/usr/local/lib/node_modules/gulp/node_modules/flagged-respawn/index.js","function":"module.exports","line":17,"method":"exports","native":false},{"column":9,"file":"/usr/local/lib/node_modules/gulp/node_modules/liftoff/index.js","function":null,"line":190,"method":null,"native":false},{"column":9,"file":"/usr/local/lib/node_modules/gulp/node_modules/liftoff/index.js","function":null,"line":164,"method":null,"native":false},{"column":14,"file":"/usr/local/lib/node_modules/gulp/node_modules/v8flags/index.js","function":null,"line":110,"method":null,"native":false},{"column":12,"file":"/usr/local/lib/node_modules/gulp/node_modules/v8flags/index.js","function":null,"line":38,"method":null,"native":false},{"column":7,"file":"/usr/local/lib/node_modules/gulp/node_modules/v8flags/index.js","function":null,"line":49,"method":null,"native":false}],"stack":["TypeError: site.extention is not a function","    at Object.<anonymous> (/Users/pshan2/JSCPA-master/gulpfile.js:44:22)","    at Module._compile (module.js:570:32)","    at Object.Module._extensions..js (module.js:579:10)","    at Module.load (module.js:487:32)","    at tryModuleLoad (module.js:446:12)","    at Function.Module._load (module.js:438:3)","    at Module.require (module.js:497:17)","    at require (internal/module.js:20:19)","    at Liftoff.handleArguments (/usr/local/lib/node_modules/gulp/bin/gulp.js:116:3)","    at Liftoff.<anonymous> (/usr/local/lib/node_modules/gulp/node_modules/liftoff/index.js:198:16)","    at module.exports (/usr/local/lib/node_modules/gulp/node_modules/flagged-respawn/index.js:17:3)","    at Liftoff.<anonymous> (/usr/local/lib/node_modules/gulp/node_modules/liftoff/index.js:190:9)","    at /usr/local/lib/node_modules/gulp/node_modules/liftoff/index.js:164:9","    at /usr/local/lib/node_modules/gulp/node_modules/v8flags/index.js:110:14","    at /usr/local/lib/node_modules/gulp/node_modules/v8flags/index.js:38:12","    at /usr/local/lib/node_modules/gulp/node_modules/v8flags/index.js:49:7"]}
+[2017-08-14 3:53:06 ]INFO - pshan2 start updating files in JSTest---------------
+[2017-08-14 3:53:06 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:53:06 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 3:53:06 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:53:06 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:53:06 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:53:06 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:53:06 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 3:53:06 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:53:06 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:53:06 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:53:06 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:53:06 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:53:06 ]INFO - Begin writing dest/_cms/xslt/local.xslt in cascade server
+[2017-08-14 3:53:06 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 3:53:06 ]ERROR - Problem in writing /_cms/xslt/local.xslt: TypeError: Cannot read property 'parentFolderId' of undefined
+[2017-08-14 3:53:06 ]INFO - Finish write /_includes/js/main.min.js to cascade server.
+[2017-08-14 3:53:06 ]ERROR - Problem in writing /_includes/js/main.min.js: Could not execute JDBC batch update; SQL [update cxml_foldercontent set name=?, lockId=?, isCurrentVersion=?, versionDate=?, metadataId=?, permissionsId=?, workflowId=?, isWorkingCopy=?, parentFolderId=?, relativeOrder=?, cachePath=?, isRecycled=?, recycleRecordId=?, workflowComment=?, draftUserId=?, draftAssetFactoryId=?, siteId=?, ownedBy=?, prevVersionId=?, nextVersionId=?, originalCopyId=?, workingCopyId=?, displayName=?, title=?, summary=?, teaser=?, keywords=?, description=?, author=?, startDate=?, endDate=?, reviewDate=?, metadataSetId=?, expirationNoticeSent=?, firstExpirationWarningSent=?, secondExpirationWarningSent=?, expirationFolderId=?, fileRewriteFileContents=?, maintainAbsoluteLinks=?, fileBlobId=?, shouldBeIndexed=?, shouldBePublished=?, lastDatePublished=?, lastPublishedBy=?, byteLength=?, draftOriginalId=? where id=?]; constraint [CASCADE.UQ_FCE_NEXTVERSION]; nested exception is org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+[2017-08-14 3:53:07 ]INFO - Finish write /_includes/documents/test.pdf to cascade server.
+[2017-08-14 3:53:07 ]INFO - Finish write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-14 3:53:07 ]ERROR - Problem in writing /_includes/css/style.min.css: Could not execute JDBC batch update; SQL [update cxml_foldercontent set name=?, lockId=?, isCurrentVersion=?, versionDate=?, metadataId=?, permissionsId=?, workflowId=?, isWorkingCopy=?, parentFolderId=?, relativeOrder=?, cachePath=?, isRecycled=?, recycleRecordId=?, workflowComment=?, draftUserId=?, draftAssetFactoryId=?, siteId=?, ownedBy=?, prevVersionId=?, nextVersionId=?, originalCopyId=?, workingCopyId=?, displayName=?, title=?, summary=?, teaser=?, keywords=?, description=?, author=?, startDate=?, endDate=?, reviewDate=?, metadataSetId=?, expirationNoticeSent=?, firstExpirationWarningSent=?, secondExpirationWarningSent=?, expirationFolderId=?, fileRewriteFileContents=?, maintainAbsoluteLinks=?, fileBlobId=?, shouldBeIndexed=?, shouldBePublished=?, lastDatePublished=?, lastPublishedBy=?, byteLength=?, draftOriginalId=? where id=?]; constraint [CASCADE.UQ_FCE_NEXTVERSION]; nested exception is org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+[2017-08-14 3:54:37 ]INFO - pshan2 start updating files in JSTest---------------
+[2017-08-14 3:54:38 ]INFO - Begin deleting /_includes/images/test1.png in cascade server
+[2017-08-14 3:54:38 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 3:54:38 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:54:38 ]INFO - Begin writing dest/_cms/xslt/local.xslt in cascade server
+[2017-08-14 3:54:38 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 3:54:38 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:54:38 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:54:38 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:54:38 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:54:38 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:54:38 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 3:54:38 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:54:38 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:54:38 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:54:38 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:54:38 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 3:54:38 ]ERROR - Problem in writing /_cms/xslt/local.xslt: TypeError: Cannot read property 'parentFolderId' of undefined
+[2017-08-14 3:54:38 ]INFO - Finish write /_includes/js/main.min.js to cascade server.
+[2017-08-14 3:54:38 ]ERROR - Problem in writing /_includes/js/main.min.js: Could not execute JDBC batch update; SQL [update cxml_foldercontent set name=?, lockId=?, isCurrentVersion=?, versionDate=?, metadataId=?, permissionsId=?, workflowId=?, isWorkingCopy=?, parentFolderId=?, relativeOrder=?, cachePath=?, isRecycled=?, recycleRecordId=?, workflowComment=?, draftUserId=?, draftAssetFactoryId=?, siteId=?, ownedBy=?, prevVersionId=?, nextVersionId=?, originalCopyId=?, workingCopyId=?, displayName=?, title=?, summary=?, teaser=?, keywords=?, description=?, author=?, startDate=?, endDate=?, reviewDate=?, metadataSetId=?, expirationNoticeSent=?, firstExpirationWarningSent=?, secondExpirationWarningSent=?, expirationFolderId=?, fileRewriteFileContents=?, maintainAbsoluteLinks=?, fileBlobId=?, shouldBeIndexed=?, shouldBePublished=?, lastDatePublished=?, lastPublishedBy=?, byteLength=?, draftOriginalId=? where id=?]; constraint [CASCADE.UQ_FCE_NEXTVERSION]; nested exception is org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+[2017-08-14 3:54:38 ]ERROR - Problem in writing /_includes/documents/test.pdf: Could not execute JDBC batch update; SQL [update cxml_foldercontent set name=?, lockId=?, isCurrentVersion=?, versionDate=?, metadataId=?, permissionsId=?, workflowId=?, isWorkingCopy=?, parentFolderId=?, relativeOrder=?, cachePath=?, isRecycled=?, recycleRecordId=?, workflowComment=?, draftUserId=?, draftAssetFactoryId=?, siteId=?, ownedBy=?, prevVersionId=?, nextVersionId=?, originalCopyId=?, workingCopyId=?, displayName=?, title=?, summary=?, teaser=?, keywords=?, description=?, author=?, startDate=?, endDate=?, reviewDate=?, metadataSetId=?, expirationNoticeSent=?, firstExpirationWarningSent=?, secondExpirationWarningSent=?, expirationFolderId=?, fileRewriteFileContents=?, maintainAbsoluteLinks=?, fileBlobId=?, shouldBeIndexed=?, shouldBePublished=?, lastDatePublished=?, lastPublishedBy=?, byteLength=?, draftOriginalId=? where id=?]; constraint [CASCADE.UQ_FCE_NEXTVERSION]; nested exception is org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+[2017-08-14 3:54:39 ]INFO - Finish write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-14 3:54:39 ]INFO - Finish write /_includes/css/style.min.css to cascade server.
+[2017-08-14 3:54:39 ]INFO - Finish write /_includes/images/test.png to cascade server.
+[2017-08-14 3:56:41 ]INFO - pshan2 start updating files in JSTest---------------
+[2017-08-14 3:56:42 ]INFO - No remote file needed to be deleted in dest/_includes
+[2017-08-14 3:56:42 ]INFO - No remote file needed to be deleted in dest/_includes/js
+[2017-08-14 3:56:42 ]INFO - No remote file needed to be deleted in dest/_includes/css
+[2017-08-14 3:56:42 ]INFO - No remote file needed to be deleted in dest/_includes/images
+[2017-08-14 3:56:42 ]INFO - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-14 3:56:42 ]INFO - No remote file needed to be deleted in dest/_includes/documents
+[2017-08-14 3:56:42 ]INFO - No remote file needed to be deleted in dest/_cms/xslt
+[2017-08-14 3:56:42 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 3:56:42 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:56:42 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:56:42 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:56:42 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:56:42 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 3:56:42 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:56:42 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:56:42 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:56:42 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 3:56:42 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:56:42 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:56:42 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 3:56:42 ]INFO - Begin writing dest/_cms/xslt/local.xslt in cascade server
+[2017-08-14 3:56:42 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:56:42 ]ERROR - Problem in writing /_cms/xslt/local.xslt: TypeError: Cannot read property 'parentFolderId' of undefined
+[2017-08-14 3:56:42 ]INFO - Finish write /_includes/js/main.min.js to cascade server.
+[2017-08-14 3:56:42 ]ERROR - Problem in writing /_includes/js/main.min.js: Could not execute JDBC batch update; SQL [update cxml_foldercontent set name=?, lockId=?, isCurrentVersion=?, versionDate=?, metadataId=?, permissionsId=?, workflowId=?, isWorkingCopy=?, parentFolderId=?, relativeOrder=?, cachePath=?, isRecycled=?, recycleRecordId=?, workflowComment=?, draftUserId=?, draftAssetFactoryId=?, siteId=?, ownedBy=?, prevVersionId=?, nextVersionId=?, originalCopyId=?, workingCopyId=?, displayName=?, title=?, summary=?, teaser=?, keywords=?, description=?, author=?, startDate=?, endDate=?, reviewDate=?, metadataSetId=?, expirationNoticeSent=?, firstExpirationWarningSent=?, secondExpirationWarningSent=?, expirationFolderId=?, fileRewriteFileContents=?, maintainAbsoluteLinks=?, fileBlobId=?, shouldBeIndexed=?, shouldBePublished=?, lastDatePublished=?, lastPublishedBy=?, byteLength=?, draftOriginalId=? where id=?]; constraint [CASCADE.UQ_FCE_NEXTVERSION]; nested exception is org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+[2017-08-14 3:56:43 ]INFO - Finish write /_includes/documents/test.pdf to cascade server.
+[2017-08-14 3:56:43 ]INFO - Finish write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-14 3:56:43 ]INFO - Finish write /_includes/css/style.min.css to cascade server.
+[2017-08-14 3:56:43 ]INFO - Finish write /_includes/images/test.png to cascade server.
+[2017-08-14 3:58:49 ]INFO - pshan2 start updating files in JSTest---------------
+[2017-08-14 3:58:49 ]INFO - No remote file needed to be deleted in dest/_cms/xslt
+[2017-08-14 3:58:49 ]INFO - No remote file needed to be deleted in dest/_includes
+[2017-08-14 3:58:49 ]INFO - No remote file needed to be deleted in dest/_includes/css
+[2017-08-14 3:58:49 ]INFO - No remote file needed to be deleted in dest/_includes/images
+[2017-08-14 3:58:49 ]INFO - No remote file needed to be deleted in dest/_includes/js
+[2017-08-14 3:58:49 ]INFO - No remote file needed to be deleted in dest/_includes/documents
+[2017-08-14 3:58:49 ]INFO - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-14 3:58:49 ]INFO - Begin writing dest/_cms/xslt/local.xslt in cascade server
+[2017-08-14 3:58:49 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:58:49 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:58:49 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:58:49 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 3:58:49 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:58:49 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:58:49 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 3:58:49 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:58:49 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:58:49 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 3:58:49 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 3:58:50 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:58:50 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:58:50 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:58:50 ]ERROR - Problem in writing /_cms/xslt/local.xslt: TypeError: Cannot read property 'parentFolderId' of undefined
+[2017-08-14 3:58:50 ]INFO - Finish write /_includes/js/main.min.js to cascade server.
+[2017-08-14 3:58:50 ]INFO - Finish write /_includes/js/main.min.js to cascade server.
+[2017-08-14 3:58:50 ]INFO - Finish write /_includes/documents/test.pdf to cascade server.
+[2017-08-14 3:58:51 ]INFO - Finish write /_includes/images/test.png to cascade server.
+[2017-08-14 3:58:51 ]INFO - Finish write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-14 3:58:51 ]ERROR - Problem in writing /_includes/css/style.min.css: Could not execute JDBC batch update; SQL [update cxml_foldercontent set name=?, lockId=?, isCurrentVersion=?, versionDate=?, metadataId=?, permissionsId=?, workflowId=?, isWorkingCopy=?, parentFolderId=?, relativeOrder=?, cachePath=?, isRecycled=?, recycleRecordId=?, workflowComment=?, draftUserId=?, draftAssetFactoryId=?, siteId=?, ownedBy=?, prevVersionId=?, nextVersionId=?, originalCopyId=?, workingCopyId=?, displayName=?, title=?, summary=?, teaser=?, keywords=?, description=?, author=?, startDate=?, endDate=?, reviewDate=?, metadataSetId=?, expirationNoticeSent=?, firstExpirationWarningSent=?, secondExpirationWarningSent=?, expirationFolderId=?, fileRewriteFileContents=?, maintainAbsoluteLinks=?, fileBlobId=?, shouldBeIndexed=?, shouldBePublished=?, lastDatePublished=?, lastPublishedBy=?, byteLength=?, draftOriginalId=? where id=?]; constraint [CASCADE.UQ_FCE_NEXTVERSION]; nested exception is org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+[2017-08-14 3:59:45 ]INFO - pshan2 start updating files in JSTest---------------
+[2017-08-14 3:59:45 ]INFO - No remote file needed to be deleted in dest/_cms/xslt
+[2017-08-14 3:59:45 ]INFO - Begin writing dest/_cms/xslt/local.xslt in cascade server
+[2017-08-14 3:59:45 ]INFO - No remote file needed to be deleted in dest/_includes/images
+[2017-08-14 3:59:45 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 3:59:45 ]INFO - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-14 3:59:45 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:59:45 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:59:45 ]INFO - Begin deleting dest/_includes/documents/test2.pdf in cascade server
+[2017-08-14 3:59:45 ]INFO - No remote file needed to be deleted in dest/_includes/css
+[2017-08-14 3:59:45 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:59:45 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:59:45 ]WARN - Problem in deleting dest/_includes/documents/test2.pdf: Unable to identify an entity based on provided entity path 'dest/_includes/documents/test2.pdf' and type 'file'
+[2017-08-14 3:59:45 ]ERROR - Problem in writing /_cms/xslt/local.xslt: TypeError: Cannot read property 'parentFolderId' of undefined
+[2017-08-14 3:59:46 ]INFO - Finish write /_includes/images/test.png to cascade server.
+[2017-08-14 3:59:46 ]INFO - Finish write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-14 3:59:46 ]INFO - Finish write /_includes/css/style.min.css to cascade server.
+[2017-08-14 3:59:46 ]INFO - No remote file needed to be deleted in dest/_includes/js
+[2017-08-14 3:59:46 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:59:46 ]INFO - No remote file needed to be deleted in dest/_includes
+[2017-08-14 3:59:46 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 3:59:46 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 3:59:46 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 3:59:46 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 3:59:46 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 3:59:46 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 3:59:46 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 3:59:47 ]INFO - Finish write /_includes/js/main.min.js to cascade server.
+[2017-08-14 3:59:47 ]ERROR - Problem in writing /_includes/js/main.min.js: Could not execute JDBC batch update; SQL [update cxml_foldercontent set name=?, lockId=?, isCurrentVersion=?, versionDate=?, metadataId=?, permissionsId=?, workflowId=?, isWorkingCopy=?, parentFolderId=?, relativeOrder=?, cachePath=?, isRecycled=?, recycleRecordId=?, workflowComment=?, draftUserId=?, draftAssetFactoryId=?, siteId=?, ownedBy=?, prevVersionId=?, nextVersionId=?, originalCopyId=?, workingCopyId=?, displayName=?, title=?, summary=?, teaser=?, keywords=?, description=?, author=?, startDate=?, endDate=?, reviewDate=?, metadataSetId=?, expirationNoticeSent=?, firstExpirationWarningSent=?, secondExpirationWarningSent=?, expirationFolderId=?, fileRewriteFileContents=?, maintainAbsoluteLinks=?, fileBlobId=?, shouldBeIndexed=?, shouldBePublished=?, lastDatePublished=?, lastPublishedBy=?, byteLength=?, draftOriginalId=? where id=?]; constraint [CASCADE.UQ_FCE_NEXTVERSION]; nested exception is org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+[2017-08-14 4:01:13 ]INFO - pshan2 start updating files in JSTest---------------
+[2017-08-14 4:01:13 ]INFO - No remote file needed to be deleted in dest/_includes/js
+[2017-08-14 4:01:13 ]INFO - Begin deleting /_includes/documents/test2.pdf in cascade server
+[2017-08-14 4:01:13 ]INFO - No remote file needed to be deleted in dest/_includes/images
+[2017-08-14 4:01:13 ]INFO - No remote file needed to be deleted in dest/_includes
+[2017-08-14 4:01:13 ]INFO - No remote file needed to be deleted in dest/_cms/xslt
+[2017-08-14 4:01:13 ]INFO - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-14 4:01:13 ]INFO - No remote file needed to be deleted in dest/_includes/css
+[2017-08-14 4:01:13 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 4:01:13 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 4:01:13 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 4:01:13 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 4:01:13 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 4:01:13 ]INFO - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-14 4:01:13 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 4:01:13 ]INFO - Begin writing dest/_cms/xslt/local.xslt in cascade server
+[2017-08-14 4:01:13 ]INFO - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-14 4:01:13 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 4:01:13 ]INFO - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-14 4:01:13 ]INFO - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-14 4:01:13 ]INFO - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-14 4:01:13 ]INFO - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-14 4:01:13 ]ERROR - Problem in writing /_cms/xslt/local.xslt: TypeError: Cannot read property 'parentFolderId' of undefined
+[2017-08-14 4:01:13 ]INFO - Finish delete /_includes/documents/test2.pdf
+[2017-08-14 4:01:13 ]INFO - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-14 4:01:13 ]INFO - Finish write /_includes/js/main.min.js to cascade server.
+[2017-08-14 4:01:13 ]ERROR - Problem in writing /_includes/js/main.min.js: Could not execute JDBC batch update; SQL [update cxml_foldercontent set name=?, lockId=?, isCurrentVersion=?, versionDate=?, metadataId=?, permissionsId=?, workflowId=?, isWorkingCopy=?, parentFolderId=?, relativeOrder=?, cachePath=?, isRecycled=?, recycleRecordId=?, workflowComment=?, draftUserId=?, draftAssetFactoryId=?, siteId=?, ownedBy=?, prevVersionId=?, nextVersionId=?, originalCopyId=?, workingCopyId=?, displayName=?, title=?, summary=?, teaser=?, keywords=?, description=?, author=?, startDate=?, endDate=?, reviewDate=?, metadataSetId=?, expirationNoticeSent=?, firstExpirationWarningSent=?, secondExpirationWarningSent=?, expirationFolderId=?, fileRewriteFileContents=?, maintainAbsoluteLinks=?, fileBlobId=?, shouldBeIndexed=?, shouldBePublished=?, lastDatePublished=?, lastPublishedBy=?, byteLength=?, draftOriginalId=? where id=?]; constraint [CASCADE.UQ_FCE_NEXTVERSION]; nested exception is org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+[2017-08-14 4:01:14 ]INFO - Finish write /_includes/images/test.png to cascade server.
+[2017-08-14 4:01:14 ]ERROR - Problem in writing /_includes/documents/test.pdf: Could not execute JDBC batch update; SQL [update cxml_foldercontent set name=?, lockId=?, isCurrentVersion=?, versionDate=?, metadataId=?, permissionsId=?, workflowId=?, isWorkingCopy=?, parentFolderId=?, relativeOrder=?, cachePath=?, isRecycled=?, recycleRecordId=?, workflowComment=?, draftUserId=?, draftAssetFactoryId=?, siteId=?, ownedBy=?, prevVersionId=?, nextVersionId=?, originalCopyId=?, workingCopyId=?, displayName=?, title=?, summary=?, teaser=?, keywords=?, description=?, author=?, startDate=?, endDate=?, reviewDate=?, metadataSetId=?, expirationNoticeSent=?, firstExpirationWarningSent=?, secondExpirationWarningSent=?, expirationFolderId=?, fileRewriteFileContents=?, maintainAbsoluteLinks=?, fileBlobId=?, shouldBeIndexed=?, shouldBePublished=?, lastDatePublished=?, lastPublishedBy=?, byteLength=?, draftOriginalId=? where id=?]; constraint [CASCADE.UQ_FCE_NEXTVERSION]; nested exception is org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+[2017-08-14 4:01:14 ]ERROR - Problem in writing /_includes/fonts/fontawesome-webfont.eot: Could not execute JDBC batch update; SQL [update cxml_foldercontent set name=?, lockId=?, isCurrentVersion=?, versionDate=?, metadataId=?, permissionsId=?, workflowId=?, isWorkingCopy=?, parentFolderId=?, relativeOrder=?, cachePath=?, isRecycled=?, recycleRecordId=?, workflowComment=?, draftUserId=?, draftAssetFactoryId=?, siteId=?, ownedBy=?, prevVersionId=?, nextVersionId=?, originalCopyId=?, workingCopyId=?, displayName=?, title=?, summary=?, teaser=?, keywords=?, description=?, author=?, startDate=?, endDate=?, reviewDate=?, metadataSetId=?, expirationNoticeSent=?, firstExpirationWarningSent=?, secondExpirationWarningSent=?, expirationFolderId=?, fileRewriteFileContents=?, maintainAbsoluteLinks=?, fileBlobId=?, shouldBeIndexed=?, shouldBePublished=?, lastDatePublished=?, lastPublishedBy=?, byteLength=?, draftOriginalId=? where id=?]; constraint [CASCADE.UQ_FCE_NEXTVERSION]; nested exception is org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+[2017-08-14 4:01:14 ]INFO - Finish write /_includes/css/style.min.css to cascade server.
