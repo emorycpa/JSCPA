@@ -2,7 +2,7 @@
 //process.env.DEBUG = "*";
 
 
-var RestClientPromise = require('../cascade/rest.client.promise.js');
+var RestClientPromise = require('./rest.client.promise.js');
 var extend = Object.assign;
 
 

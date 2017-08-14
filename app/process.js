@@ -132,7 +132,6 @@ var deleteCascade = (onlyRemote, cascadeTypeAPI) => new Promise(function(resolve
 var writeRemote = (siteName, localCollection, cascadeTypeAPI, fileType, dest) => new Promise(function(resolve, reject) {
     var writeCascadeResponse;
     localCollection.forEach(function(localItem) {
-        cascadeLog.log('debug', localItem);
         readFile(localItem, 'utf8').then(function(content) {
                 cascadeLog.log('info', 'Begin writing ' + localItem + ' in cascade server');
                 localItem = localItem.substring(localItem.indexOf(dest) + dest.length);

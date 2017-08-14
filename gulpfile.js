@@ -33,14 +33,14 @@ var dest = 'dest';
 /**
  * Local modules
  */
-var site = require('./data/sitedata.js');
-var init = require('./index.js');
-var cascadeFolderAPI = require("./cascade/cascade.folder.js");
-var cascadeFileAPI = require("./cascade/cascade.file.js");
-var cascadeScriptFormatAPI = require("./cascade/cascade.scriptFormat.js");
-var cascadeXSLTFormatAPI = require("./cascade/cascade.xsltFormat.js");
-var process = require('./process.js');
-var cascadeLog = require('./log/logger.js');
+var site = require('./app/data/sitedata.js');
+var init = require('./app/index.js');
+var cascadeFolderAPI = require("./app/cascade/cascade.folder.js");
+var cascadeFileAPI = require("./app/cascade/cascade.file.js");
+var cascadeScriptFormatAPI = require("./app/cascade/cascade.scriptFormat.js");
+var cascadeXSLTFormatAPI = require("./app/cascade/cascade.xsltFormat.js");
+var process = require('./app/process.js');
+var cascadeLog = require('./app/log/logger.js');
 var extention = site.extention();
 var sitedata = site.sitedata();
 var foldertype = site.foldertype();
@@ -59,7 +59,7 @@ gulp.task('local:reminder', () => {
         message: 'Have you update your changes with Github? If not, please type no and update it.',
         default: false
     };
-    return gulp.src('index.js')
+    return gulp.src('./app/index.js')
         .pipe(prompt.confirm(question));
     /*
     return gulp.src('index.js').pipe(prompt.prompt([{
@@ -144,7 +144,7 @@ gulp.task('local:xslt', function() {
  * Cacade API 
  */
 gulp.task('cascade', function() {
-    return gulp.src('index.js').pipe(prompt.prompt([{
+    return gulp.src('./app/index.js').pipe(prompt.prompt([{
         type: 'input',
         name: 'username',
         message: 'Please input your cascade user name'
@@ -161,6 +161,8 @@ gulp.task('cascade', function() {
             'scriptFormat': cascadeScriptFormatAPI.init(initAPI),
             'xsltFormat': cascadeXSLTFormatAPI.init(initAPI)
         }
+        console.log('test!');
+        cascadeLog.log('debug', 'test');
         dir.paths(dest, function(err, paths) {
             paths.dirs.forEach(function(subdir) {
                 var foldertypes = Object.keys(foldertype);
@@ -190,7 +192,7 @@ gulp.task('cascade', function() {
     }))
 });
 
-gulp.task('local-sequence', gulpSequence('local:reminder', 'local:init', 'local:vm', 'local:xslt', 'local:fonts', 'local:scripts', 'local:documents', 'local:css', 'local:images'));
+gulp.task('local-sequence', gulpSequence('local:reminder', 'local:init', 'local:fonts', 'local:vm', 'local:xslt', 'local:scripts', 'local:documents', 'local:css', 'local:images'));
 gulp.task('cascade-sequence', gulpSequence('cascade'));
 
 gulp.task('default', gulpSequence('local-sequence', 'cascade-sequence'));
