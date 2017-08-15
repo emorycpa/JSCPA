@@ -44,12 +44,6 @@ var cascadeLog = require('./app/log/logger.js');
 var sitedata = site.sitedata();
 var foldertype = site.foldertype();
 
-
-/**
- * Shared Variables
- */
-var gitLogin = {};
-
 /**
  * Local File Process
  */
@@ -152,6 +146,7 @@ gulp.task('cascade', function() {
         name: 'password',
         message: 'Please input your cascade password'
     }], function(res) {
+        cascadeLog.user = res.username;
         cascadeLog.log('info', res.username + ' start updating files in ' + sitedata.sitename + '---------------');
         var initAPI = init.initAPI(sitedata.hostname, res.username, res.password);
         var APIList = {
@@ -170,16 +165,18 @@ gulp.task('cascade', function() {
                             .then(function(deleteResult) {
                                 //cascadeLog.log('debug', deleteResult);
                                 if (deleteResult.code == 'true' || !("message" in deleteResult)) {
-                                    cascadeLog.log('info', deleteResult.message);
+                                    //cascadeLog.log('info', deleteResult.message);
                                     process.writeProcess(sitedata.sitename, deleteResult.localCollection, initAPI[type], type, dest).then(function(writeRes) {
+                                        /*
                                         if (writeRes.code == 'true' || !("message" in writeRes))
                                             cascadeLog.log('info', writeRes.message);
                                         else
                                             cascadeLog.log('warn', writeRes.message);
+                                        */
                                     }).catch(function(rej) { cascadeLog.log('error', rej.message) });
                                 } else {
                                     //Edit this after bug is fixed in next version.  
-                                    cascadeLog.log('warn', deleteResult.message);
+                                    //cascadeLog.log('warn', deleteResult.message);
                                 }
                             })
                             .catch(function(rej) { cascadeLog.log('error', rej.message); });

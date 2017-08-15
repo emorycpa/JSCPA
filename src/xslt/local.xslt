@@ -6,7 +6,7 @@
 	<!-- outputs date in this format:
         April 3, 2011 
         Feb. 25, 2011
-        
+        This is a test
     -->
 	<xsl:template name="ap_date_any">
 		<xsl:param name="date_source"/>

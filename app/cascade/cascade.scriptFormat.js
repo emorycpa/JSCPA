@@ -55,18 +55,13 @@ var init = function(cascadeClient) {
                     var editAssetObj = {
                         "asset": {
                             "scriptFormat": {
-                                "parentFolderId": requestReturn.data.asset.file.parentFolderId,
-                                "id": requestReturn.data.asset.file.id,
-                                "siteId": requestReturn.data.asset.file.siteId
+                                "parentFolderId": requestReturn.data.asset.scriptFormat.parentFolderId,
+                                "id": requestReturn.data.asset.scriptFormat.id,
+                                "siteId": requestReturn.data.asset.scriptFormat.siteId
                             }
                         }
-                    };
-
-                    if (Buffer.isBuffer(dataToWrite)) {
-                        editAssetObj.asset.scriptFormat["script"] = Array.from((new Int8Array(dataToWrite)));
-                    } else {
-                        editAssetObj.asset.scriptFormat["script"] = dataToWrite;
                     }
+                    editAssetObj.asset.scriptFormat["script"] = dataToWrite;
 
                     if (additionalData === Object(additionalData)) {
                         Object.assign(editAssetObj.asset.scriptFormat, additionalData);

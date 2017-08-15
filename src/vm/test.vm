@@ -1,0 +1,37 @@
+#* Velocity Markup Template for block
+ * Please include a description of the block type here in comments
+ * Please fill out the following elements:
+ *      Between the MACRO-NAME sudotags please include the name of the macro you are creating for the block transform (This must be unique to each 
+
+template)
+ *          ex EmoryEduNewsFeed, NewsCenterTwitterWidge, BasicWYSIWYG
+ *      Between the XPATH-SIGNATURE sudotags please include the xpath expression of the block your wish a match
+ *          ex. system-data-struture[@definition-path="page-parts/widget/image"], system-data-struture[type="twitter-widget"], system-data-struture
+
+[contains(type, 'feed-')]
+ * When testing developing select block above and test format as normal
+ * You may need to add mock macros for recursive calling
+ * DO NOT REMOVE CAP CASE COMMENTS FROM THIS TEMPLATE
+ *#
+##[MACRO-NAME]contact-block[/MACRO-NAME]
+##[XPATH-SIGNATURE]system-data-structure[type='contact-block'][/XPATH-SIGNATURE]
+#macro(developmentName $node $configObj) 
+    #* When you want to transform a node call the matchTemplate macro on your jdom object 
+     * Example: #matchTemplates($nodeElement $blockTemplates)
+     * This allows for recursive transforms of blocks that contain or import other blocks
+     *#
+    #set ($phone = $node.getChildText('contact-phone'))
+    #set ($phone = $phone.replaceAll("[\\-\\.]",""))
+    <p>#formatText($node.getChildText('contact-name') false)
+        <br />#formatText($node.getChildText('contact-address') false)
+        <br />
+        <a href="tel:${phone}">#formatText($node.getChildText('contact-phone') false)</a>
+    </p>
+        
+#end
+##DEVELOPMENT CALL
+#developmentName($contentRoot)
+
+#macro(matchTemplates $nodeElement $blockTemplates)
+    <!-- MATCH OTHER TEMPLATES -->
+#end

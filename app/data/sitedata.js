@@ -35,7 +35,7 @@ exports.remotecontent = function() {
 }
 exports.contenttype = function() {
     return {
-        'buffer': ['png', 'jpg', 'jpeg', 'pdf', 'doc', 'xls', 'csv'],
+        'buffer': ['png', 'jpg', 'jpeg', 'pdf', 'doc', 'docx', 'pptx', 'ppt', 'xls', 'csv', 'xlsx'],
         'data': ['css', 'js']
     }
 }

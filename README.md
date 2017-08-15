@@ -71,8 +71,6 @@ For internal process, see <a href="#gulp">gulp</a> part.
 
 #### Todos
 
-- **Problem2**: after re-adjusting folder structure, the 'no such file or directory problem comes back'.
-
 - Some files which has been deleted still show in REST Read method. See `https://3.basecamp.com/3247301/buckets/752581/todos/614344069`. *Due this problem, process.deleteProcess has no reject temporary. This will be fixed after moving to next version*.
 
 - Merge gulp task with pattern lab
@@ -92,12 +90,6 @@ For internal process, see <a href="#gulp">gulp</a> part.
 #### Todos
 
 - **Problems**: output error in promise for folder without deletion
-
-- Custom formatter is only used in file logging. Colorize and Custom Level are not work if custom formatter is used. Should console being configured to custom formatter also?
-
-- Check formatter - where else we want to add log?
-
-- Do we want to split log between info and debug?
 
 ### Github
 

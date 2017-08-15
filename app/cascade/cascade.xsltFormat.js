@@ -55,19 +55,14 @@ var init = function(cascadeClient) {
                     var editAssetObj = {
                         "asset": {
                             "xsltFormat": {
-                                "parentFolderId": requestReturn.data.asset.file.parentFolderId,
-                                "id": requestReturn.data.asset.file.id,
-                                "siteId": requestReturn.data.asset.file.siteId
+                                "parentFolderId": requestReturn.data.asset.xsltFormat.parentFolderId,
+                                "id": requestReturn.data.asset.xsltFormat.id,
+                                "siteId": requestReturn.data.asset.xsltFormat.siteId
                             }
                         }
                     };
 
-                    if (Buffer.isBuffer(dataToWrite)) {
-                        editAssetObj.asset.xsltFormat["xml"] = Array.from((new Int8Array(dataToWrite)));
-                    } else {
-                        editAssetObj.asset.xsltFormat["xml"] = dataToWrite;
-                    }
-
+                    editAssetObj.asset.xsltFormat["xml"] = dataToWrite;
                     if (additionalData === Object(additionalData)) {
                         Object.assign(editAssetObj.asset.xsltFormat, additionalData);
                     }

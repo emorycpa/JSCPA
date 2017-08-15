@@ -1,5 +1,6 @@
 var winston = require('winston');
 var moment = require('moment');
+var colors = require('colors/safe');
 
 /**
  * Log Setting
@@ -21,10 +22,17 @@ var logLevels = {
     }
 }
 
-var formatter = function(options) {
-    var now = moment().utcOffset(-5).format('YYYY-MM-DD h:mm:ss'); //est timezone
-    return '[' + now + ' ' + ']' + options.level.toUpperCase() + ' - ' + (options.message ? options.message : '') +
-        (options.meta && Object.keys(options.meta).length ? '\n\t' + JSON.stringify(options.meta) : '');
+var customFormatter = function(user, msg) {
+        var now = moment().utcOffset(-5).format('YYYY-MM-DD h:mm:ss'); //est timezone
+        if (msg == '') {
+            return '';
+        } else {
+            return '[' + now + ' ' + user + ']' + ' - ' + msg;
+        }
+    }
+    //Remove extra dates in file
+var fileFormatter = function(options) {
+    return (options.message ? options.message : '');
 }
 
 //winston.setLevels(logLevels.levels);
@@ -38,7 +46,7 @@ var cascadeLogger = new winston.Logger({
             maxsize: 5242880, //5MB
             maxFiles: 5,
             formatter: function(options) {
-                return formatter(options);
+                return fileFormatter(options);
             },
             json: false
         }),
@@ -47,16 +55,14 @@ var cascadeLogger = new winston.Logger({
             colorize: true,
             handleExceptions: true,
             json: false
-                /*,
-                formatter: function(options) {
-                    return formatter(options);
-                }
-                */
         })
     ]
 });
 //console.log(cascadeLogger);
 
 module.exports = {
-    log: function(option, msg) { cascadeLogger.log(option, msg) }
+    user: '',
+    log: function(option, msg) {
+        cascadeLogger.log(option, customFormatter(this.user, msg));
+    }
 }

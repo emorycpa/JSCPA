@@ -7,7 +7,6 @@ var winston = require('winston');
 var index = require('./index.js');
 var site = require('./data/sitedata.js');
 var cascadeLog = require('./log/logger.js');
-//var colors = require('colors/safe');
 var dirFiles = Promise.promisify(dir.files);
 var readFile = Promise.promisify(fs.readFile);
 var remotecontent = site.contenttype();
@@ -18,6 +17,7 @@ var remotetype = site.remotetype();
 function onlyUnique(value, index, self) {
     return self.indexOf(value) === index;
 }
+var alreadyWritten = [];
 
 
 exports.deleteProcess = function(siteName, mainDir, cascadeFolderAPI, cascadeTypeAPI, fileType, dest) {
@@ -104,6 +104,7 @@ var readRemote = (cascadeFolderAPI, mainDir, remoteCollection, localCollection, 
                 result = { 'code': 'false', 'message': res.data.message, 'localCollection': localCollection };
                 resolveItem.result = resolveItem;
             }
+            cascadeLog.log('info', result.message);
             resolve(resolveItem);
         }).catch(e => cascadeLog.log('error', 'Error in reading remote files process: ' + e));
 });
@@ -115,7 +116,7 @@ var deleteCascade = (onlyRemote, cascadeTypeAPI, dest) => new Promise(function(r
         cascadeLog.log('info', 'Begin deleting ' + remoteItem + ' in cascade server');
         cascadeTypeAPI['delete'](sitedata.sitename, remoteItem)
             .then(function(data) {
-                    deleteCascadeResponse = { 'code': data.data.success.toString().trim(), 'message': 'Finish delete ' + remoteItem };
+                    deleteCascadeResponse = { 'code': data.data.success.toString().trim(), 'message': 'Successfully delete ' + remoteItem };
                     if (deleteCascadeResponse.code == 'false') {
                         deleteCascadeResponse.message = 'Problem in deleting ' + remoteItem + ": " + data.data.message;
                     }
@@ -128,45 +129,56 @@ var deleteCascade = (onlyRemote, cascadeTypeAPI, dest) => new Promise(function(r
             .catch(e => cascadeLog.log('error', 'Error in deleting remote files process: ' + e));
     });
 });
-
 var writeRemote = (siteName, localCollection, cascadeTypeAPI, fileType, dest) => new Promise(function(resolve, reject) {
-    var writeCascadeResponse;
     localCollection.forEach(function(localItem) {
-        var extention = localItem.substring(localItem.lastIndexOf('.') + 1);
-        //Buffer as file content
-        if (remotecontent.buffer.indexOf(extention) >= 0) {
-            readFile(localItem).then(function(buffer) {
-                    cascadeLog.log('info', 'Begin writing ' + localItem + ' in cascade server');
-                    localItem = localItem.substring(localItem.indexOf(dest) + dest.length);
-                    cascadeTypeAPI['write'](sitedata.sitename, localItem, buffer).then(function(data) {
-                        writeCascadeResponse = { 'code': data.data.success.toString().trim(), 'message': 'Finish write ' + localItem + ' to cascade server.' };
-                        if (writeCascadeResponse.code == 'false') {
-                            writeCascadeResponse.message = 'Problem in writing ' + localItem + ": " + data.data.message;
-                        }
+        //not process repeating file
+        if (alreadyWritten.indexOf(localItem) < 0) {
+            alreadyWritten.push(localItem);
+            var extention = localItem.substring(localItem.lastIndexOf('.') + 1);
+            //Buffer as file content
+            if (remotecontent.buffer.indexOf(extention) >= 0) {
+                readFile(localItem).then(function(buffer) {
+                        cascadeLog.log('info', 'Begin writing ' + localItem + ' in cascade server');
+                        localItem = localItem.substring(localItem.indexOf(dest) + dest.length);
+                        cascadeTypeAPI['write'](sitedata.sitename, localItem, buffer).then(function(data) {
+                            writeCascadeResponse = { 'code': data.data.success.toString().trim() };
+                            if (writeCascadeResponse.code == 'false') {
+                                writeCascadeResponse.message = 'Problem in writing ' + localItem + ": " + data.data.message;
+                            } else {
+                                writeCascadeResponse.message = 'Successfully write ' + localItem + ' to cascade server.';
+                            }
+                            cascadeLog.log('info', writeCascadeResponse.message);
+                            resolve(writeCascadeResponse);
+                        }).catch(e => cascadeLog.log('error', 'Problem in writing ' + localItem + ": " + e));
+                    },
+                    function(error) {
+                        writeCascadeResponse = { 'code': 'false', 'message': localItem + ': ' + error };
                         resolve(writeCascadeResponse);
-                    }).catch(e => cascadeLog.log('error', 'Problem in writing ' + localItem + ": " + e));
-                },
-                function(error) {
-                    writeCascadeResponse = { 'code': 'false', 'message': localItem + ': ' + error };
-                    resolve(writeCascadeResponse);
-                }).catch(e => cascadeLog.log('error', 'Error in writing remote files process: ' + e));
+                    }).catch(e => cascadeLog.log('error', 'Error in writing remote files process: ' + e));
+            } else {
+                //String as file content
+                readFile(localItem, 'utf8').then(function(content) {
+                        cascadeLog.log('info', 'Begin writing ' + localItem + ' in cascade server');
+                        localItem = localItem.substring(localItem.indexOf(dest) + dest.length);
+                        cascadeTypeAPI['write'](sitedata.sitename, localItem, content).then(function(data) {
+                            writeCascadeResponse = { 'code': data.data.success.toString().trim(), };
+                            if (writeCascadeResponse.code == 'false') {
+                                writeCascadeResponse.message = 'Problem in writing ' + localItem + ": " + data.data.message;
+                            } else {
+                                writeCascadeResponse.message = 'Successfully write ' + localItem + ' to cascade server.';
+                            }
+                            cascadeLog.log('info', writeCascadeResponse.message);
+                            resolve(writeCascadeResponse);
+                        }).catch(e => cascadeLog.log('error', 'Problem in writing ' + localItem + ": " + e));
+                    },
+                    function(error) {
+                        writeCascadeResponse = { 'code': 'false', 'message': localItem + ': ' + error };
+                        resolve(writeCascadeResponse);
+                    }).catch(e => cascadeLog.log('error', 'Error in writing remote files process: ' + e));
+            }
         } else {
-            //String as file content
-            readFile(localItem, 'utf8').then(function(content) {
-                    cascadeLog.log('info', 'Begin writing ' + localItem + ' in cascade server');
-                    localItem = localItem.substring(localItem.indexOf(dest) + dest.length);
-                    cascadeTypeAPI['write'](sitedata.sitename, localItem, content).then(function(data) {
-                        writeCascadeResponse = { 'code': data.data.success.toString().trim(), 'message': 'Finish write ' + localItem + ' to cascade server.' };
-                        if (writeCascadeResponse.code == 'false') {
-                            writeCascadeResponse.message = 'Problem in writing ' + localItem + ": " + data.data.message;
-                        }
-                        resolve(writeCascadeResponse);
-                    }).catch(e => cascadeLog.log('error', 'Problem in writing ' + localItem + ": " + e));
-                },
-                function(error) {
-                    writeCascadeResponse = { 'code': 'false', 'message': localItem + ': ' + error };
-                    resolve(writeCascadeResponse);
-                }).catch(e => cascadeLog.log('error', 'Error in writing remote files process: ' + e));
+            writeCascadeResponse = { 'code': 'true', 'message': '---------------------------------------' };
+            resolve(writeCascadeResponse);
         }
     });
 });
