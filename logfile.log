@@ -1051,3 +1051,594 @@ uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA
 [2017-08-15 3:50:40 pshan2] - Successfully write /_includes/documents/equal-height.pptx to cascade server.
 [2017-08-15 3:50:40 pshan2] - Successfully write /_includes/documents/sample.xlsx to cascade server.
 [2017-08-15 3:50:48 pshan2] - Successfully write /_includes/documents/course.csv to cascade server.
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_cms/vm/test.vm'
+[2017-08-16 8:55:21 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-16 8:55:23 pshan2] - No remote file needed to be deleted in dest/_includes/documents
+[2017-08-16 8:55:23 pshan2] - Begin writing dest/_includes/documents/Registrar Class Search SOW.docx in cascade server
+[2017-08-16 8:55:23 pshan2] - Begin writing dest/_includes/documents/equal-height.pptx in cascade server
+[2017-08-16 8:55:23 pshan2] - Begin writing dest/_includes/documents/sample.xlsx in cascade server
+[2017-08-16 8:55:23 pshan2] - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-16 8:55:23 pshan2] - Begin writing dest/_includes/documents/course.csv in cascade server
+[2017-08-16 8:55:23 pshan2] - Successfully write /_includes/documents/equal-height.pptx to cascade server.
+[2017-08-16 8:55:23 pshan2] - Successfully write /_includes/documents/sample.xlsx to cascade server.
+[2017-08-16 8:55:24 pshan2] - Successfully write /_includes/documents/Registrar Class Search SOW.docx to cascade server.
+[2017-08-16 8:55:24 pshan2] - No remote file needed to be deleted in dest/_cms/xslt
+[2017-08-16 8:55:24 pshan2] - Begin writing dest/_cms/xslt/local.xslt in cascade server
+[2017-08-16 8:55:24 pshan2] - No remote file needed to be deleted in dest/_includes/js
+[2017-08-16 8:55:24 pshan2] - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-16 8:55:24 pshan2] - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-16 8:55:24 pshan2] - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-16 8:55:24 pshan2] - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-16 8:55:24 pshan2] - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-16 8:55:24 pshan2] - No remote file needed to be deleted in dest/_includes
+[2017-08-16 8:55:24 pshan2] - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-16 8:55:24 pshan2] - No remote file needed to be deleted in dest/_cms/vm
+[2017-08-16 8:55:24 pshan2] - Begin writing dest/_cms/vm/test.vm in cascade server
+[2017-08-16 8:55:24 pshan2] - No remote file needed to be deleted in dest/_includes/css
+[2017-08-16 8:55:24 pshan2] - Successfully write /_includes/documents/test.pdf to cascade server.
+[2017-08-16 8:55:24 pshan2] - Successfully write /_cms/vm/test.vm to cascade server.
+[2017-08-16 8:55:24 pshan2] - Successfully write /_cms/xslt/local.xslt to cascade server.
+[2017-08-16 8:55:25 pshan2] - Successfully write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-16 8:55:25 pshan2] - Successfully write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-16 8:55:25 pshan2] - Successfully write /_includes/js/main.min.js to cascade server.
+[2017-08-16 8:55:25 pshan2] - Successfully write /_includes/css/style.min.css to cascade server.
+[2017-08-16 8:55:25 pshan2] - Successfully write /_includes/fonts/Lato-Heavy.woff to cascade server.
+[2017-08-16 8:55:41 pshan2] - Successfully write /_includes/documents/course.csv to cascade server.
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_cms/xslt/local.xslt'
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_cms/xslt/local.xslt'
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_includes/documents/course.csv'
+[2017-08-16 12:38:35 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-16 12:38:36 pshan2] - No remote file needed to be deleted in dest/_includes/css
+[2017-08-16 12:38:36 pshan2] - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-16 12:38:37 pshan2] - Successfully write /_includes/css/style.min.css to cascade server.
+[2017-08-16 12:38:37 pshan2] - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-16 12:38:37 pshan2] - No remote file needed to be deleted in dest/_includes/documents
+[2017-08-16 12:38:37 pshan2] - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-16 12:38:37 pshan2] - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-16 12:38:37 pshan2] - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-16 12:38:37 pshan2] - Begin writing dest/_includes/documents/Registrar Class Search SOW.docx in cascade server
+[2017-08-16 12:38:37 pshan2] - Begin writing dest/_includes/documents/equal-height.pptx in cascade server
+[2017-08-16 12:38:37 pshan2] - No remote file needed to be deleted in dest/_cms/vm
+[2017-08-16 12:38:37 pshan2] - Begin writing dest/_includes/documents/sample.xlsx in cascade server
+[2017-08-16 12:38:37 pshan2] - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-16 12:38:37 pshan2] - Begin writing dest/_includes/documents/course.csv in cascade server
+[2017-08-16 12:38:37 pshan2] - No remote file needed to be deleted in dest/_cms/xslt
+[2017-08-16 12:38:37 pshan2] - No remote file needed to be deleted in dest/_includes/js
+[2017-08-16 12:38:37 pshan2] - No remote file needed to be deleted in dest/_includes/images
+[2017-08-16 12:38:37 pshan2] - Begin writing dest/_cms/vm/test.vm in cascade server
+[2017-08-16 12:38:37 pshan2] - Begin writing dest/_cms/xslt/local.xslt in cascade server
+[2017-08-16 12:38:37 pshan2] - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-16 12:38:37 pshan2] - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-16 12:38:37 pshan2] - Begin writing dest/_includes/images/0101601-15BM-F307.jpg in cascade server
+[2017-08-16 12:38:37 pshan2] - No remote file needed to be deleted in dest/_includes
+[2017-08-16 12:38:38 pshan2] - Successfully write /_cms/vm/test.vm to cascade server.
+[2017-08-16 12:38:38 pshan2] - Successfully write /_includes/js/main.min.js to cascade server.
+[2017-08-16 12:38:38 pshan2] - Successfully write /_cms/xslt/local.xslt to cascade server.
+[2017-08-16 12:38:38 pshan2] - Successfully write /_includes/documents/equal-height.pptx to cascade server.
+[2017-08-16 12:38:39 pshan2] - Successfully write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-16 12:38:39 pshan2] - Successfully write /_includes/documents/sample.xlsx to cascade server.
+[2017-08-16 12:38:39 pshan2] - Successfully write /_includes/documents/Registrar Class Search SOW.docx to cascade server.
+[2017-08-16 12:38:39 pshan2] - Successfully write /_includes/documents/test.pdf to cascade server.
+[2017-08-16 12:38:39 pshan2] - Successfully write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-16 12:38:40 pshan2] - Successfully write /_includes/images/test.png to cascade server.
+[2017-08-16 12:38:40 pshan2] - Successfully write /_includes/fonts/Lato-Heavy.woff to cascade server.
+[2017-08-16 12:38:49 pshan2] - Successfully write /_includes/images/0101601-15BM-F307.jpg to cascade server.
+[2017-08-16 12:39:02 pshan2] - Successfully write /_includes/documents/course.csv to cascade server.
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_cms/xslt/local.xslt'
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_includes/documents/course.csv'
+[2017-08-16 1:13:59 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-16 1:14:00 pshan2] - No remote file needed to be deleted in dest/_includes/js
+[2017-08-16 1:14:00 pshan2] - No remote file needed to be deleted in dest/_includes/images
+[2017-08-16 1:14:00 pshan2] - No remote file needed to be deleted in dest/_includes/documents
+[2017-08-16 1:14:00 pshan2] - No remote file needed to be deleted in dest/_includes/css
+[2017-08-16 1:14:00 pshan2] - No remote file needed to be deleted in dest/_cms/xslt
+[2017-08-16 1:14:00 pshan2] - No remote file needed to be deleted in dest/_includes
+[2017-08-16 1:14:00 pshan2] - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-16 1:14:00 pshan2] - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-16 1:14:00 pshan2] - Begin writing dest/_includes/images/0101601-15BM-F307.jpg in cascade server
+[2017-08-16 1:14:00 pshan2] - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-16 1:14:00 pshan2] - Begin writing dest/_includes/documents/Registrar Class Search SOW.docx in cascade server
+[2017-08-16 1:14:00 pshan2] - Begin writing dest/_includes/documents/equal-height.pptx in cascade server
+[2017-08-16 1:14:00 pshan2] - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-16 1:14:00 pshan2] - Begin writing dest/_includes/documents/sample.xlsx in cascade server
+[2017-08-16 1:14:00 pshan2] - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-16 1:14:00 pshan2] - No remote file needed to be deleted in dest/_cms/vm
+[2017-08-16 1:14:00 pshan2] - Begin writing dest/_cms/xslt/local.xslt in cascade server
+[2017-08-16 1:14:00 pshan2] - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-16 1:14:00 pshan2] - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-16 1:14:00 pshan2] - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-16 1:14:00 pshan2] - Begin writing dest/_includes/documents/course.csv in cascade server
+[2017-08-16 1:14:00 pshan2] - Begin writing dest/_cms/vm/test.vm in cascade server
+[2017-08-16 1:14:01 pshan2] - Successfully write /_cms/vm/test.vm to cascade server.
+[2017-08-16 1:14:01 pshan2] - Successfully write /_includes/js/main.min.js to cascade server.
+[2017-08-16 1:14:01 pshan2] - Successfully write /_includes/documents/equal-height.pptx to cascade server.
+[2017-08-16 1:14:01 pshan2] - Successfully write /_cms/xslt/local.xslt to cascade server.
+[2017-08-16 1:14:01 pshan2] - Successfully write /_includes/documents/Registrar Class Search SOW.docx to cascade server.
+[2017-08-16 1:14:01 pshan2] - Successfully write /_includes/documents/sample.xlsx to cascade server.
+[2017-08-16 1:14:01 pshan2] - Successfully write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-16 1:14:01 pshan2] - Successfully write /_includes/documents/test.pdf to cascade server.
+[2017-08-16 1:14:02 pshan2] - Successfully write /_includes/css/style.min.css to cascade server.
+[2017-08-16 1:14:02 pshan2] - Successfully write /_includes/images/test.png to cascade server.
+[2017-08-16 1:14:02 pshan2] - Successfully write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-16 1:14:03 pshan2] - Successfully write /_includes/fonts/Lato-Heavy.woff to cascade server.
+[2017-08-16 1:17:26 pshan2] - Problem in writing /_includes/documents/course.csv: Failed parsing JSON source: JsonReader near 49,53,48,34,44,34,48,49,47,48,51,47,50,4 to Json
+[2017-08-16 1:17:31 pshan2] - Successfully write /_includes/images/0101601-15BM-F307.jpg to cascade server.
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_cms/vm/test.vm'
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_includes/documents/course.csv'
+[2017-08-16 1:38:12 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-16 1:38:12 pshan2] - Unable to identify an entity based on provided entity path '/_includes/css/*.css' and type 'folder'
+[2017-08-16 1:38:12 pshan2] - Begin writing dest/_includes/css/*.css/bootstrap-grid.css in cascade server
+[2017-08-16 1:38:12 pshan2] - Begin writing dest/_includes/css/*.css/bootstrap-reboot.css in cascade server
+[2017-08-16 1:38:12 pshan2] - Begin writing dest/_includes/css/*.css/bootstrap.css in cascade server
+[2017-08-16 1:38:12 pshan2] - No remote file needed to be deleted in dest/_includes/css
+[2017-08-16 1:38:12 pshan2] - No remote file needed to be deleted in dest/_includes/js
+[2017-08-16 1:38:12 pshan2] - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-16 1:38:12 pshan2] - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-16 1:38:12 pshan2] - No remote file needed to be deleted in dest/_cms/vm
+[2017-08-16 1:38:12 pshan2] - Begin writing dest/_cms/vm/test.vm in cascade server
+[2017-08-16 1:38:12 pshan2] - No remote file needed to be deleted in dest/_includes/images
+[2017-08-16 1:38:12 pshan2] - No remote file needed to be deleted in dest/_includes
+[2017-08-16 1:38:12 pshan2] - No remote file needed to be deleted in dest/_cms/xslt
+[2017-08-16 1:38:12 pshan2] - No remote file needed to be deleted in dest/_includes/documents
+[2017-08-16 1:38:12 pshan2] - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-16 1:38:12 pshan2] - Begin writing dest/_includes/documents/Registrar Class Search SOW.docx in cascade server
+[2017-08-16 1:38:12 pshan2] - Begin writing dest/_includes/images/0101601-15BM-F307.jpg in cascade server
+[2017-08-16 1:38:12 pshan2] - Begin writing dest/_includes/documents/equal-height.pptx in cascade server
+[2017-08-16 1:38:12 pshan2] - Begin writing dest/_includes/documents/sample.xlsx in cascade server
+[2017-08-16 1:38:12 pshan2] - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-16 1:38:12 pshan2] - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-16 1:38:12 pshan2] - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-16 1:38:12 pshan2] - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-16 1:38:12 pshan2] - Begin writing dest/_cms/xslt/local.xslt in cascade server
+[2017-08-16 1:38:12 pshan2] - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-16 1:38:12 pshan2] - Begin writing dest/_includes/documents/course.csv in cascade server
+[2017-08-16 1:38:13 pshan2] - Successfully write /_cms/vm/test.vm to cascade server.
+[2017-08-16 1:38:13 pshan2] - Successfully write /_includes/js/main.min.js to cascade server.
+[2017-08-16 1:38:13 pshan2] - Successfully write /_includes/documents/equal-height.pptx to cascade server.
+[2017-08-16 1:38:13 pshan2] - Problem in writing /_includes/css/style.min.css: Either one of text, data is required.
+[2017-08-16 1:38:13 pshan2] - Successfully write /_cms/xslt/local.xslt to cascade server.
+[2017-08-16 1:38:13 pshan2] - Successfully write /_includes/documents/Registrar Class Search SOW.docx to cascade server.
+[2017-08-16 1:38:13 pshan2] - Successfully write /_includes/documents/sample.xlsx to cascade server.
+[2017-08-16 1:38:13 pshan2] - Successfully write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-16 1:38:13 pshan2] - Problem in writing /_includes/css/*.css/bootstrap-reboot.css: TypeError: Cannot read property 'folder' of undefined
+[2017-08-16 1:38:13 pshan2] - Problem in writing /_includes/css/*.css/bootstrap.css: TypeError: Cannot read property 'folder' of undefined
+[2017-08-16 1:38:13 pshan2] - Successfully write /_includes/documents/test.pdf to cascade server.
+[2017-08-16 1:38:13 pshan2] - Problem in writing /_includes/css/*.css/bootstrap-grid.css: TypeError: Cannot read property 'folder' of undefined
+[2017-08-16 1:38:13 pshan2] - Successfully write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-16 1:38:14 pshan2] - Successfully write /_includes/images/test.png to cascade server.
+[2017-08-16 1:38:14 pshan2] - Successfully write /_includes/fonts/Lato-Heavy.woff to cascade server.
+[2017-08-16 1:40:07 pshan2] - Problem in writing /_includes/images/0101601-15BM-F307.jpg: Failed parsing JSON source: JsonReader near 1,-34,87,-29,-89,-93,-89,17,-63,-78,107, to Json
+[2017-08-16 1:40:16 pshan2] - Successfully write /_includes/documents/course.csv to cascade server.
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_cms/xslt/local.xslt'
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_includes/documents/Registrar Class Search SOW.docx'
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_includes/documents/Registrar Class Search SOW.docx'
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_includes/documents/Registrar Class Search SOW.docx'
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_includes/documents/Registrar Class Search SOW.docx'
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_cms/xslt/local.xslt'
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_includes/css/bootstrap.css'
+[2017-08-16 2:28:12 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-16 2:28:12 pshan2] - No remote file needed to be deleted in dest/_cms/xslt
+[2017-08-16 2:28:12 pshan2] - No remote file needed to be deleted in dest/_includes
+[2017-08-16 2:28:12 pshan2] - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-16 2:28:12 pshan2] - Begin writing dest/_cms/xslt/local.xslt in cascade server
+[2017-08-16 2:28:12 pshan2] - No remote file needed to be deleted in dest/_includes/css
+[2017-08-16 2:28:12 pshan2] - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-16 2:28:12 pshan2] - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-16 2:28:12 pshan2] - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-16 2:28:12 pshan2] - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-16 2:28:12 pshan2] - Begin writing dest/_includes/documents/Registrar Class Search SOW.docx in cascade server
+[2017-08-16 2:28:12 pshan2] - Begin writing dest/_includes/documents/sample.xlsx in cascade server
+[2017-08-16 2:28:12 pshan2] - Begin writing dest/_includes/documents/equal-height.pptx in cascade server
+[2017-08-16 2:28:12 pshan2] - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-16 2:28:12 pshan2] - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-16 2:28:12 pshan2] - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-16 2:28:12 pshan2] - Begin writing dest/_includes/documents/course.csv in cascade server
+[2017-08-16 2:28:12 pshan2] - No remote file needed to be deleted in dest/_includes/images
+[2017-08-16 2:28:12 pshan2] - No remote file needed to be deleted in dest/_includes/documents
+[2017-08-16 2:28:12 pshan2] - Begin writing dest/_includes/images/0101601-15BM-F307.jpg in cascade server
+[2017-08-16 2:28:12 pshan2] - No remote file needed to be deleted in dest/_includes/js
+[2017-08-16 2:28:12 pshan2] - No remote file needed to be deleted in dest/_cms/vm
+[2017-08-16 2:28:12 pshan2] - Begin writing dest/_cms/vm/test.vm in cascade server
+[2017-08-16 2:28:13 pshan2] - Successfully write /_cms/vm/test.vm to cascade server.
+[2017-08-16 2:28:13 pshan2] - Successfully write /_includes/js/main.min.js to cascade server.
+[2017-08-16 2:28:13 pshan2] - Successfully write /_includes/documents/equal-height.pptx to cascade server.
+[2017-08-16 2:28:13 pshan2] - Successfully write /_cms/xslt/local.xslt to cascade server.
+[2017-08-16 2:28:13 pshan2] - Successfully write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-16 2:28:13 pshan2] - Successfully write /_includes/documents/Registrar Class Search SOW.docx to cascade server.
+[2017-08-16 2:28:13 pshan2] - Successfully write /_includes/documents/test.pdf to cascade server.
+[2017-08-16 2:28:13 pshan2] - Successfully write /_includes/documents/sample.xlsx to cascade server.
+[2017-08-16 2:28:14 pshan2] - Successfully write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-16 2:28:14 pshan2] - Successfully write /_includes/images/test.png to cascade server.
+[2017-08-16 2:28:14 pshan2] - Successfully write /_includes/css/style.min.css to cascade server.
+[2017-08-16 2:28:14 pshan2] - Successfully write /_includes/fonts/Lato-Heavy.woff to cascade server.
+[2017-08-16 2:28:41 pshan2] - Problem in writing /_includes/documents/course.csv: Failed parsing JSON source: JsonReader near 44,34,34,44,34,78,34,44,34,49,48,34,44,3 to Json
+[2017-08-16 2:28:44 pshan2] - Successfully write /_includes/images/0101601-15BM-F307.jpg to cascade server.
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_cms/vm/test.vm'
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_includes/documents/course.csv'
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_cms/vm/test.vm'
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_includes/documents/course.csv'
+[2017-08-16 2:43:34 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-16 2:43:35 pshan2] - No remote file needed to be deleted in dest/_includes/documents
+[2017-08-16 2:43:35 pshan2] - Begin writing dest/_includes/documents/Registrar Class Search SOW.docx in cascade server
+[2017-08-16 2:43:35 pshan2] - Begin writing dest/_includes/documents/equal-height.pptx in cascade server
+[2017-08-16 2:43:35 pshan2] - Begin writing dest/_includes/documents/sample.xlsx in cascade server
+[2017-08-16 2:43:35 pshan2] - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-16 2:43:35 pshan2] - Begin writing dest/_includes/documents/course.csv in cascade server
+[2017-08-16 2:43:35 pshan2] - Successfully write /_includes/documents/equal-height.pptx to cascade server.
+[2017-08-16 2:43:35 pshan2] - Successfully write /_includes/documents/Registrar Class Search SOW.docx to cascade server.
+[2017-08-16 2:43:35 pshan2] - Successfully write /_includes/documents/sample.xlsx to cascade server.
+[2017-08-16 2:43:36 pshan2] - No remote file needed to be deleted in dest/_includes/js
+[2017-08-16 2:43:36 pshan2] - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-16 2:43:36 pshan2] - No remote file needed to be deleted in dest/_includes/images
+[2017-08-16 2:43:36 pshan2] - No remote file needed to be deleted in dest/_cms/vm
+[2017-08-16 2:43:36 pshan2] - No remote file needed to be deleted in dest/_includes/css
+[2017-08-16 2:43:36 pshan2] - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-16 2:43:36 pshan2] - Begin writing dest/_includes/images/0101601-15BM-F307.jpg in cascade server
+[2017-08-16 2:43:36 pshan2] - Begin writing dest/_cms/vm/test.vm in cascade server
+[2017-08-16 2:43:36 pshan2] - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-16 2:43:36 pshan2] - No remote file needed to be deleted in dest/_cms/xslt
+[2017-08-16 2:43:36 pshan2] - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-16 2:43:36 pshan2] - No remote file needed to be deleted in dest/_includes
+[2017-08-16 2:43:36 pshan2] - Begin writing dest/_cms/xslt/local.xslt in cascade server
+[2017-08-16 2:43:36 pshan2] - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-16 2:43:36 pshan2] - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-16 2:43:36 pshan2] - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-16 2:43:36 pshan2] - Successfully write /_includes/documents/test.pdf to cascade server.
+[2017-08-16 2:43:36 pshan2] - Successfully write /_cms/vm/test.vm to cascade server.
+[2017-08-16 2:43:36 pshan2] - Successfully write /_includes/js/main.min.js to cascade server.
+[2017-08-16 2:43:36 pshan2] - Successfully write /_cms/xslt/local.xslt to cascade server.
+[2017-08-16 2:43:37 pshan2] - Successfully write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-16 2:43:37 pshan2] - Successfully write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-16 2:43:37 pshan2] - Successfully write /_includes/images/test.png to cascade server.
+[2017-08-16 2:43:37 pshan2] - Successfully write /_includes/css/style.min.css to cascade server.
+[2017-08-16 2:43:38 pshan2] - Successfully write /_includes/fonts/Lato-Heavy.woff to cascade server.
+[2017-08-16 2:44:06 pshan2] - Problem in writing /_includes/documents/course.csv: Error: socket hang up
+[2017-08-16 2:44:12 pshan2] - Successfully write /_includes/images/0101601-15BM-F307.jpg to cascade server.
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_cms/vm/test.vm'
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_includes/documents/course.csv'
+[2017-08-16 2:44:47 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-16 2:44:48 pshan2] - No remote file needed to be deleted in dest/_includes
+[2017-08-16 2:44:48 pshan2] - No remote file needed to be deleted in dest/_includes/js
+[2017-08-16 2:44:48 pshan2] - No remote file needed to be deleted in dest/_cms/xslt
+[2017-08-16 2:44:48 pshan2] - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-16 2:44:48 pshan2] - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-16 2:44:48 pshan2] - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-16 2:44:48 pshan2] - Begin writing dest/_includes/documents/Registrar Class Search SOW.docx in cascade server
+[2017-08-16 2:44:48 pshan2] - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-16 2:44:48 pshan2] - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-16 2:44:48 pshan2] - Begin writing dest/_includes/documents/sample.xlsx in cascade server
+[2017-08-16 2:44:48 pshan2] - Begin writing dest/_includes/documents/equal-height.pptx in cascade server
+[2017-08-16 2:44:48 pshan2] - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-16 2:44:48 pshan2] - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-16 2:44:48 pshan2] - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-16 2:44:48 pshan2] - No remote file needed to be deleted in dest/_includes/documents
+[2017-08-16 2:44:48 pshan2] - Begin writing dest/_cms/xslt/local.xslt in cascade server
+[2017-08-16 2:44:48 pshan2] - Begin writing dest/_includes/documents/course.csv in cascade server
+[2017-08-16 2:44:48 pshan2] - Begin writing dest/_includes/images/0101601-15BM-F307.jpg in cascade server
+[2017-08-16 2:44:48 pshan2] - No remote file needed to be deleted in dest/_includes/css
+[2017-08-16 2:44:48 pshan2] - No remote file needed to be deleted in dest/_includes/images
+[2017-08-16 2:44:48 pshan2] - No remote file needed to be deleted in dest/_cms/vm
+[2017-08-16 2:44:48 pshan2] - Begin writing dest/_cms/vm/test.vm in cascade server
+[2017-08-16 2:44:48 pshan2] - Successfully write /_cms/vm/test.vm to cascade server.
+[2017-08-16 2:44:48 pshan2] - Successfully write /_includes/js/main.min.js to cascade server.
+[2017-08-16 2:44:49 pshan2] - Successfully write /_includes/documents/equal-height.pptx to cascade server.
+[2017-08-16 2:44:49 pshan2] - Successfully write /_cms/xslt/local.xslt to cascade server.
+[2017-08-16 2:44:49 pshan2] - Successfully write /_includes/documents/Registrar Class Search SOW.docx to cascade server.
+[2017-08-16 2:44:49 pshan2] - Successfully write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-16 2:44:49 pshan2] - Successfully write /_includes/documents/sample.xlsx to cascade server.
+[2017-08-16 2:44:49 pshan2] - Successfully write /_includes/documents/test.pdf to cascade server.
+[2017-08-16 2:44:49 pshan2] - Successfully write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-16 2:44:49 pshan2] - Successfully write /_includes/css/style.min.css to cascade server.
+[2017-08-16 2:44:49 pshan2] - Successfully write /_includes/images/test.png to cascade server.
+[2017-08-16 2:44:50 pshan2] - Successfully write /_includes/fonts/Lato-Heavy.woff to cascade server.
+[2017-08-16 2:45:20 pshan2] - Problem in writing /_includes/images/0101601-15BM-F307.jpg: Error: socket hang up
+[2017-08-16 2:45:23 pshan2] - Successfully write /_includes/documents/course.csv to cascade server.
+uncaughtException: ENOENT: no such file or directory, lstat '/Users/pshan2/JSCPA-master/dest/_cms/vm/test.vm'
+uncaughtException: dest.on is not a function
+[2017-08-16 2:53:22 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-16 2:53:23 pshan2] - No remote file needed to be deleted in dest/_includes/js
+[2017-08-16 2:53:23 pshan2] - No remote file needed to be deleted in dest/_includes
+[2017-08-16 2:53:23 pshan2] - No remote file needed to be deleted in dest/_includes/images
+[2017-08-16 2:53:23 pshan2] - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-16 2:53:23 pshan2] - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-16 2:53:23 pshan2] - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-16 2:53:23 pshan2] - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-16 2:53:23 pshan2] - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-16 2:53:23 pshan2] - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-16 2:53:23 pshan2] - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-16 2:53:23 pshan2] - Begin writing dest/_includes/documents/Registrar Class Search SOW.docx in cascade server
+[2017-08-16 2:53:23 pshan2] - Begin writing dest/_includes/documents/equal-height.pptx in cascade server
+[2017-08-16 2:53:23 pshan2] - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-16 2:53:23 pshan2] - Begin writing dest/_includes/documents/sample.xlsx in cascade server
+[2017-08-16 2:53:23 pshan2] - Begin writing dest/_includes/images/0101601-15BM-F307.jpg in cascade server
+[2017-08-16 2:53:23 pshan2] - Begin writing dest/_includes/documents/course.csv in cascade server
+[2017-08-16 2:53:23 pshan2] - Successfully write /_includes/documents/equal-height.pptx to cascade server.
+[2017-08-16 2:53:23 pshan2] - Successfully write /_includes/js/main.min.js to cascade server.
+[2017-08-16 2:53:24 pshan2] - No remote file needed to be deleted in dest/_includes/documents
+[2017-08-16 2:53:24 pshan2] - No remote file needed to be deleted in dest/_includes/css
+[2017-08-16 2:53:24 pshan2] - Successfully write /_includes/documents/sample.xlsx to cascade server.
+[2017-08-16 2:53:24 pshan2] - Successfully write /_includes/documents/Registrar Class Search SOW.docx to cascade server.
+[2017-08-16 2:53:24 pshan2] - Successfully write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-16 2:53:24 pshan2] - Successfully write /_includes/images/test.png to cascade server.
+[2017-08-16 2:53:24 pshan2] - Successfully write /_includes/css/style.min.css to cascade server.
+[2017-08-16 2:53:24 pshan2] - Successfully write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-16 2:53:24 pshan2] - Successfully write /_includes/documents/test.pdf to cascade server.
+[2017-08-16 2:53:25 pshan2] - Successfully write /_includes/fonts/Lato-Heavy.woff to cascade server.
+[2017-08-16 2:53:52 pshan2] - Problem in writing /_includes/documents/course.csv: Error: socket hang up
+[2017-08-16 2:53:56 pshan2] - Successfully write /_includes/images/0101601-15BM-F307.jpg to cascade server.
+[2017-08-16 2:54:27 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-16 2:54:29 pshan2] - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-16 2:54:29 pshan2] - No remote file needed to be deleted in dest/_includes
+[2017-08-16 2:54:29 pshan2] - No remote file needed to be deleted in dest/_includes/js
+[2017-08-16 2:54:29 pshan2] - No remote file needed to be deleted in dest/_includes/css
+[2017-08-16 2:54:29 pshan2] - No remote file needed to be deleted in dest/_includes/images
+[2017-08-16 2:54:29 pshan2] - No remote file needed to be deleted in dest/_includes/images
+[2017-08-16 2:54:29 pshan2] - Begin deleting /_includes/documents/course.csv in cascade server
+[2017-08-16 2:54:29 pshan2] - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-16 2:54:29 pshan2] - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-16 2:54:29 pshan2] - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-16 2:54:29 pshan2] - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-16 2:54:29 pshan2] - Begin writing dest/_includes/documents/Registrar Class Search SOW.docx in cascade server
+[2017-08-16 2:54:29 pshan2] - Begin writing dest/_includes/documents/equal-height.pptx in cascade server
+[2017-08-16 2:54:29 pshan2] - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-16 2:54:29 pshan2] - Begin writing dest/_includes/documents/sample.xlsx in cascade server
+[2017-08-16 2:54:29 pshan2] - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-16 2:54:29 pshan2] - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-16 2:54:29 pshan2] - Begin writing dest/_includes/images/0101601-15BM-F307.jpg in cascade server
+[2017-08-16 2:54:29 pshan2] - Successfully write /_includes/documents/equal-height.pptx to cascade server.
+[2017-08-16 2:54:29 pshan2] - Successfully write /_includes/js/main.min.js to cascade server.
+[2017-08-16 2:54:30 pshan2] - Successfully write /_includes/documents/Registrar Class Search SOW.docx to cascade server.
+[2017-08-16 2:54:30 pshan2] - Successfully write /_includes/documents/sample.xlsx to cascade server.
+[2017-08-16 2:54:30 pshan2] - Successfully write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-16 2:54:30 pshan2] - Successfully write /_includes/documents/test.pdf to cascade server.
+[2017-08-16 2:54:30 pshan2] - Successfully write /_includes/images/test.png to cascade server.
+[2017-08-16 2:54:30 pshan2] - Successfully write /_includes/css/style.min.css to cascade server.
+[2017-08-16 2:54:30 pshan2] - Successfully write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-16 2:54:31 pshan2] - Successfully write /_includes/fonts/Lato-Heavy.woff to cascade server.
+[2017-08-16 2:54:46 pshan2] - Successfully write /_includes/images/0101601-15BM-F307.jpg to cascade server.
+[2017-08-16 2:56:54 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-16 2:56:55 pshan2] - No remote file needed to be deleted in dest/_includes/js
+[2017-08-16 2:56:55 pshan2] - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-16 2:56:55 pshan2] - No remote file needed to be deleted in dest/_includes/documents
+[2017-08-16 2:56:55 pshan2] - No remote file needed to be deleted in dest/_includes/images
+[2017-08-16 2:56:55 pshan2] - No remote file needed to be deleted in dest/_includes
+[2017-08-16 2:56:55 pshan2] - No remote file needed to be deleted in dest/_includes/css
+[2017-08-16 2:56:55 pshan2] - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-16 2:56:55 pshan2] - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-16 2:56:55 pshan2] - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-16 2:56:55 pshan2] - Begin writing dest/_includes/documents/Registrar Class Search SOW.docx in cascade server
+[2017-08-16 2:56:55 pshan2] - Begin writing dest/_includes/documents/sample.xlsx in cascade server
+[2017-08-16 2:56:55 pshan2] - Begin writing dest/_includes/documents/equal-height.pptx in cascade server
+[2017-08-16 2:56:55 pshan2] - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-16 2:56:55 pshan2] - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-16 2:56:55 pshan2] - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-16 2:56:55 pshan2] - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-16 2:56:55 pshan2] - Begin writing dest/_includes/images/0101601-15BM-F307.jpg in cascade server
+[2017-08-16 2:56:56 pshan2] - Successfully write /_includes/js/main.min.js to cascade server.
+[2017-08-16 2:56:56 pshan2] - Successfully write /_includes/documents/equal-height.pptx to cascade server.
+[2017-08-16 2:56:56 pshan2] - Successfully write /_includes/documents/Registrar Class Search SOW.docx to cascade server.
+[2017-08-16 2:56:56 pshan2] - Successfully write /_includes/documents/sample.xlsx to cascade server.
+[2017-08-16 2:56:56 pshan2] - Successfully write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-16 2:56:56 pshan2] - Successfully write /_includes/images/test.png to cascade server.
+[2017-08-16 2:56:56 pshan2] - Successfully write /_includes/css/style.min.css to cascade server.
+[2017-08-16 2:56:57 pshan2] - Successfully write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-16 2:56:57 pshan2] - Successfully write /_includes/documents/test.pdf to cascade server.
+[2017-08-16 2:56:57 pshan2] - Successfully write /_includes/fonts/Lato-Heavy.woff to cascade server.
+[2017-08-16 2:57:09 pshan2] - Successfully write /_includes/images/0101601-15BM-F307.jpg to cascade server.
+[2017-08-16 2:57:40 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-16 2:57:41 pshan2] - No remote file needed to be deleted in dest/_includes/images
+[2017-08-16 2:57:41 pshan2] - No remote file needed to be deleted in dest/_includes/css
+[2017-08-16 2:57:41 pshan2] - No remote file needed to be deleted in dest/_includes/js
+[2017-08-16 2:57:41 pshan2] - No remote file needed to be deleted in dest/_includes
+[2017-08-16 2:57:41 pshan2] - No remote file needed to be deleted in dest/_includes/documents
+[2017-08-16 2:57:41 pshan2] - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-16 2:57:41 pshan2] - Begin writing dest/_includes/images/0101601-15BM-F307.jpg in cascade server
+[2017-08-16 2:57:41 pshan2] - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-16 2:57:41 pshan2] - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-16 2:57:41 pshan2] - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-16 2:57:41 pshan2] - Begin writing dest/_includes/documents/Registrar Class Search SOW.docx in cascade server
+[2017-08-16 2:57:41 pshan2] - Begin writing dest/_includes/documents/equal-height.pptx in cascade server
+[2017-08-16 2:57:41 pshan2] - Begin writing dest/_includes/documents/sample.xlsx in cascade server
+[2017-08-16 2:57:41 pshan2] - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-16 2:57:41 pshan2] - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-16 2:57:41 pshan2] - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-16 2:57:41 pshan2] - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-16 2:57:41 pshan2] - Begin writing dest/_includes/documents/course.csv in cascade server
+[2017-08-16 2:57:41 pshan2] - Successfully write /_includes/js/main.min.js to cascade server.
+[2017-08-16 2:57:42 pshan2] - Successfully write /_includes/documents/equal-height.pptx to cascade server.
+[2017-08-16 2:57:42 pshan2] - Successfully write /_includes/documents/sample.xlsx to cascade server.
+[2017-08-16 2:57:42 pshan2] - Successfully write /_includes/documents/Registrar Class Search SOW.docx to cascade server.
+[2017-08-16 2:57:43 pshan2] - Successfully write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-16 2:57:43 pshan2] - Successfully write /_includes/documents/test.pdf to cascade server.
+[2017-08-16 2:57:43 pshan2] - Successfully write /_includes/css/style.min.css to cascade server.
+[2017-08-16 2:57:43 pshan2] - Successfully write /_includes/images/test.png to cascade server.
+[2017-08-16 2:57:43 pshan2] - Successfully write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-16 2:57:45 pshan2] - Successfully write /_includes/fonts/Lato-Heavy.woff to cascade server.
+[2017-08-16 2:58:01 pshan2] - Successfully write /_includes/documents/course.csv to cascade server.
+[2017-08-16 2:58:08 pshan2] - Successfully write /_includes/images/0101601-15BM-F307.jpg to cascade server.
+[2017-08-16 3:25:52 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-16 3:25:52 pshan2] - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-16 3:25:52 pshan2] - No remote file needed to be deleted in dest/_includes/images
+[2017-08-16 3:25:52 pshan2] - No remote file needed to be deleted in dest/_includes
+[2017-08-16 3:25:52 pshan2] - No remote file needed to be deleted in dest/_includes/js
+[2017-08-16 3:25:52 pshan2] - No remote file needed to be deleted in dest/_includes/documents
+[2017-08-16 3:25:52 pshan2] - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-16 3:25:52 pshan2] - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-16 3:25:52 pshan2] - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-16 3:25:52 pshan2] - No remote file needed to be deleted in dest/_includes/css
+[2017-08-16 3:25:52 pshan2] - Begin writing dest/_includes/documents/Registrar Class Search SOW.docx in cascade server
+[2017-08-16 3:25:52 pshan2] - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-16 3:25:52 pshan2] - Begin writing dest/_includes/documents/equal-height.pptx in cascade server
+[2017-08-16 3:25:52 pshan2] - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-16 3:25:52 pshan2] - Begin writing dest/_includes/documents/sample.xlsx in cascade server
+[2017-08-16 3:25:52 pshan2] - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-16 3:25:52 pshan2] - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-16 3:25:52 pshan2] - Begin writing dest/_includes/images/0101601-15BM-F307.jpg in cascade server
+[2017-08-16 3:25:52 pshan2] - Begin writing dest/_includes/documents/course.csv in cascade server
+[2017-08-16 3:25:53 pshan2] - Successfully write /_includes/documents/equal-height.pptx to cascade server.
+[2017-08-16 3:25:53 pshan2] - Successfully write /_includes/js/main.min.js to cascade server.
+[2017-08-16 3:25:53 pshan2] - Successfully write /_includes/documents/Registrar Class Search SOW.docx to cascade server.
+[2017-08-16 3:25:53 pshan2] - Successfully write /_includes/documents/sample.xlsx to cascade server.
+[2017-08-16 3:25:53 pshan2] - Successfully write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-16 3:25:53 pshan2] - Successfully write /_includes/images/test.png to cascade server.
+[2017-08-16 3:25:53 pshan2] - Successfully write /_includes/documents/test.pdf to cascade server.
+[2017-08-16 3:25:53 pshan2] - Successfully write /_includes/css/style.min.css to cascade server.
+[2017-08-16 3:25:53 pshan2] - Successfully write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-16 3:25:54 pshan2] - Successfully write /_includes/fonts/Lato-Heavy.woff to cascade server.
+[2017-08-16 3:26:58 pshan2] - Problem in writing /_includes/documents/course.csv: Error: socket hang up
+[2017-08-16 3:27:02 pshan2] - Successfully write /_includes/images/0101601-15BM-F307.jpg to cascade server.
+[2017-08-16 3:29:26 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-16 3:29:26 pshan2] - No remote file needed to be deleted in dest/_includes
+[2017-08-16 3:29:26 pshan2] - No remote file needed to be deleted in dest/_includes/images
+[2017-08-16 3:29:26 pshan2] - No remote file needed to be deleted in dest/_includes/css
+[2017-08-16 3:29:26 pshan2] - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-16 3:29:26 pshan2] - No remote file needed to be deleted in dest/_includes/documents
+[2017-08-16 3:29:26 pshan2] - No remote file needed to be deleted in dest/_includes/js
+[2017-08-16 3:29:26 pshan2] - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-16 3:29:26 pshan2] - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-16 3:29:26 pshan2] - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-16 3:29:26 pshan2] - Begin writing dest/_includes/documents/Registrar Class Search SOW.docx in cascade server
+[2017-08-16 3:29:26 pshan2] - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-16 3:29:26 pshan2] - Begin writing dest/_includes/documents/equal-height.pptx in cascade server
+[2017-08-16 3:29:26 pshan2] - Begin writing dest/_includes/documents/sample.xlsx in cascade server
+[2017-08-16 3:29:26 pshan2] - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-16 3:29:26 pshan2] - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-16 3:29:26 pshan2] - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-16 3:29:26 pshan2] - Begin writing dest/_includes/documents/course.csv in cascade server
+[2017-08-16 3:29:26 pshan2] - Begin writing dest/_includes/images/0101601-15BM-F307.jpg in cascade server
+[2017-08-16 3:29:27 pshan2] - Successfully write /_includes/js/main.min.js to cascade server.
+[2017-08-16 3:29:27 pshan2] - Successfully write /_includes/documents/test.pdf to cascade server.
+[2017-08-16 3:29:27 pshan2] - Successfully write /_includes/documents/equal-height.pptx to cascade server.
+[2017-08-16 3:29:27 pshan2] - Successfully write /_includes/documents/Registrar Class Search SOW.docx to cascade server.
+[2017-08-16 3:29:28 pshan2] - Successfully write /_includes/documents/sample.xlsx to cascade server.
+[2017-08-16 3:29:28 pshan2] - Successfully write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-16 3:29:28 pshan2] - Successfully write /_includes/css/style.min.css to cascade server.
+[2017-08-16 3:29:28 pshan2] - Successfully write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-16 3:29:28 pshan2] - Successfully write /_includes/images/test.png to cascade server.
+[2017-08-16 3:29:29 pshan2] - Successfully write /_includes/fonts/Lato-Heavy.woff to cascade server.
+[2017-08-16 3:31:49 pshan2] - Problem in writing /_includes/images/0101601-15BM-F307.jpg: Failed parsing JSON source: JsonReader near 41,-42,80,-47,-94,70,-42,7,77,58,123,88, to Json
+[2017-08-16 3:31:52 pshan2] - Successfully write /_includes/documents/course.csv to cascade server.
+[2017-08-16 3:45:02 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-16 3:45:03 pshan2] - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-16 3:45:03 pshan2] - No remote file needed to be deleted in dest/_includes/css
+[2017-08-16 3:45:03 pshan2] - No remote file needed to be deleted in dest/_includes/documents
+[2017-08-16 3:45:03 pshan2] - No remote file needed to be deleted in dest/_includes/js
+[2017-08-16 3:45:03 pshan2] - No remote file needed to be deleted in dest/_includes/images
+[2017-08-16 3:45:03 pshan2] - No remote file needed to be deleted in dest/_includes
+[2017-08-16 3:45:03 pshan2] - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-16 3:45:03 pshan2] - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-16 3:45:03 pshan2] - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-16 3:45:03 pshan2] - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-16 3:45:03 pshan2] - Begin writing dest/_includes/documents/Registrar Class Search SOW.docx in cascade server
+[2017-08-16 3:45:03 pshan2] - Begin writing dest/_includes/documents/equal-height.pptx in cascade server
+[2017-08-16 3:45:04 pshan2] - Begin writing dest/_includes/documents/sample.xlsx in cascade server
+[2017-08-16 3:45:04 pshan2] - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-16 3:45:04 pshan2] - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-16 3:45:04 pshan2] - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-16 3:45:04 pshan2] - Begin writing dest/_includes/documents/course.csv in cascade server
+[2017-08-16 3:45:04 pshan2] - Begin writing dest/_includes/images/0101601-15BM-F307.jpg in cascade server
+[2017-08-16 3:45:04 pshan2] - Successfully write /_includes/js/main.min.js to cascade server.
+[2017-08-16 3:45:04 pshan2] - Successfully write /_includes/documents/equal-height.pptx to cascade server.
+[2017-08-16 3:45:05 pshan2] - Successfully write /_includes/documents/test.pdf to cascade server.
+[2017-08-16 3:45:05 pshan2] - Successfully write /_includes/documents/Registrar Class Search SOW.docx to cascade server.
+[2017-08-16 3:45:05 pshan2] - Successfully write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-16 3:45:05 pshan2] - Successfully write /_includes/documents/sample.xlsx to cascade server.
+[2017-08-16 3:45:05 pshan2] - Successfully write /_includes/css/style.min.css to cascade server.
+[2017-08-16 3:45:05 pshan2] - Successfully write /_includes/images/test.png to cascade server.
+[2017-08-16 3:45:05 pshan2] - Successfully write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-16 3:45:06 pshan2] - Successfully write /_includes/fonts/Lato-Heavy.woff to cascade server.
+[2017-08-16 3:45:30 pshan2] - Problem in writing /_includes/documents/course.csv: Failed parsing JSON source: JsonReader near 44,34,34,44,34,78,34,44,34,49,48,34,44,3 to Json
+[2017-08-16 3:45:37 pshan2] - Successfully write /_includes/images/0101601-15BM-F307.jpg to cascade server.
+[2017-08-16 3:48:14 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-16 3:48:14 pshan2] - No remote file needed to be deleted in dest/_includes
+[2017-08-16 3:48:14 pshan2] - No remote file needed to be deleted in dest/_includes/js
+[2017-08-16 3:48:14 pshan2] - No remote file needed to be deleted in dest/_includes/css
+[2017-08-16 3:48:14 pshan2] - No remote file needed to be deleted in dest/_includes/images
+[2017-08-16 3:48:14 pshan2] - No remote file needed to be deleted in dest/_includes/documents
+[2017-08-16 3:48:14 pshan2] - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-16 3:48:14 pshan2] - Begin writing dest/_includes/documents/Registrar Class Search SOW.docx in cascade server
+[2017-08-16 3:48:14 pshan2] - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-16 3:48:14 pshan2] - Begin writing dest/_includes/documents/equal-height.pptx in cascade server
+[2017-08-16 3:48:14 pshan2] - Begin writing dest/_includes/documents/sample.xlsx in cascade server
+[2017-08-16 3:48:14 pshan2] - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-16 3:48:14 pshan2] - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-16 3:48:14 pshan2] - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-16 3:48:14 pshan2] - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-16 3:48:14 pshan2] - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-16 3:48:14 pshan2] - Begin writing dest/_includes/documents/course.csv in cascade server
+[2017-08-16 3:48:14 pshan2] - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-16 3:48:14 pshan2] - Begin writing dest/_includes/images/0101601-15BM-F307.jpg in cascade server
+[2017-08-16 3:48:15 pshan2] - Successfully write /_includes/js/main.min.js to cascade server.
+[2017-08-16 3:48:15 pshan2] - Successfully write /_includes/documents/equal-height.pptx to cascade server.
+[2017-08-16 3:48:15 pshan2] - Successfully write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-16 3:48:15 pshan2] - Successfully write /_includes/documents/Registrar Class Search SOW.docx to cascade server.
+[2017-08-16 3:48:15 pshan2] - Successfully write /_includes/documents/sample.xlsx to cascade server.
+[2017-08-16 3:48:15 pshan2] - Successfully write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-16 3:48:15 pshan2] - Successfully write /_includes/images/test.png to cascade server.
+[2017-08-16 3:48:15 pshan2] - Successfully write /_includes/documents/test.pdf to cascade server.
+[2017-08-16 3:48:15 pshan2] - Successfully write /_includes/css/style.min.css to cascade server.
+[2017-08-16 3:48:16 pshan2] - Successfully write /_includes/fonts/Lato-Heavy.woff to cascade server.
+[2017-08-16 3:48:44 pshan2] - Problem in writing /_includes/images/0101601-15BM-F307.jpg: Error: socket hang up
+[2017-08-16 3:48:47 pshan2] - Successfully write /_includes/documents/course.csv to cascade server.
+[2017-08-16 3:49:01 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-16 3:49:02 pshan2] - No remote file needed to be deleted in dest/_includes
+[2017-08-16 3:49:02 pshan2] - No remote file needed to be deleted in dest/_includes/documents
+[2017-08-16 3:49:02 pshan2] - No remote file needed to be deleted in dest/_includes/js
+[2017-08-16 3:49:02 pshan2] - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-16 3:49:02 pshan2] - No remote file needed to be deleted in dest/_includes/css
+[2017-08-16 3:49:02 pshan2] - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-16 3:49:02 pshan2] - Begin writing dest/_includes/documents/Registrar Class Search SOW.docx in cascade server
+[2017-08-16 3:49:02 pshan2] - Begin writing dest/_includes/documents/sample.xlsx in cascade server
+[2017-08-16 3:49:02 pshan2] - Begin writing dest/_includes/documents/equal-height.pptx in cascade server
+[2017-08-16 3:49:02 pshan2] - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-16 3:49:02 pshan2] - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-16 3:49:02 pshan2] - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-16 3:49:02 pshan2] - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-16 3:49:02 pshan2] - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-16 3:49:02 pshan2] - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-16 3:49:02 pshan2] - No remote file needed to be deleted in dest/_includes/images
+[2017-08-16 3:49:02 pshan2] - Begin writing dest/_includes/documents/course.csv in cascade server
+[2017-08-16 3:49:02 pshan2] - Begin writing dest/_includes/images/0101601-15BM-F307.jpg in cascade server
+[2017-08-16 3:49:02 pshan2] - Successfully write /_includes/js/main.min.js to cascade server.
+[2017-08-16 3:49:03 pshan2] - Successfully write /_includes/documents/equal-height.pptx to cascade server.
+[2017-08-16 3:49:03 pshan2] - Successfully write /_includes/documents/Registrar Class Search SOW.docx to cascade server.
+[2017-08-16 3:49:03 pshan2] - Successfully write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-16 3:49:03 pshan2] - Successfully write /_includes/documents/sample.xlsx to cascade server.
+[2017-08-16 3:49:03 pshan2] - Successfully write /_includes/images/test.png to cascade server.
+[2017-08-16 3:49:03 pshan2] - Successfully write /_includes/documents/test.pdf to cascade server.
+[2017-08-16 3:49:03 pshan2] - Successfully write /_includes/css/style.min.css to cascade server.
+[2017-08-16 3:49:03 pshan2] - Successfully write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-16 3:49:04 pshan2] - Successfully write /_includes/fonts/Lato-Heavy.woff to cascade server.
+[2017-08-16 3:49:32 pshan2] - Problem in writing /_includes/documents/course.csv: Error: socket hang up
+[2017-08-16 3:49:38 pshan2] - Successfully write /_includes/images/0101601-15BM-F307.jpg to cascade server.
+[2017-08-16 3:50:38 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-16 3:50:39 pshan2] - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-16 3:50:39 pshan2] - No remote file needed to be deleted in dest/_includes/css
+[2017-08-16 3:50:39 pshan2] - No remote file needed to be deleted in dest/_includes
+[2017-08-16 3:50:39 pshan2] - Begin writing dest/_includes/fonts/FontAwesome.otf in cascade server
+[2017-08-16 3:50:39 pshan2] - Begin writing dest/_includes/fonts/fontawesome-webfont.eot in cascade server
+[2017-08-16 3:50:39 pshan2] - Begin writing dest/_includes/fonts/Lato-Heavy.woff in cascade server
+[2017-08-16 3:50:39 pshan2] - Begin writing dest/_includes/css/style.min.css in cascade server
+[2017-08-16 3:50:39 pshan2] - No remote file needed to be deleted in dest/_includes/documents
+[2017-08-16 3:50:39 pshan2] - No remote file needed to be deleted in dest/_includes/images
+[2017-08-16 3:50:39 pshan2] - No remote file needed to be deleted in dest/_includes/js
+[2017-08-16 3:50:39 pshan2] - Begin writing dest/_includes/documents/Registrar Class Search SOW.docx in cascade server
+[2017-08-16 3:50:39 pshan2] - Begin writing dest/_includes/documents/equal-height.pptx in cascade server
+[2017-08-16 3:50:39 pshan2] - Begin writing dest/_includes/documents/sample.xlsx in cascade server
+[2017-08-16 3:50:39 pshan2] - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-16 3:50:39 pshan2] - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-16 3:50:39 pshan2] - Begin writing dest/_includes/js/main.min.js in cascade server
+[2017-08-16 3:50:39 pshan2] - Begin writing dest/_includes/documents/course.csv in cascade server
+[2017-08-16 3:50:39 pshan2] - Begin writing dest/_includes/images/0101601-15BM-F307.jpg in cascade server
+[2017-08-16 3:50:40 pshan2] - Successfully write /_includes/js/main.min.js to cascade server.
+[2017-08-16 3:50:41 pshan2] - Successfully write /_includes/documents/equal-height.pptx to cascade server.
+[2017-08-16 3:50:41 pshan2] - Successfully write /_includes/documents/Registrar Class Search SOW.docx to cascade server.
+[2017-08-16 3:50:41 pshan2] - Successfully write /_includes/documents/sample.xlsx to cascade server.
+[2017-08-16 3:50:41 pshan2] - Successfully write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-16 3:50:41 pshan2] - Successfully write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-16 3:50:41 pshan2] - Successfully write /_includes/documents/test.pdf to cascade server.
+[2017-08-16 3:50:41 pshan2] - Successfully write /_includes/css/style.min.css to cascade server.
+[2017-08-16 3:50:41 pshan2] - Successfully write /_includes/images/test.png to cascade server.
+[2017-08-16 3:50:42 pshan2] - Successfully write /_includes/fonts/Lato-Heavy.woff to cascade server.
+[2017-08-16 3:54:29 pshan2] - Problem in writing /_includes/images/0101601-15BM-F307.jpg: Error: socket hang up
+[2017-08-16 3:54:34 pshan2] - Successfully write /_includes/documents/course.csv to cascade server.

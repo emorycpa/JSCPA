@@ -7,6 +7,7 @@ var clean = require('gulp-clean');
 var cache = require('gulp-cache');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
+var sass = require('gulp-sass');
 var concatCss = require('gulp-concat-css');
 var uglify = require('gulp-uglify');
 var foreach = require('gulp-foreach');
@@ -58,85 +59,73 @@ gulp.task('local:reminder', () => {
 
 
 //Delete Existing dist folder, then re-create it
-gulp.task('local:init', function() {
+gulp.task('local:init', ['local:reminder'], function() {
     mkdirp('./' + dest, function(err) {
         if (err) {
             cascadeLog.log('error', 'Error when creating destination folder: ' + err);
             return false;
         } else {
-            return gulp.src(dest + '/**/*', { read: false })
-                .pipe(clean());
+            return gulp.src(dest, { read: false })
+                .pipe(clean({ force: true }));
         }
     });
 });
 
-// Concatenate & Minify JS -> Compare if changed -> Move to Dist Folder
-gulp.task('local:scripts', function() {
-    setTimeout(function() {
-        return gulp.src(baseSrc + '/' + resourceSrc + '/js/*.js')
-            .pipe(concat('main.js'))
-            .pipe(rename({ suffix: '.min' }))
-            .pipe(uglify())
-            //.changed(dest + resourceSrc + 'javascript', { hasChanged: changed.compareContent }) Compare
-            .pipe(gulp.dest(dest + '/' + resourceSrc + '/js'));
-    }, 1000);
-});
-
-// Compress CSS Files to One File (include pattern lab css and project css)
-gulp.task('local:css', function() {
-    setTimeout(function() {
-        return gulp.src(baseSrc + '/' + resourceSrc + '/css/*.css')
-            .pipe(concatCss('style.css'))
-            .pipe(rename({ suffix: '.min' }))
-            .pipe(gulp.dest(dest + '/' + resourceSrc + '/css'));
-    }, 1000);
-});
-
-// Cache Images
-gulp.task('local:images', function() {
-    setTimeout(function() {
-        return gulp.src(baseSrc + '/' + resourceSrc + '/images/**/*')
-            .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
-            .pipe(gulp.dest(dest + '/' + resourceSrc + '/images'));
-    }, 2000);
-});
-
-//Cache Fonts?
-gulp.task('local:fonts', function() {
-    setTimeout(function() {
-        return gulp.src(baseSrc + '/' + resourceSrc + '/fonts/**/*')
-            .pipe(gulp.dest(dest + '/' + resourceSrc + '/fonts'));
-    }, 2000);
-});
-
-//Documents
-gulp.task('local:documents', function() {
-    setTimeout(function() {
-        return gulp.src(baseSrc + '/' + resourceSrc + '/documents/**/*')
-            .pipe(gulp.dest(dest + '/' + resourceSrc + '/documents'));
-    }, 2000);
-});
-
 //Parse Templates to Velocity. Currently just test file uploading
-gulp.task('local:vm', function() {
-    setTimeout(function() {
-        return gulp.src(baseSrc + '/vm/**/*')
-            .pipe(gulp.dest(dest + '/' + cmsSrc + '/vm'));
-    }, 1000);
+gulp.task('local:vm', ['local:init'], function() {
+    return gulp.src(baseSrc + '/vm/**/*')
+        .pipe(gulp.dest(dest + '/' + cmsSrc + '/vm'));
 });
 
 //Parse Templates to Data Definition XML
-gulp.task('local:xslt', function() {
-    setTimeout(function() {
-        return gulp.src(baseSrc + '/xslt/**/*')
-            .pipe(gulp.dest(dest + '/' + cmsSrc + '/xslt'));
-    }, 1000);
+gulp.task('local:xslt', ['local:vm'], function() {
+    return gulp.src(baseSrc + '/xslt/**/*')
+        .pipe(gulp.dest(dest + '/' + cmsSrc + '/xslt'));
+});
+
+//Compile SASS file to CSS File
+gulp.task('local:sass', ['local:xslt'], function() {
+    return gulp.src(baseSrc + '/' + resourceSrc + '/scss/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(concatCss('style.css'))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest(dest + '/' + resourceSrc + '/css'));
+});
+
+
+// Concatenate & Minify JS -> Compare if changed -> Move to Dist Folder
+gulp.task('local:scripts', ['local:sass'], function() {
+    return gulp.src(baseSrc + '/' + resourceSrc + '/js/*.js')
+        .pipe(concat('main.js'))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(uglify())
+        //.changed(dest + resourceSrc + 'javascript', { hasChanged: changed.compareContent }) Compare
+        .pipe(gulp.dest(dest + '/' + resourceSrc + '/js'));
+});
+
+// Cache Images
+gulp.task('local:images', ['local:scripts'], function() {
+    return gulp.src(baseSrc + '/' + resourceSrc + '/images/**/*')
+        .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
+        .pipe(gulp.dest(dest + '/' + resourceSrc + '/images'));
+});
+
+//Cache Fonts?
+gulp.task('local:fonts', ['local:images'], function() {
+    return gulp.src(baseSrc + '/' + resourceSrc + '/fonts/**/*')
+        .pipe(gulp.dest(dest + '/' + resourceSrc + '/fonts'));
+});
+
+//Documents
+gulp.task('local:documents', ['local:fonts'], function() {
+    return gulp.src(baseSrc + '/' + resourceSrc + '/documents/**/*')
+        .pipe(gulp.dest(dest + '/' + resourceSrc + '/documents'));
 });
 
 /**
  * Cacade API 
  */
-gulp.task('cascade', function() {
+gulp.task('cascade', ['local:documents'], function() {
     return gulp.src('./app/index.js').pipe(prompt.prompt([{
         type: 'input',
         name: 'username',
@@ -163,21 +152,11 @@ gulp.task('cascade', function() {
                     if (subdir.indexOf(targetFolder) >= 0) {
                         process.deleteProcess(sitedata.sitename, subdir, initAPI.folder, initAPI[type], type, dest)
                             .then(function(deleteResult) {
-                                //cascadeLog.log('debug', deleteResult);
                                 if (deleteResult.code == 'true' || !("message" in deleteResult)) {
-                                    //cascadeLog.log('info', deleteResult.message);
                                     process.writeProcess(sitedata.sitename, deleteResult.localCollection, initAPI[type], type, dest).then(function(writeRes) {
-                                        /*
-                                        if (writeRes.code == 'true' || !("message" in writeRes))
-                                            cascadeLog.log('info', writeRes.message);
-                                        else
-                                            cascadeLog.log('warn', writeRes.message);
-                                        */
-                                    }).catch(function(rej) { cascadeLog.log('error', rej.message) });
-                                } else {
-                                    //Edit this after bug is fixed in next version.  
-                                    //cascadeLog.log('warn', deleteResult.message);
-                                }
+
+                                    }).catch(function(rej) { cascadeLog.log('error', rej.message); });
+                                } else {}
                             })
                             .catch(function(rej) { cascadeLog.log('error', rej.message); });
                     }
@@ -186,8 +165,10 @@ gulp.task('cascade', function() {
         });
     }))
 });
-
-gulp.task('local-sequence', gulpSequence('local:reminder', 'local:init', 'local:scripts', 'local:fonts', 'local:vm', 'local:xslt', 'local:documents', 'local:css', 'local:images'));
+/*
+gulp.task('local-sequence', gulpSequence('local:reminder', 'local:init', 'local:vm', 'local:xslt', 'local:sass', 'sass:watch', 'local:css', 'local:scripts', 'local:images', 'local:fonts', 'local:documents'));
 gulp.task('cascade-sequence', gulpSequence('cascade'));
 
 gulp.task('default', gulpSequence('local-sequence', 'cascade-sequence'));
+*/
+gulp.task('default', ['cascade'], function() {});

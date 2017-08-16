@@ -120,6 +120,7 @@ var deleteCascade = (onlyRemote, cascadeTypeAPI, dest) => new Promise(function(r
                     if (deleteCascadeResponse.code == 'false') {
                         deleteCascadeResponse.message = 'Problem in deleting ' + remoteItem + ": " + data.data.message;
                     }
+                    cascadeLog.log('info', deleteCascadeResponse.message);
                     resolve(deleteCascadeResponse);
                 },
                 function(error) {
