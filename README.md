@@ -13,16 +13,15 @@ Please see right menu for instructions and development notes.
         - [2. Install Github Desktop on your machine](#2-install-github-desktop-on-your-machine)
         - [3. Clone repository to your machine](#3-clone-repository-to-your-machine)
         - [4. Install node package on your machine](#4-install-node-package-on-your-machine)
-    - [User Guideline](#user-guideline)
+    - [How to Use](#how-to-use)
     - [Structure of Program](#structure-of-program)
         - [Cascade API](#cascade-api)
+            - [Future Plan](#future-plan)
         - [Gulp](#gulp)
             - [Order of gulp.js](#order-of-gulpjs)
-            - [Todos](#todos)
+            - [Future Plan](#future-plan)
         - [Log](#log)
-            - [Todos](#todos)
         - [Github](#github)
-            - [Todos](#todos)
     - [Reference Sites](#reference-sites)
 
 ## Setup
@@ -66,9 +65,9 @@ _Example screen videos are recorded on Mac, but guidelines for Windows environme
 
 If you want to make sure that all modules have been installed successfully, you can run `npm list` to list all installed modules and messages.
 
-## User Guideline
+## How to Use
  
-Type `gulp` in root directory of repository folder, then enter answers to questions (Type your answer then hit `Enter` on keyboard). You are done!
+Just type `gulp` in root directory of repository folder, then enter answers to questions (Type your answer then hit `Enter` on keyboard). You are done!
 
 <img src="readme/tty.gif" width="600"/>
 
@@ -76,9 +75,13 @@ Type `gulp` in root directory of repository folder, then enter answers to questi
 
 ### Cascade API
 
-- *Till Aug 11th, apis that work:* file (`css`, `js`, `image`,etc), folder, script (`vm`), xslt(`xslt`)
+Code about Cascade API Process can be found in `app/cascade` folder. Each type of cascade item has four operations: `read`, `delete`, `edit` and `write`. The correspondence between local file and remote file type can be found in `data/sitedata.js`.
 
-- May want to add api in the future: page
+#### Future Plan 
+
+- Api in the future: `page`
+
+- Solve socket problem for large files
 
 ### Gulp
 
@@ -92,7 +95,9 @@ Type `gulp` in root directory of repository folder, then enter answers to questi
 
 4. Remote - For **each** file in destination folder, overwrite the content of its remote sibling in remote server
 
-#### Todos
+#### Future Plan
+
+- Add progress bar in terminal for gulp process
 
 - Some files which has been deleted still show in REST Read method. See `https://3.basecamp.com/3247301/buckets/752581/todos/614344069`. *Due this problem, process.deleteProcess has no reject temporary. This will be fixed after moving to next version*.
 
@@ -104,23 +109,27 @@ Type `gulp` in root directory of repository folder, then enter answers to questi
 
 ### Log
 
-- Using `winston` library to log actions: https://github.com/winstonjs/winston
+<a href="https://github.com/winstonjs/winston">winston</a> library is used to log actions. 
 
-- Logger configuration is in `logger.js`
+Logger configuration is in `logger.js`. 
 
-- Log is recorded on both console and `logfile.log` file - this file is created automatically if not found in system
+Log is recorded on both terminal and `logfile.log` file - this file is created automatically if not found in system.
 
-#### Todos
+The format of log is `action type` + `EST data/time (no daylight saving)` + `your cascade username` + `description of your action`.
 
-- **Problems**: output error in promise for folder without deletion
+There are four actions types currently being used: 
+
+- `info`: action is processed regularly and successfully
+
+- `error`: an error exists in action. Action failed
+
+- `alert`: action is required manually to fix error
+
+- `debug`: this message is only for local debug. **Should be removed before submitting all code to Github**
 
 ### Github
 
-- Currently no Github integration is used app
-
-#### Todos
-
-- Add Github integration to app: automatically check if the code is up-to-date in Github. If no, stop app. 
+Currently, there is no Github integration is used app
 
 ## Reference Sites
 

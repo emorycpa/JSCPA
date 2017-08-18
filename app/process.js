@@ -90,23 +90,21 @@ var readRemote = (cascadeFolderAPI, mainDir, remoteCollection, localCollection, 
                     }
                 });
                 var remoteFiles = Object.keys(remoteCollection);
-                //cascadeLog.log('debug', 'remote: ' + remoteFiles);
-                //cascadeLog.log('debug', 'local: ' + localCollection);
                 var onlyRemote = remoteFiles.map(function(r) { return dest + '/' + r }).filter(x => localCollection.indexOf(x) < 0);
-                //cascadeLog.log('debug', 'onlyRemote: ' + onlyRemote);
                 if (onlyRemote.length == 0) {
                     result = { 'code': 'true', 'message': 'No remote file needed to be deleted in ' + mainDir, 'localCollection': localCollection };
                 } else {
                     resolveItem.onlyRemote = onlyRemote;
                 }
+                cascadeLog.log('info', result.message);
                 resolveItem.result = result;
             } else {
                 result = { 'code': 'false', 'message': res.data.message, 'localCollection': localCollection };
+                cascadeLog.log('error', result.message);
                 resolveItem.result = resolveItem;
             }
-            cascadeLog.log('info', result.message);
             resolve(resolveItem);
-        }).catch(e => cascadeLog.log('error', 'Error in reading remote files process: ' + e));
+        }).catch(e => cascadeLog.log('error', 'Error in reading remote files in' + mainDir.substring(dest.length) + ' process: ' + e));
 });
 
 var deleteCascade = (onlyRemote, cascadeTypeAPI, dest) => new Promise(function(resolve, reject) {
@@ -119,17 +117,19 @@ var deleteCascade = (onlyRemote, cascadeTypeAPI, dest) => new Promise(function(r
                     deleteCascadeResponse = { 'code': data.data.success.toString().trim(), 'message': 'Successfully delete ' + remoteItem };
                     if (deleteCascadeResponse.code == 'false') {
                         deleteCascadeResponse.message = 'Problem in deleting ' + remoteItem + ": " + data.data.message;
+                        cascadeLog.log('error', deleteCascadeResponse.message);
                     }
-                    cascadeLog.log('info', deleteCascadeResponse.message);
                     resolve(deleteCascadeResponse);
                 },
                 function(error) {
                     deleteCascadeResponse = { 'code': 'false', 'message': 'Problem in deleting ' + remoteItem + ": " + error };
+                    cascadeLog.log('error', deleteCascadeResponse.message);
                     resolve(deleteCascadeResponse);
                 })
             .catch(e => cascadeLog.log('error', 'Error in deleting remote files process: ' + e));
     });
 });
+
 var writeRemote = (siteName, localCollection, cascadeTypeAPI, fileType, dest) => new Promise(function(resolve, reject) {
     localCollection.forEach(function(localItem) {
         //not process repeating file
@@ -145,10 +145,12 @@ var writeRemote = (siteName, localCollection, cascadeTypeAPI, fileType, dest) =>
                             writeCascadeResponse = { 'code': data.data.success.toString().trim() };
                             if (writeCascadeResponse.code == 'false') {
                                 writeCascadeResponse.message = 'Problem in writing ' + localItem + ": " + data.data.message;
+                                cascadeLog.log('error', writeCascadeResponse.message);
+                                cascadeLog.log('alert', localItem + ' is too large that it cannot be uploaded through this tool. Please upload it MANUALLY to ' + sitedata.hostname + '/' + sitedata.sitename);
                             } else {
                                 writeCascadeResponse.message = 'Successfully write ' + localItem + ' to cascade server.';
+                                cascadeLog.log('info', writeCascadeResponse.message);
                             }
-                            cascadeLog.log('info', writeCascadeResponse.message);
                             resolve(writeCascadeResponse);
                         }).catch(e => cascadeLog.log('error', 'Problem in writing ' + localItem + ": " + e));
                     },
@@ -162,15 +164,22 @@ var writeRemote = (siteName, localCollection, cascadeTypeAPI, fileType, dest) =>
                         cascadeLog.log('info', 'Begin writing ' + localItem + ' in cascade server');
                         localItem = localItem.substring(localItem.indexOf(dest) + dest.length);
                         cascadeTypeAPI['write'](sitedata.sitename, localItem, content).then(function(data) {
-                            writeCascadeResponse = { 'code': data.data.success.toString().trim(), };
+                            writeCascadeResponse = { 'code': data.data.success.toString().trim() };
                             if (writeCascadeResponse.code == 'false') {
                                 writeCascadeResponse.message = 'Problem in writing ' + localItem + ": " + data.data.message;
+                                cascadeLog.log('error', writeCascadeResponse.message);
+                                cascadeLog.log('alert', localItem + ' is too large that it cannot be uploaded through this tool. Please upload it MANUALLY to ' + sitedata.hostname + '/' + sitedata.sitename);
+
                             } else {
                                 writeCascadeResponse.message = 'Successfully write ' + localItem + ' to cascade server.';
+                                cascadeLog.log('info', writeCascadeResponse.message);
                             }
-                            cascadeLog.log('info', writeCascadeResponse.message);
                             resolve(writeCascadeResponse);
-                        }).catch(e => cascadeLog.log('error', 'Problem in writing ' + localItem + ": " + e));
+                        }).catch(e => {
+                            cascadeLog.log('debug', e.toString());
+                            cascadeLog.log('error', 'Problem in writing ' + localItem + ": " + e);
+                            cascadeLog.log('alert', localItem + ' is too large that it cannot be uploaded through this tool. Please upload it MANUALLY to ' + sitedata.hostname + '/' + sitedata.sitename);
+                        });
                     },
                     function(error) {
                         writeCascadeResponse = { 'code': 'false', 'message': localItem + ': ' + error };

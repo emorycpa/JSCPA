@@ -17,6 +17,7 @@ var dir = require('node-dir');
 var prompt = require('gulp-prompt');
 var gulpSequence = require('gulp-sequence');
 var fs = require('fs');
+var print = require('gulp-print');
 //var colors = require('colors/safe');
 //var Github = require('github-api');
 var moment = require('moment');
@@ -62,7 +63,7 @@ gulp.task('local:reminder', () => {
 gulp.task('local:init', ['local:reminder'], function() {
     mkdirp('./' + dest, function(err) {
         if (err) {
-            cascadeLog.log('error', 'Error when creating destination folder: ' + err);
+            cascadeLog.log('error', 'Error when creating destination folder: ' + err + '. Program is stop now.');
             return false;
         } else {
             return gulp.src(dest, { read: false })
@@ -83,23 +84,27 @@ gulp.task('local:xslt', ['local:vm'], function() {
         .pipe(gulp.dest(dest + '/' + cmsSrc + '/xslt'));
 });
 
+//PHPs
+gulp.task('local:phps', ['local:xslt'], function() {
+    return gulp.src(baseSrc + '/' + resourceSrc + '/php/**/*')
+        .pipe(gulp.dest(dest + '/' + resourceSrc + '/php'));
+});
+
 //Compile SASS file to CSS File
-gulp.task('local:sass', ['local:xslt'], function() {
-    return gulp.src(baseSrc + '/' + resourceSrc + '/scss/*.scss')
+gulp.task('local:sass', ['local:phps'], function() {
+    return gulp.src(baseSrc + '/' + resourceSrc + '/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(concatCss('style.css'))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest(dest + '/' + resourceSrc + '/css'));
 });
 
-
 // Concatenate & Minify JS -> Compare if changed -> Move to Dist Folder
 gulp.task('local:scripts', ['local:sass'], function() {
-    return gulp.src(baseSrc + '/' + resourceSrc + '/js/*.js')
+    return gulp.src(baseSrc + '/' + resourceSrc + '/js/**/*.js')
         .pipe(concat('main.js'))
         .pipe(rename({ suffix: '.min' }))
         .pipe(uglify())
-        //.changed(dest + resourceSrc + 'javascript', { hasChanged: changed.compareContent }) Compare
         .pipe(gulp.dest(dest + '/' + resourceSrc + '/js'));
 });
 
@@ -165,10 +170,6 @@ gulp.task('cascade', ['local:documents'], function() {
         });
     }))
 });
-/*
-gulp.task('local-sequence', gulpSequence('local:reminder', 'local:init', 'local:vm', 'local:xslt', 'local:sass', 'sass:watch', 'local:css', 'local:scripts', 'local:images', 'local:fonts', 'local:documents'));
-gulp.task('cascade-sequence', gulpSequence('cascade'));
 
-gulp.task('default', gulpSequence('local-sequence', 'cascade-sequence'));
-*/
+
 gulp.task('default', ['cascade'], function() {});
