@@ -382,3 +382,118 @@
 [2017-08-18 2:18:18 pshan2] - Successfully write /_includes/fonts/Lato-Heavy.woff to cascade server.
 [2017-08-18 2:18:34 pshan2] - Successfully write /_includes/documents/course.csv to cascade server.
 [2017-08-18 2:18:40 pshan2] - Successfully write /_includes/images/0101601-15BM-F307.jpg to cascade server.
+[2017-08-18 3:29:59 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-18 3:29:59 pshan2] - No remote file needed to be deleted in dest/_includes/documents
+[2017-08-18 3:29:59 pshan2] - No remote file needed to be deleted in dest/_includes/js
+[2017-08-18 3:29:59 pshan2] - No remote file needed to be deleted in dest/_includes/css
+[2017-08-18 3:29:59 pshan2] - No remote file needed to be deleted in dest/_cms/xslt
+[2017-08-18 3:29:59 pshan2] - No remote file needed to be deleted in dest/_includes/php
+[2017-08-18 3:29:59 pshan2] - No remote file needed to be deleted in dest/_includes
+[2017-08-18 3:29:59 pshan2] - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-18 3:29:59 pshan2] - No remote file needed to be deleted in dest/_includes/images
+[2017-08-18 3:29:59 pshan2] - Begin writing dest/_includes/documents/Registrar Class Search SOW.docx in cascade server
+[2017-08-18 3:29:59 pshan2] - Begin writing dest/_includes/documents/sample.xlsx in cascade server
+[2017-08-18 3:29:59 pshan2] - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-18 3:29:59 pshan2] - Begin writing dest/_includes/documents/equal-height.pptx in cascade server
+[2017-08-18 3:29:59 pshan2] - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-18 3:29:59 pshan2] - Begin writing dest/_includes/images/0101601-15BM-F307.jpg in cascade server
+[2017-08-18 3:30:00 pshan2] - Successfully write /_includes/php/local2.php to cascade server.
+[2017-08-18 3:30:00 pshan2] - Successfully write /_includes/php/local.php to cascade server.
+[2017-08-18 3:30:00 pshan2] - Successfully write /_includes/fonts/glyphicons-halflings-regular.ttf to cascade server.
+[2017-08-18 3:30:00 pshan2] - Successfully write /_includes/js/main.min.js to cascade server.
+[2017-08-18 3:30:00 pshan2] - Successfully write /_includes/fonts/glyphicons-halflings-regular.woff2 to cascade server.
+[2017-08-18 3:30:00 pshan2] - Successfully write /_includes/fonts/glyphicons-halflings-regular.woff to cascade server.
+[2017-08-18 3:30:00 pshan2] - Successfully write /_includes/documents/equal-height.pptx to cascade server.
+[2017-08-18 3:30:00 pshan2] - Successfully write /_includes/fonts/glyphicons-halflings-regular.svg to cascade server.
+[2017-08-18 3:30:00 pshan2] - Successfully write /_cms/xslt/local.xslt to cascade server.
+[2017-08-18 3:30:00 pshan2] - Successfully write /_includes/documents/Registrar Class Search SOW.docx to cascade server.
+[2017-08-18 3:30:00 pshan2] - Successfully write /_includes/documents/sample.xlsx to cascade server.
+[2017-08-18 3:30:01 pshan2] - Successfully write /_includes/documents/test.pdf to cascade server.
+[2017-08-18 3:30:01 pshan2] - Successfully write /_includes/css/style.min.css to cascade server.
+[2017-08-18 3:30:01 pshan2] - Successfully write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-18 3:30:01 pshan2] - Successfully write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-18 3:30:01 pshan2] - Successfully write /_includes/images/test.png to cascade server.
+[2017-08-18 3:30:01 pshan2] - Successfully write /_includes/fonts/Lato-Heavy.woff to cascade server.
+[2017-08-18 3:30:13 pshan2] - Successfully write /_includes/documents/course.csv to cascade server.
+[2017-08-18 3:30:17 pshan2] - Successfully write /_includes/images/0101601-15BM-F307.jpg to cascade server.
+[2017-08-18 3:32:37 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-18 3:32:37 pshan2] - No remote file needed to be deleted in dest/_includes
+[2017-08-18 3:32:37 pshan2] - No remote file needed to be deleted in dest/_includes/images
+[2017-08-18 3:32:37 pshan2] - No remote file needed to be deleted in dest/_includes/css
+[2017-08-18 3:32:37 pshan2] - No remote file needed to be deleted in dest/_includes/js
+[2017-08-18 3:32:37 pshan2] - No remote file needed to be deleted in dest/_includes/php
+[2017-08-18 3:32:37 pshan2] - No remote file needed to be deleted in dest/_cms/xslt
+[2017-08-18 3:32:37 pshan2] - Begin writing dest/_includes/documents/Registrar Class Search SOW.docx in cascade server
+[2017-08-18 3:32:37 pshan2] - undefined
+[2017-08-18 3:32:37 pshan2] - Begin writing dest/_includes/documents/equal-height.pptx in cascade server
+[2017-08-18 3:32:37 pshan2] - Begin writing dest/_includes/documents/sample.xlsx in cascade server
+[2017-08-18 3:32:37 pshan2] - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-18 3:32:37 pshan2] - undefined
+[2017-08-18 3:32:37 pshan2] - undefined
+[2017-08-18 3:32:37 pshan2] - undefined
+[2017-08-18 3:32:37 pshan2] - undefined
+[2017-08-18 3:32:37 pshan2] - undefined
+[2017-08-18 3:32:37 pshan2] - undefined
+[2017-08-18 3:32:37 pshan2] - undefined
+[2017-08-18 3:32:37 pshan2] - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-18 3:32:37 pshan2] - undefined
+[2017-08-18 3:32:37 pshan2] - undefined
+[2017-08-18 3:32:37 pshan2] - undefined
+[2017-08-18 3:32:37 pshan2] - undefined
+[2017-08-18 3:32:37 pshan2] - No remote file needed to be deleted in dest/_includes/documents
+[2017-08-18 3:32:37 pshan2] - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-18 3:32:37 pshan2] - Begin writing dest/_includes/images/0101601-15BM-F307.jpg in cascade server
+[2017-08-18 3:32:37 pshan2] - undefined
+[2017-08-18 3:32:37 pshan2] - Successfully write /_includes/php/local.php to cascade server.
+[2017-08-18 3:32:38 pshan2] - Successfully write /_includes/php/local2.php to cascade server.
+[2017-08-18 3:32:38 pshan2] - Successfully write /_includes/fonts/glyphicons-halflings-regular.woff2 to cascade server.
+[2017-08-18 3:32:38 pshan2] - Successfully write /_includes/fonts/glyphicons-halflings-regular.ttf to cascade server.
+[2017-08-18 3:32:38 pshan2] - Successfully write /_includes/fonts/glyphicons-halflings-regular.svg to cascade server.
+[2017-08-18 3:32:38 pshan2] - Successfully write /_includes/documents/equal-height.pptx to cascade server.
+[2017-08-18 3:32:38 pshan2] - Successfully write /_includes/fonts/glyphicons-halflings-regular.woff to cascade server.
+[2017-08-18 3:32:38 pshan2] - Successfully write /_includes/js/main.min.js to cascade server.
+[2017-08-18 3:32:38 pshan2] - Successfully write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-18 3:32:38 pshan2] - Successfully write /_includes/documents/sample.xlsx to cascade server.
+[2017-08-18 3:32:38 pshan2] - Successfully write /_cms/xslt/local.xslt to cascade server.
+[2017-08-18 3:32:38 pshan2] - Successfully write /_includes/documents/Registrar Class Search SOW.docx to cascade server.
+[2017-08-18 3:32:38 pshan2] - Successfully write /_includes/documents/test.pdf to cascade server.
+[2017-08-18 3:32:39 pshan2] - Successfully write /_includes/images/test.png to cascade server.
+[2017-08-18 3:32:39 pshan2] - Successfully write /_includes/css/style.min.css to cascade server.
+[2017-08-18 3:32:39 pshan2] - Successfully write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-18 3:32:39 pshan2] - Successfully write /_includes/fonts/Lato-Heavy.woff to cascade server.
+[2017-08-18 3:32:51 pshan2] - Successfully write /_includes/documents/course.csv to cascade server.
+[2017-08-18 3:32:55 pshan2] - Successfully write /_includes/images/0101601-15BM-F307.jpg to cascade server.
+[2017-08-18 3:42:16 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-18 3:42:16 pshan2] - No remote file needed to be deleted in dest/_includes/php
+[2017-08-18 3:42:16 pshan2] - No remote file needed to be deleted in dest/_includes/js
+[2017-08-18 3:42:16 pshan2] - No remote file needed to be deleted in dest/_includes
+[2017-08-18 3:42:16 pshan2] - No remote file needed to be deleted in dest/_cms/xslt
+[2017-08-18 3:42:16 pshan2] - No remote file needed to be deleted in dest/_includes/images
+[2017-08-18 3:42:16 pshan2] - No remote file needed to be deleted in dest/_includes/css
+[2017-08-18 3:42:16 pshan2] - No remote file needed to be deleted in dest/_includes/fonts
+[2017-08-18 3:42:16 pshan2] - No remote file needed to be deleted in dest/_includes/documents
+[2017-08-18 3:42:16 pshan2] - Begin writing dest/_includes/documents/Registrar Class Search SOW.docx in cascade server
+[2017-08-18 3:42:16 pshan2] - Begin writing dest/_includes/documents/equal-height.pptx in cascade server
+[2017-08-18 3:42:16 pshan2] - Begin writing dest/_includes/documents/sample.xlsx in cascade server
+[2017-08-18 3:42:16 pshan2] - Begin writing dest/_includes/documents/test.pdf in cascade server
+[2017-08-18 3:42:16 pshan2] - Begin writing dest/_includes/images/test.png in cascade server
+[2017-08-18 3:42:16 pshan2] - Begin writing dest/_includes/images/0101601-15BM-F307.jpg in cascade server
+[2017-08-18 3:42:17 pshan2] - Successfully write /_includes/php/local.php to cascade server.
+[2017-08-18 3:42:17 pshan2] - Successfully write /_includes/php/local2.php to cascade server.
+[2017-08-18 3:42:17 pshan2] - Successfully write /_includes/fonts/glyphicons-halflings-regular.woff2 to cascade server.
+[2017-08-18 3:42:17 pshan2] - Successfully write /_includes/js/main.min.js to cascade server.
+[2017-08-18 3:42:18 pshan2] - Successfully write /_cms/xslt/local.xslt to cascade server.
+[2017-08-18 3:42:18 pshan2] - Successfully write /_includes/documents/equal-height.pptx to cascade server.
+[2017-08-18 3:42:18 pshan2] - Successfully write /_includes/fonts/glyphicons-halflings-regular.woff to cascade server.
+[2017-08-18 3:42:18 pshan2] - Successfully write /_includes/fonts/glyphicons-halflings-regular.ttf to cascade server.
+[2017-08-18 3:42:18 pshan2] - Successfully write /_includes/fonts/glyphicons-halflings-regular.svg to cascade server.
+[2017-08-18 3:42:18 pshan2] - Successfully write /_includes/documents/test.pdf to cascade server.
+[2017-08-18 3:42:18 pshan2] - Successfully write /_includes/documents/Registrar Class Search SOW.docx to cascade server.
+[2017-08-18 3:42:18 pshan2] - Successfully write /_includes/fonts/fontawesome-webfont.eot to cascade server.
+[2017-08-18 3:42:18 pshan2] - Successfully write /_includes/documents/sample.xlsx to cascade server.
+[2017-08-18 3:42:18 pshan2] - Successfully write /_includes/css/style.min.css to cascade server.
+[2017-08-18 3:42:18 pshan2] - Successfully write /_includes/images/test.png to cascade server.
+[2017-08-18 3:42:18 pshan2] - Successfully write /_includes/fonts/FontAwesome.otf to cascade server.
+[2017-08-18 3:42:19 pshan2] - Successfully write /_includes/fonts/Lato-Heavy.woff to cascade server.
+[2017-08-18 3:42:31 pshan2] - Successfully write /_includes/documents/course.csv to cascade server.
+[2017-08-18 3:42:37 pshan2] - Successfully write /_includes/images/0101601-15BM-F307.jpg to cascade server.

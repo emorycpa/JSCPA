@@ -2,6 +2,7 @@ var dir = require('node-dir');
 var fs = require('fs');
 var Promise = require("bluebird");
 var winston = require('winston');
+var ProgressBar = require('progress');
 
 /*Local Variable */
 var index = require('./index.js');
@@ -161,9 +162,18 @@ var writeRemote = (siteName, localCollection, cascadeTypeAPI, fileType, dest) =>
             } else {
                 //String as file content
                 readFile(localItem, 'utf8').then(function(content) {
-                        cascadeLog.log('info', 'Begin writing ' + localItem + ' in cascade server');
+                        var len = content.length;
+                        var bar = new ProgressBar('Uploading ' + localItem + ' [:bar] :rate/bps :percent :etas', {
+                            complete: '=',
+                            incomplete: ' ',
+                            width: 20,
+                            total: len
+                        });
+                        bar.tick();
                         localItem = localItem.substring(localItem.indexOf(dest) + dest.length);
                         cascadeTypeAPI['write'](sitedata.sitename, localItem, content).then(function(data) {
+
+                            bar.tick(len);
                             writeCascadeResponse = { 'code': data.data.success.toString().trim() };
                             if (writeCascadeResponse.code == 'false') {
                                 writeCascadeResponse.message = 'Problem in writing ' + localItem + ": " + data.data.message;

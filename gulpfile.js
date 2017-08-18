@@ -18,7 +18,7 @@ var prompt = require('gulp-prompt');
 var gulpSequence = require('gulp-sequence');
 var fs = require('fs');
 var print = require('gulp-print');
-//var colors = require('colors/safe');
+var ProgressBar = require('progress');
 //var Github = require('github-api');
 var moment = require('moment');
 var del = require('del');
@@ -159,6 +159,7 @@ gulp.task('cascade', ['local:documents'], function() {
                         process.deleteProcess(sitedata.sitename, subdir, initAPI.folder, initAPI[type], type, dest)
                             .then(function(deleteResult) {
                                 if (deleteResult.code == 'true' || !("message" in deleteResult)) {
+
                                     process.writeProcess(sitedata.sitename, deleteResult.localCollection, initAPI[type], type, dest).then(function(writeRes) {
 
                                     }).catch(function(rej) { cascadeLog.log('error', rej.message); });
