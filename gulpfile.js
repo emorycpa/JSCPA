@@ -72,16 +72,17 @@ gulp.task('local:init', ['local:reminder'], function() {
     });
 });
 
-//Parse Templates to Velocity. Currently just test file uploading
-gulp.task('local:vm', ['local:init'], function() {
-    return gulp.src(baseSrc + '/vm/**/*')
-        .pipe(gulp.dest(dest + '/' + cmsSrc + '/vm'));
-});
 
 //Parse Templates to Data Definition XML
-gulp.task('local:xslt', ['local:vm'], function() {
+gulp.task('local:xslt', ['local:init'], function() {
     return gulp.src(baseSrc + '/xslt/**/*')
         .pipe(gulp.dest(dest + '/' + cmsSrc + '/xslt'));
+});
+
+//Parse Templates to Velocity. Currently just test file uploading
+gulp.task('local:vm', ['local:xslt'], function() {
+    return gulp.src(baseSrc + '/vm/**/*')
+        .pipe(gulp.dest(dest + '/' + cmsSrc + '/vm'));
 });
 
 //PHPs

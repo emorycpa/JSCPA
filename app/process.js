@@ -169,7 +169,6 @@ var writeRemote = (siteName, localCollection, cascadeTypeAPI, fileType, dest) =>
                                 writeCascadeResponse.message = 'Problem in writing ' + localItem + ": " + data.data.message;
                                 cascadeLog.log('error', writeCascadeResponse.message);
                                 cascadeLog.log('alert', localItem + ' is too large that it cannot be uploaded through this tool. Please upload it MANUALLY to ' + sitedata.hostname + '/' + sitedata.sitename);
-
                             } else {
                                 writeCascadeResponse.message = 'Successfully write ' + localItem + ' to cascade server.';
                                 cascadeLog.log('info', writeCascadeResponse.message);
