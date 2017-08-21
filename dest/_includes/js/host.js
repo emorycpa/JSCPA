@@ -1,0 +1,1 @@
+var Promise=blue,Host=function(s){return this.name=s,this.userName="pshan2",this.password="Spy62710!",this};module.exports=Host;

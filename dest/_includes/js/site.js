@@ -1,0 +1,1 @@
+var host=require("./host.js"),Site=function(e){this.name=e,this.lastModifiedBy=host.userName,this.lastModifiedDateTime=Date.now(),this.getFolder=function(t){return console.log("getFolder"),e}};module.exports=Site;

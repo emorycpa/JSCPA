@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".toggle-button").click(function(){$(".toggle-reveal__horizontal").animate({width:"toggle"})})}),$(document).ready(function(e){var o=function(){var o=document.body.clientWidth;o<767?e(".nav-search").removeClass("toggle-reveal__horizontal"):o>=768&&e(".nav-search").addClass("toggle-reveal__horizontal")};e(window).resize(function(){o()}),o()});

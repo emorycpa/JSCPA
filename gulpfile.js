@@ -1,50 +1,51 @@
 /**
  * Node modules
  */
-var mkdirp = require('mkdirp');
-var gulp = require('gulp');
-var clean = require('gulp-clean');
-var cache = require('gulp-cache');
-var concat = require('gulp-concat');
-var rename = require('gulp-rename');
-var sass = require('gulp-sass');
-var concatCss = require('gulp-concat-css');
-var uglify = require('gulp-uglify');
-var foreach = require('gulp-foreach');
-var imagemin = require('gulp-imagemin');
-var changed = require('gulp-changed');
-var dir = require('node-dir');
-var prompt = require('gulp-prompt');
-var gulpSequence = require('gulp-sequence');
-var fs = require('fs');
-var print = require('gulp-print');
-var ProgressBar = require('progress');
-//var Github = require('github-api');
-var moment = require('moment');
-var del = require('del');
+const mkdirp = require('mkdirp');
+const gulp = require('gulp');
+const clean = require('gulp-clean');
+const cache = require('gulp-cache');
+const concat = require('gulp-concat');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass');
+const concatCss = require('gulp-concat-css');
+const uglify = require('gulp-uglify');
+const foreach = require('gulp-foreach');
+const imagemin = require('gulp-imagemin');
+const changed = require('gulp-changed');
+const dir = require('node-dir');
+const prompt = require('gulp-prompt');
+const gulpSequence = require('gulp-sequence');
+const fs = require('fs');
+const print = require('gulp-print');
+const ProgressBar = require('progress');
+const moment = require('moment');
+const del = require('del');
 
 
 /**
  * Fixed Constants
  */
-var baseSrc = 'src';
-var resourceSrc = '_includes';
-var cmsSrc = '_cms';
-var dest = 'dest';
+const baseSrc = 'src';
+const resourceSrc = '_includes';
+const cmsSrc = '_cms';
+const dest = 'dest';
+
+
 
 /**
  * Local modules
  */
-var site = require('./app/data/sitedata.js');
-var init = require('./app/index.js');
-var cascadeFolderAPI = require("./app/cascade/cascade.folder.js");
-var cascadeFileAPI = require("./app/cascade/cascade.file.js");
-var cascadeScriptFormatAPI = require("./app/cascade/cascade.scriptFormat.js");
-var cascadeXSLTFormatAPI = require("./app/cascade/cascade.xsltFormat.js");
-var process = require('./app/process.js');
-var cascadeLog = require('./app/log/logger.js');
-var sitedata = site.sitedata();
-var foldertype = site.foldertype();
+const site = require('./app/data/sitedata.js');
+const init = require('./app/index.js');
+const cascadeFolderAPI = require("./app/cascade/cascade.folder.js");
+const cascadeFileAPI = require("./app/cascade/cascade.file.js");
+const cascadeScriptFormatAPI = require("./app/cascade/cascade.scriptFormat.js");
+const cascadeXSLTFormatAPI = require("./app/cascade/cascade.xsltFormat.js");
+const process = require('./app/process.js');
+const cascadeLog = require('./app/log/logger.js');
+const sitedata = site.sitedata();
+const foldertype = site.foldertype();
 
 /**
  * Local File Process
@@ -95,16 +96,16 @@ gulp.task('local:phps', ['local:xslt'], function() {
 gulp.task('local:sass', ['local:phps'], function() {
     return gulp.src(baseSrc + '/' + resourceSrc + '/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(concatCss('style.css'))
-        .pipe(rename({ suffix: '.min' }))
+        //.pipe(concatCss('style.css'))
+        //.pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest(dest + '/' + resourceSrc + '/css'));
 });
 
 // Concatenate & Minify JS -> Compare if changed -> Move to Dist Folder
 gulp.task('local:scripts', ['local:sass'], function() {
     return gulp.src(baseSrc + '/' + resourceSrc + '/js/**/*.js')
-        .pipe(concat('main.js'))
-        .pipe(rename({ suffix: '.min' }))
+        //.pipe(concat('main.js'))
+        //.pipe(rename({ suffix: '.min' }))
         .pipe(uglify())
         .pipe(gulp.dest(dest + '/' + resourceSrc + '/js'));
 });
@@ -143,8 +144,8 @@ gulp.task('cascade', ['local:documents'], function() {
     }], function(res) {
         cascadeLog.user = res.username;
         cascadeLog.log('info', res.username + ' start updating files in ' + sitedata.sitename + '---------------');
-        var initAPI = init.initAPI(sitedata.hostname, res.username, res.password);
-        var APIList = {
+        const initAPI = init.initAPI(sitedata.hostname, res.username, res.password);
+        const APIList = {
             'file': cascadeFileAPI.init(initAPI),
             'folder': cascadeFolderAPI.init(initAPI),
             'scriptFormat': cascadeScriptFormatAPI.init(initAPI),
@@ -152,18 +153,13 @@ gulp.task('cascade', ['local:documents'], function() {
         };
         dir.paths(dest, function(err, paths) {
             paths.dirs.forEach(function(subdir) {
-                var foldertypes = Object.keys(foldertype);
+                const foldertypes = Object.keys(foldertype);
                 foldertypes.forEach(function(type) {
-                    var targetFolder = foldertype[type];
-                    if (subdir.indexOf(targetFolder) >= 0) {
+                    if (subdir.indexOf(foldertype[type]) >= 0) {
                         process.deleteProcess(sitedata.sitename, subdir, initAPI.folder, initAPI[type], type, dest)
                             .then(function(deleteResult) {
-
                                 if (deleteResult.code == 'true' || !("message" in deleteResult)) {
-
-                                    process.writeProcess(sitedata.sitename, deleteResult.localCollection, initAPI[type], type, dest).then(function(writeRes) {
-
-                                    }).catch(function(rej) { cascadeLog.log('error', rej.message); });
+                                    process.writeProcess(sitedata.sitename, deleteResult.localCollection, initAPI[type], type, dest).then(function(writeRes) {}).catch(function(rej) { cascadeLog.log('error', rej.message); });
                                 } else {}
                             })
                             .catch(function(rej) { cascadeLog.log('error', rej.message); });

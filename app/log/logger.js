@@ -1,43 +1,26 @@
-var winston = require('winston');
-var moment = require('moment');
-var colors = require('colors/safe');
+const winston = require('winston');
+const moment = require('moment');
+const colors = require('colors/safe');
 
 /**
  * Log Setting
  */
-var logLevels = {
-    levels: {
-        info: 0,
-        success: 1,
-        warning: 2,
-        error: 3,
-        debug: 4
-    },
-    colors: {
-        info: 'blue',
-        success: 'green',
-        warning: 'yellow',
-        error: 'red',
-        debug: 'black'
+
+const customFormatter = function(user, msg) {
+    const now = moment().utcOffset(-5).format('YYYY-MM-DD h:mm:ss'); //est timezone
+    if (msg == '') {
+        return '';
+    } else {
+        return '[' + now + ' ' + user + ']' + ' - ' + msg;
     }
 }
 
-var customFormatter = function(user, msg) {
-        var now = moment().utcOffset(-5).format('YYYY-MM-DD h:mm:ss'); //est timezone
-        if (msg == '') {
-            return '';
-        } else {
-            return '[' + now + ' ' + user + ']' + ' - ' + msg;
-        }
-    }
-    //Remove extra dates in file
-var fileFormatter = function(options) {
+//Remove extra dates in log file
+const fileFormatter = function(options) {
     return (options.message ? options.message : '');
 }
 
-//winston.setLevels(logLevels.levels);
-//winston.addColors()
-var cascadeLogger = new winston.Logger({
+const cascadeLogger = new winston.Logger({
     transports: [
         new(winston.transports.File)({
             level: 'info',
@@ -58,7 +41,6 @@ var cascadeLogger = new winston.Logger({
         })
     ]
 });
-//console.log(cascadeLogger);
 
 module.exports = {
     user: '',
