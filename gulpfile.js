@@ -158,6 +158,7 @@ gulp.task('cascade', ['local:documents'], function() {
                     if (subdir.indexOf(targetFolder) >= 0) {
                         process.deleteProcess(sitedata.sitename, subdir, initAPI.folder, initAPI[type], type, dest)
                             .then(function(deleteResult) {
+
                                 if (deleteResult.code == 'true' || !("message" in deleteResult)) {
 
                                     process.writeProcess(sitedata.sitename, deleteResult.localCollection, initAPI[type], type, dest).then(function(writeRes) {

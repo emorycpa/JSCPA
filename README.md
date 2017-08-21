@@ -42,26 +42,26 @@ _Example screen videos are recorded on Mac, but guidelines for Windows environme
 
 3. Open Github Desktop. In menu, select **File -> Clone Repository**
 
-<img src="readme/clone_repo.png" width="600"/>
+<img src="./readme/clone_repo.png" width="600"/>
 
 4. Enter https://github.com/emorycpa/JSCPA.git in `Repository URL` field, and select a location for this repository. Then click `Clone` to clone repository
 
-<img src="readme/choose_location.png" width="600"/>
+<img src="./readme/choose_location.png" width="600"/>
 
 5. Open Visual Studio Code, then open integrated terminal by selecting `View -> Integrated Terminal`. If you prefer terminal, you can open your favorite terminal on your machine and navigate to this directory
 
-<img src="readme/open_terminal.png" height="300"/>
+<img src="./readme/open_terminal.png" height="300"/>
 <br/>
-<img src="readme/vs_terminal.png" width="600"/>
+<img src="./readme/vs_terminal.png" width="600"/>
 <br/>
-<img src="readme/mac_terminal.png" width="600"/>
+<img src="./readme/mac_terminal.png" width="600"/>
 <br/>
 
 ### 4. Install node package on your machine
 
 6. Run `npm install` in your terminal. Node will automatically install necessary modules for this app, refering `package.json` file in repository. (*You may need administration right to install this*)
 
-<img src="readme/npm_install.png" width="800"/>
+<img src="./readme/npm_install.png" width="800"/>
 
 If you want to make sure that all modules have been installed successfully, you can run `npm list` to list all installed modules and messages.
 
@@ -69,7 +69,7 @@ If you want to make sure that all modules have been installed successfully, you 
  
 Just type `gulp` in root directory of repository folder, then enter answers to questions (Type your answer then hit `Enter` on keyboard). You are done!
 
-<img src="readme/tty.gif" width="600"/>
+<img src="./readme/tty.gif" width="600"/>
 
 ## Structure of Program
 
