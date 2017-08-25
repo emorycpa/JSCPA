@@ -1,14 +1,14 @@
-let dir = require('node-dir');
-let fs = require('fs');
+const fs = require('fs');
+const dir = require('node-dir');
 const Promise = require("bluebird");
 const winston = require('winston');
 const ProgressBar = require('progress');
 const colors = require('colors/safe');
 
 /*Local Variable */
-const index = require('./index.js');
 const site = require('./data/sitedata.js');
 const cascadeLog = require('./log/logger.js');
+const cascadeObject = require('./data/object.js');
 const dirFiles = Promise.promisify(dir.files);
 const readFile = Promise.promisify(fs.readFile);
 const remotecontent = site.contenttype();
@@ -17,14 +17,14 @@ const remotetype = site.remotetype();
 
 //Helper Function
 function onlyUnique(value, index, self) {
-    return self.indexOf(value) === index;
+    return self.indexOf(value.path) === index;
 }
 let alreadyWritten = [];
 
 
-exports.deleteProcess = function(siteName, mainDir, cascadeFolderAPI, cascadeTypeAPI, fileType, dest) {
+exports.deleteProcess = function(cascadeFolderAPI, cascadeObjectAPI, path) {
     return new Promise(function(resolve, reject) {
-        deleteRemote(siteName, mainDir, cascadeFolderAPI, cascadeTypeAPI, fileType, dest).then(function(deleteRes) {
+        deleteRemote(cascadeFolderAPI, cascadeObjectAPI, path).then(function(deleteRes) {
             resolve(deleteRes);
         });
     });
@@ -51,31 +51,41 @@ exports.writeProcess = function(siteName, localCollection, cascadeTypeAPI, fileT
 
 
 
-let deleteRemote = (siteName, mainDir, cascadeFolderAPI, cascadeTypeAPI, fileType, dest) =>
+const deleteRemote = (cascadeFolderAPI, cascadeObjectAPI, path) =>
     new Promise(function(resolve, reject) {
-        let remoteCollection = {};
+        //Get local file list for current path. Generate a array of cascadeObjects
         let localCollection = [];
-        dirFiles(mainDir).then((subItems) => {
+
+        dirFiles(path).then((subItems) => {
             subItems.forEach(function(sub) {
-                localCollection.push(sub);
+                var localObject = new cascadeObject.cascadeBase(sub, true, false);
+                localCollection.push(localObject);
             });
-            localCollection = localCollection.filter(onlyUnique);
-            readRemote(cascadeFolderAPI, mainDir, remoteCollection, localCollection, dest, fileType).then(function(remoteItem) {
-                if (remoteItem.onlyRemote && remoteItem.onlyRemote.length > 0) {
-                    deleteCascade(remoteItem.onlyRemote, cascadeTypeAPI, dest).then(function(newResult) {
-                        newResult.localCollection = localCollection;
-                        resolve(newResult);
-                    });
-                } else {
-                    remoteItem.result.localCollection = localCollection;
-                    resolve(remoteItem.result);
-                }
-            });
-        }).catch(e => {
-            cascadeLog.log('error', 'Error in deleting process: ' + e);
-            reject(e);
-        }); //End of dir.promiseFiles
-    });
+            cascadeLog.log('debug', localCollection);
+            localCollection = localCollection.filter(
+                function(item, pos) { return localCollection.indexOf(item.path) === pos; }
+            );
+            cascadeLog.log('debug', localCollection);
+        });
+
+
+        /*
+        readRemote(cascadeFolderAPI, remoteCollection, localCollection, cascadeSingleObject).then(function(remoteItem) {
+            if (remoteItem.onlyRemote && remoteItem.onlyRemote.length > 0) {
+                deleteCascade(remoteItem.onlyRemote, cascadeTypeAPI, dest).then(function(newResult) {
+                    newResult.localCollection = localCollection;
+                    resolve(newResult);
+                });
+            } else {
+                remoteItem.result.localCollection = localCollection;
+                resolve(remoteItem.result);
+            }
+        });
+        */
+    }).catch(e => {
+        cascadeLog.log('error', 'Error in deleting process: ' + e);
+        reject(e);
+    }); //End of dir.promiseFiles
 
 
 let readRemote = (cascadeFolderAPI, mainDir, remoteCollection, localCollection, dest, fileType) => new Promise(function(resolve, reject) {

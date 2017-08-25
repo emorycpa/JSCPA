@@ -36,8 +36,8 @@ const dest = 'dest';
 /**
  * Local modules
  */
+const cascadeObject = require('./app/data/object.js');
 const site = require('./app/data/sitedata.js');
-const init = require('./app/index.js');
 const cascadeFolderAPI = require("./app/cascade/cascade.folder.js");
 const cascadeFileAPI = require("./app/cascade/cascade.file.js");
 const cascadeScriptFormatAPI = require("./app/cascade/cascade.scriptFormat.js");
@@ -55,7 +55,7 @@ gulp.task('local:reminder', () => {
         message: 'Have you update your changes with Github? If not, please type no and update it.',
         default: false
     };
-    return gulp.src('./app/index.js')
+    return gulp.src('./app/data/sitedata.js')
         .pipe(prompt.confirm(question));
 });
 
@@ -133,7 +133,7 @@ gulp.task('local:documents', ['local:fonts'], function() {
  * Cacade API 
  */
 gulp.task('cascade', ['local:documents'], function() {
-    return gulp.src('./app/index.js').pipe(prompt.prompt([{
+    return gulp.src('./app/data/sitedata.js').pipe(prompt.prompt([{
         type: 'input',
         name: 'username',
         message: 'Please input your cascade user name'
@@ -144,18 +144,41 @@ gulp.task('cascade', ['local:documents'], function() {
     }], function(res) {
         cascadeLog.user = res.username;
         cascadeLog.log('info', res.username + ' start updating files in ' + sitedata.sitename + '---------------');
-        const initAPI = init.initAPI(sitedata.hostname, res.username, res.password);
-        const APIList = {
-            'file': cascadeFileAPI.init(initAPI),
-            'folder': cascadeFolderAPI.init(initAPI),
-            'scriptFormat': cascadeScriptFormatAPI.init(initAPI),
-            'xsltFormat': cascadeXSLTFormatAPI.init(initAPI)
-        };
+        const initAPI = cascadeObject.initAPI(sitedata.hostname, res.username, res.password);
+
         dir.paths(dest, function(err, paths) {
             paths.dirs.forEach(function(subdir) {
                 const foldertypes = Object.keys(foldertype);
+                var folderAPI = cascadeFolderAPI.init(initAPI); //for read action in process.js
                 foldertypes.forEach(function(type) {
+                    var cascadeBase = new cascadeObject.cascadeBase(subdir, true, false);
                     if (subdir.indexOf(foldertype[type]) >= 0) {
+                        switch (type) {
+                            case 'folder':
+
+                                break;
+                            case 'file':
+                                var fileAPI = cascadeFileAPI.init(initAPI);
+                                process.deleteProcess(folderAPI, fileAPI, subdir)
+                                    .then(function(deleteResult) {
+                                        /*
+                                        if (deleteResult.code == 'true' || !("message" in deleteResult)) {
+                                            process.writeProcess(sitedata.sitename, deleteResult.localCollection, initAPI[type], type, dest).then(function(writeRes) {}).catch(function(rej) { cascadeLog.log('error', rej.message); });
+                                        } else {}
+                                        */
+                                    })
+                                    .catch(function(rej) { cascadeLog.log('error', rej.message); });
+                                break;
+                            case 'scriptFormat':
+                                var scriptFormat = cascadeScriptFormatAPI.init(initAPI);
+                                break;
+                            case 'xsltFormat':
+                                var xsltFormat = cascadeXSLTFormatAPI.init(initAPI);
+                                break;
+                            default:
+                                cascadeLog.log('alert', 'Please assign correct file type. Exit now');
+                        }
+                        /*
                         process.deleteProcess(sitedata.sitename, subdir, initAPI.folder, initAPI[type], type, dest)
                             .then(function(deleteResult) {
                                 if (deleteResult.code == 'true' || !("message" in deleteResult)) {
@@ -163,6 +186,7 @@ gulp.task('cascade', ['local:documents'], function() {
                                 } else {}
                             })
                             .catch(function(rej) { cascadeLog.log('error', rej.message); });
+                            */
                     }
                 });
             });

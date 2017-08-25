@@ -25,7 +25,6 @@
  * Method for reading an asset that returns a promise
  * 
  * @param object ReadAsset An object with type and indentifiers
- * @return promise The promise is passed {data: returnDada, request: RestRequestObj}  
  */
 
 /*
@@ -66,10 +65,3 @@
  * 
  * @return promise The promise is passed {data: returnDada, request: RestRequestObj}  
  */
-
-
-var CascadeRESTAPI = require("./cascade/cascade.js");
-exports.initAPI = function(hostname, username, password, config) {
-    var cascadeRESTAPI = CascadeRESTAPI.init(hostname, username, password, Object.assign({}, config));
-    return cascadeRESTAPI;
-}
