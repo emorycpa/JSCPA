@@ -13,6 +13,7 @@ const dirFiles = Promise.promisify(dir.files);
 const readFile = Promise.promisify(fs.readFile);
 const remotecontent = site.contenttype();
 const sitedata = site.sitedata();
+const dest = sitedata.dest;
 const remotetype = site.remotetype();
 
 //Helper Function
@@ -22,9 +23,9 @@ function onlyUnique(value, index, self) {
 let alreadyWritten = [];
 
 
-exports.deleteProcess = function(cascadeFolderAPI, cascadeObjectAPI, path) {
+exports.deleteProcess = function(initAPI, localFolder) {
     return new Promise(function(resolve, reject) {
-        deleteRemote(cascadeFolderAPI, cascadeObjectAPI, path).then(function(deleteRes) {
+        deleteRemote(initAPI, localFolder).then(function(deleteRes) {
             resolve(deleteRes);
         });
     });
@@ -51,76 +52,106 @@ exports.writeProcess = function(siteName, localCollection, cascadeTypeAPI, fileT
 
 
 
-const deleteRemote = (cascadeFolderAPI, cascadeObjectAPI, path) =>
+const deleteRemote = (initAPI, localFolder) =>
     new Promise(function(resolve, reject) {
         //Get local file list for current path. Generate a array of cascadeObjects
         let localCollection = [];
-
-        dirFiles(path).then((subItems) => {
-            subItems.forEach(function(sub) {
-                var localObject = new cascadeObject.cascadeBase(sub, true, false);
-                localCollection.push(localObject);
+        dirFiles(localFolder.path).then((subLocalFiles) => {
+            subLocalFiles.forEach(function(subLocalFilePath) {
+                var subLocalFile = new cascadeObject.cascadeBase(subLocalFilePath, true, false);
+                localCollection.push(subLocalFile);
             });
-            cascadeLog.log('debug', localCollection);
-            localCollection = localCollection.filter(
-                function(item, pos) { return localCollection.indexOf(item.path) === pos; }
-            );
-            cascadeLog.log('debug', localCollection);
+            //console.log(initAPI);
+            readRemote(initAPI, localFolder, localCollection).then(function(remoteItem) {
+                /*
+                if (remoteItem.onlyRemote && remoteItem.onlyRemote.length > 0) {
+                    deleteCascade(remoteItem.onlyRemote, cascadeTypeAPI, dest).then(function(newResult) {
+                        newResult.localCollection = localCollection;
+                        resolve(newResult);
+                    });
+                } else {
+                    remoteItem.result.localCollection = localCollection;
+                    resolve(remoteItem.result);
+                }
+                */
+            });
         });
-
-
-        /*
-        readRemote(cascadeFolderAPI, remoteCollection, localCollection, cascadeSingleObject).then(function(remoteItem) {
-            if (remoteItem.onlyRemote && remoteItem.onlyRemote.length > 0) {
-                deleteCascade(remoteItem.onlyRemote, cascadeTypeAPI, dest).then(function(newResult) {
-                    newResult.localCollection = localCollection;
-                    resolve(newResult);
-                });
-            } else {
-                remoteItem.result.localCollection = localCollection;
-                resolve(remoteItem.result);
-            }
-        });
-        */
     }).catch(e => {
         cascadeLog.log('error', 'Error in deleting process: ' + e);
         reject(e);
     }); //End of dir.promiseFiles
 
-
-let readRemote = (cascadeFolderAPI, mainDir, remoteCollection, localCollection, dest, fileType) => new Promise(function(resolve, reject) {
-    cascadeFolderAPI.read(sitedata.sitename, mainDir.substring(dest.length))
-        .then(function(res) {
-            let resolveItem = {};
-            if (res.data.success.toString().trim() == 'true') {
-                res.data.asset.folder.children.forEach(function(remoteItem) {
-                    if (remoteItem.type == remotetype[fileType] && remoteItem['recycled'] == false) {
-                        var remotePath = remoteItem.path.path
-                        if (!remoteCollection.hasOwnProperty(remotePath)) {
-                            remoteCollection[remotePath] = remotePath;
+/**
+ * Return an array of remote-only cascade object(type can be file, scriptFormat, xsltFormat...)
+ * @param {cascadeAPI} initAPI 
+ * @param {cascadeFolder Object} localFolder 
+ * @param {Empty Arrary} localCollection 
+ */
+const readRemote = (initAPI, localFolder, localCollection) => new Promise(function(resolve, reject) {
+    let remoteCollection = [];
+    //console.log(localCollection);
+    if (localCollection.length > 0) {
+        initAPI.folder.read(new cascadeObject.cascadeBase(localFolder.getRemotePath(dest)))
+            .then(function(res) {
+                let resolveItem = {};
+                if (res.data.success.toString().trim() == 'true') {
+                    res.data.asset.folder.children.forEach(function(remoteItem) {
+                        if (remoteItem['recycled'] == false) {
+                            //cascadeLog.log('debug', remoteItem['type']);
+                            switch (remoteItem['type']) {
+                                case 'folder':
+                                    break;
+                                case 'file':
+                                    var remoteFile = new cascadeObject.cascadeFile(remoteItem.path.path, false, true);
+                                    remoteFile.setId(remoteItem.id);
+                                    remoteFile.setSiteId(remoteItem.path.siteId);
+                                    remoteCollection.push(remoteFile);
+                                    break;
+                                case 'scriptFormat':
+                                    break;
+                                default:
+                                    break;
+                            }
                         }
+                    });
+                    const onlyRemote = remoteCollection.map(function(r) { r.path = dest + '/' + r.path; return r; })
+                        .filter(function(r) {
+                            return JSON.stringify(localCollection).indexOf(JSON.stringify(new cascadeObject.cascadeBase(r.path, true, false))) < 0;
+                        });
+                    if (onlyRemote.length == 0) {
+                        var result = { 'code': 'true', 'message': 'No remote file needed to be deleted in ' + localFolder.getRemotePath(dest), 'localCollection': localCollection };
+                    } else {
+                        onlyRemote.map(function(o) {
+                            o.path = o.getRemotePath(dest);
+                            o.status.local = false;
+                            o.status.remote = true;
+                        });
+                        //Method for moving onlyRemote to temporary folder
+                        console.log(onlyRemote);
+
+
+                        const result = { 'code': 'true', 'message': JSON.stringify(onlyRemote) + ' have been removed to temporary deletion folder', 'localCollection': localCollection };
+                        cascadeLog.log('info', result.message);
+                        resolveItem.onlyRemote = onlyRemote;
+                        resolveItem.result = result;
                     }
-                });
-                const remoteFiles = Object.keys(remoteCollection);
-                const onlyRemote = remoteFiles.map(function(r) { return dest + '/' + r }).filter(x => localCollection.indexOf(x) < 0);
-                if (onlyRemote.length == 0) {
-                    result = { 'code': 'true', 'message': 'No remote file needed to be deleted in ' + mainDir, 'localCollection': localCollection };
+                    resolve(resolveItem);
                 } else {
-                    resolveItem.onlyRemote = onlyRemote;
+                    result = { 'code': 'false', 'message': res.data.message, 'localCollection': localCollection };
+                    cascadeLog.log('error', result.message);
+                    resolveItem.result = resolveItem;
                 }
-                cascadeLog.log('info', result.message);
-                resolveItem.result = result;
-            } else {
-                result = { 'code': 'false', 'message': res.data.message, 'localCollection': localCollection };
-                cascadeLog.log('error', result.message);
-                resolveItem.result = resolveItem;
-            }
-            resolve(resolveItem);
-        }).catch(e => cascadeLog.log('error', 'Error in reading remote files in' + mainDir.substring(dest.length) + ' process: ' + e));
+                resolve(resolveItem);
+            }).catch(e => cascadeLog.log('error', 'Error in reading remote files in' + localFolder.getRemotePath(dest) + ' process: ' + e));
+    } else {
+        var result = { 'code': 'true', 'message': 'No remote file needed to be deleted in ' + localFolder.getRemotePath(dest), 'localCollection': localCollection };
+        resolve(resolveItem);
+    }
+
 });
 
 
-let deleteCascade = (onlyRemote, cascadeTypeAPI, dest) => new Promise(function(resolve, reject) {
+const deleteCascade = (onlyRemote, cascadeTypeAPI, dest) => new Promise(function(resolve, reject) {
     let deleteCascadeResponse;
     onlyRemote.forEach(function(remoteItem) {
         remoteItem = remoteItem.substring(dest.length);
@@ -144,7 +175,7 @@ let deleteCascade = (onlyRemote, cascadeTypeAPI, dest) => new Promise(function(r
 });
 
 
-let writeRemote = (siteName, localCollection, cascadeTypeAPI, fileType, dest) => new Promise(function(resolve, reject) {
+const writeRemote = (siteName, localCollection, cascadeTypeAPI, fileType, dest) => new Promise(function(resolve, reject) {
     localCollection.forEach(function(localItem) {
         //cascadeLog.log('debug', alreadyWritten);
         //not process repeating file

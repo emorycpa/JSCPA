@@ -23,14 +23,6 @@ const moment = require('moment');
 const del = require('del');
 
 
-/**
- * Fixed Constants
- */
-const baseSrc = 'src';
-const resourceSrc = '_includes';
-const cmsSrc = '_cms';
-const dest = 'dest';
-
 
 
 /**
@@ -45,6 +37,10 @@ const cascadeXSLTFormatAPI = require("./app/cascade/cascade.xsltFormat.js");
 const process = require('./app/process.js');
 const cascadeLog = require('./app/log/logger.js');
 const sitedata = site.sitedata();
+const dest = sitedata.dest;
+const cmsSrc = sitedata.cmsSrc;
+const baseSrc = sitedata.baseSrc;
+const resourceSrc = sitedata.resourceSrc;
 const foldertype = site.foldertype();
 
 /**
@@ -96,8 +92,6 @@ gulp.task('local:phps', ['local:xslt'], function() {
 gulp.task('local:sass', ['local:phps'], function() {
     return gulp.src(baseSrc + '/' + resourceSrc + '/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        //.pipe(concatCss('style.css'))
-        //.pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest(dest + '/' + resourceSrc + '/css'));
 });
 
@@ -145,11 +139,10 @@ gulp.task('cascade', ['local:documents'], function() {
         cascadeLog.user = res.username;
         cascadeLog.log('info', res.username + ' start updating files in ' + sitedata.sitename + '---------------');
         const initAPI = cascadeObject.initAPI(sitedata.hostname, res.username, res.password);
-
         dir.paths(dest, function(err, paths) {
             paths.dirs.forEach(function(subdir) {
                 const foldertypes = Object.keys(foldertype);
-                var folderAPI = cascadeFolderAPI.init(initAPI); //for read action in process.js
+                cascadeFolderAPI.init(initAPI); //for read action in process.js
                 foldertypes.forEach(function(type) {
                     var cascadeBase = new cascadeObject.cascadeBase(subdir, true, false);
                     if (subdir.indexOf(foldertype[type]) >= 0) {
@@ -158,8 +151,9 @@ gulp.task('cascade', ['local:documents'], function() {
 
                                 break;
                             case 'file':
-                                var fileAPI = cascadeFileAPI.init(initAPI);
-                                process.deleteProcess(folderAPI, fileAPI, subdir)
+                                cascadeFileAPI.init(initAPI);
+                                const localFolder = new cascadeObject.cascadeFolder(subdir, 'true', 'false');
+                                process.deleteProcess(initAPI, localFolder)
                                     .then(function(deleteResult) {
                                         /*
                                         if (deleteResult.code == 'true' || !("message" in deleteResult)) {
@@ -170,10 +164,10 @@ gulp.task('cascade', ['local:documents'], function() {
                                     .catch(function(rej) { cascadeLog.log('error', rej.message); });
                                 break;
                             case 'scriptFormat':
-                                var scriptFormat = cascadeScriptFormatAPI.init(initAPI);
+                                cascadeScriptFormatAPI.init(initAPI);
                                 break;
                             case 'xsltFormat':
-                                var xsltFormat = cascadeXSLTFormatAPI.init(initAPI);
+                                cascadeXSLTFormatAPI.init(initAPI);
                                 break;
                             default:
                                 cascadeLog.log('alert', 'Please assign correct file type. Exit now');

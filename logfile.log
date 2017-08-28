@@ -153,3 +153,200 @@ uncaughtException: init is not defined
 [2017-08-25 4:01:00 pshan2] - pshan2 start updating files in JSTest---------------
 [2017-08-25 4:01:42 pshan2] - pshan2 start updating files in JSTest---------------
 [2017-08-25 4:02:00 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 9:16:04 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 9:27:02 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 9:32:30 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 10:22:40 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 10:24:46 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 10:28:25 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 10:42:01 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 10:42:48 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 10:44:49 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 10:45:54 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 10:47:39 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 11:24:46 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 11:26:34 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 11:29:12 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 11:30:32 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 11:34:17 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 11:35:56 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 11:37:50 pshan2] - pshan2 start updating files in JSTest---------------
+uncaughtException: callback is not a function
+uncaughtException: callback is not a function
+uncaughtException: callback is not a function
+uncaughtException: callback is not a function
+uncaughtException: callback is not a function
+uncaughtException: callback is not a function
+uncaughtException: callback is not a function
+uncaughtException: callback is not a function
+[2017-08-28 11:39:08 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 11:39:08 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 11:39:08 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 11:39:08 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 11:39:08 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 11:39:08 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 11:39:08 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 11:39:08 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 11:39:08 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 12:15:30 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 12:15:30 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 12:15:30 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 12:15:30 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 12:15:30 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 12:15:30 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 12:15:30 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 12:15:30 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 12:15:30 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 12:16:37 pshan2] - pshan2 start updating files in JSTest---------------
+uncaughtException: cascadeBaseItem is not defined
+[2017-08-28 12:17:01 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 12:17:01 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 12:17:01 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 12:17:01 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 12:17:01 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 12:17:01 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 12:17:01 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 12:17:01 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 12:17:01 pshan2] - Cannot create an identifier without either an id or path
+[2017-08-28 1:02:37 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 1:02:37 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes/images' and type 'folder'
+[2017-08-28 1:02:37 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes/documents' and type 'folder'
+[2017-08-28 1:02:37 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes' and type 'folder'
+[2017-08-28 1:02:37 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes/php' and type 'folder'
+[2017-08-28 1:02:37 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes/js' and type 'folder'
+[2017-08-28 1:02:37 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes/fonts' and type 'folder'
+[2017-08-28 1:02:37 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes/css' and type 'folder'
+[2017-08-28 1:02:37 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes/js/rev-slider' and type 'folder'
+[2017-08-28 1:04:47 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 1:04:47 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes' and type 'folder'
+[2017-08-28 1:04:47 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes' and type 'folder'
+[2017-08-28 1:04:47 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes' and type 'folder'
+[2017-08-28 1:04:47 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes/js' and type 'folder'
+[2017-08-28 1:04:47 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes' and type 'folder'
+[2017-08-28 1:04:47 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes' and type 'folder'
+[2017-08-28 1:04:47 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes' and type 'folder'
+[2017-08-28 1:04:47 pshan2] - Unable to identify an entity based on provided entity path 'dest' and type 'folder'
+[2017-08-28 1:32:49 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 1:32:49 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes' and type 'folder'
+[2017-08-28 1:32:49 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes' and type 'folder'
+[2017-08-28 1:32:49 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes' and type 'folder'
+[2017-08-28 1:32:49 pshan2] - Unable to identify an entity based on provided entity path 'dest' and type 'folder'
+[2017-08-28 1:32:49 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes/js' and type 'folder'
+[2017-08-28 1:32:49 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes' and type 'folder'
+[2017-08-28 1:32:49 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes' and type 'folder'
+[2017-08-28 1:32:49 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes' and type 'folder'
+[2017-08-28 1:33:45 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 1:33:46 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes' and type 'folder'
+[2017-08-28 1:33:46 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes' and type 'folder'
+[2017-08-28 1:33:46 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes' and type 'folder'
+[2017-08-28 1:33:46 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes' and type 'folder'
+[2017-08-28 1:33:46 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes' and type 'folder'
+[2017-08-28 1:33:46 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes/js' and type 'folder'
+[2017-08-28 1:33:46 pshan2] - Unable to identify an entity based on provided entity path 'dest/_includes' and type 'folder'
+[2017-08-28 1:33:46 pshan2] - Unable to identify an entity based on provided entity path 'dest' and type 'folder'
+[2017-08-28 1:40:47 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 1:42:24 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 1:46:43 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 1:46:44 pshan2] - Error in reading remote files in/_includes/php process: ReferenceError: fileType is not defined
+[2017-08-28 1:46:44 pshan2] - Error in reading remote files in/_includes/fonts process: ReferenceError: fileType is not defined
+[2017-08-28 1:46:44 pshan2] - Error in reading remote files in/_includes/js process: ReferenceError: fileType is not defined
+[2017-08-28 1:46:44 pshan2] - Error in reading remote files in/_includes/images process: ReferenceError: fileType is not defined
+[2017-08-28 1:46:44 pshan2] - Error in reading remote files in/_includes/css process: ReferenceError: fileType is not defined
+[2017-08-28 1:46:44 pshan2] - Error in reading remote files in/_includes/documents process: ReferenceError: fileType is not defined
+[2017-08-28 1:46:44 pshan2] - Error in reading remote files in/_includes/js/rev-slider process: ReferenceError: fileType is not defined
+[2017-08-28 1:46:44 pshan2] - Error in reading remote files in/_includes process: ReferenceError: fileType is not defined
+[2017-08-28 1:53:16 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 1:53:17 pshan2] - Error in reading remote files in/_includes/js process: TypeError: remoteCollection.map is not a function
+[2017-08-28 1:53:17 pshan2] - Error in reading remote files in/_includes/php process: TypeError: remoteCollection.map is not a function
+[2017-08-28 1:53:17 pshan2] - Error in reading remote files in/_includes process: TypeError: remoteCollection.map is not a function
+[2017-08-28 1:53:17 pshan2] - Error in reading remote files in/_includes/documents process: TypeError: remoteCollection.map is not a function
+[2017-08-28 1:53:17 pshan2] - Error in reading remote files in/_includes/images process: TypeError: remoteCollection.map is not a function
+[2017-08-28 1:53:17 pshan2] - Error in reading remote files in/_includes/fonts process: TypeError: remoteCollection.map is not a function
+[2017-08-28 1:53:17 pshan2] - Error in reading remote files in/_includes/js/rev-slider process: TypeError: remoteCollection.map is not a function
+[2017-08-28 1:53:17 pshan2] - Error in reading remote files in/_includes/css process: TypeError: remoteCollection.map is not a function
+[2017-08-28 1:55:09 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 1:55:09 pshan2] - Error in reading remote files in/_includes/documents process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 1:55:09 pshan2] - Error in reading remote files in/_includes/css process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 1:55:09 pshan2] - Error in reading remote files in/_includes process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 1:55:09 pshan2] - Error in reading remote files in/_includes/images process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 1:55:09 pshan2] - Error in reading remote files in/_includes/php process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 1:55:09 pshan2] - Error in reading remote files in/_includes/js process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 1:55:09 pshan2] - Error in reading remote files in/_includes/fonts process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 1:55:09 pshan2] - Error in reading remote files in/_includes/js/rev-slider process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 1:57:24 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 1:57:24 pshan2] - Error in reading remote files in/_includes process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 1:57:24 pshan2] - Error in reading remote files in/_includes/css process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 1:57:24 pshan2] - Error in reading remote files in/_includes/js process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 1:57:24 pshan2] - Error in reading remote files in/_includes/php process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 1:57:24 pshan2] - Error in reading remote files in/_includes/documents process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 1:57:24 pshan2] - Error in reading remote files in/_includes/js/rev-slider process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 1:57:24 pshan2] - Error in reading remote files in/_includes/fonts process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 1:57:24 pshan2] - Error in reading remote files in/_includes/images process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:05:29 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 2:05:30 pshan2] - Error in reading remote files in/_includes/images process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:05:30 pshan2] - Error in reading remote files in/_includes process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:05:30 pshan2] - Error in reading remote files in/_includes/documents process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:05:30 pshan2] - Error in reading remote files in/_includes/php process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:05:30 pshan2] - Error in reading remote files in/_includes/js process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:05:30 pshan2] - Error in reading remote files in/_includes/fonts process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:05:30 pshan2] - Error in reading remote files in/_includes/js/rev-slider process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:05:30 pshan2] - Error in reading remote files in/_includes/css process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:06:34 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 2:06:34 pshan2] - Error in reading remote files in/_includes/php process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:06:34 pshan2] - Error in reading remote files in/_includes/images process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:06:34 pshan2] - Error in reading remote files in/_includes/css process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:06:34 pshan2] - Error in reading remote files in/_includes/js process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:06:34 pshan2] - Error in reading remote files in/_includes/js/rev-slider process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:06:34 pshan2] - Error in reading remote files in/_includes process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:06:34 pshan2] - Error in reading remote files in/_includes/fonts process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:06:34 pshan2] - Error in reading remote files in/_includes/documents process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:08:43 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 2:08:43 pshan2] - Error in reading remote files in/_includes/images process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:08:43 pshan2] - Error in reading remote files in/_includes/documents process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:08:43 pshan2] - Error in reading remote files in/_includes/css process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:08:43 pshan2] - Error in reading remote files in/_includes process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:08:43 pshan2] - Error in reading remote files in/_includes/fonts process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:08:43 pshan2] - Error in reading remote files in/_includes/php process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:08:43 pshan2] - Error in reading remote files in/_includes/js process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:08:43 pshan2] - Error in reading remote files in/_includes/js/rev-slider process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:09:27 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 2:09:27 pshan2] - Error in reading remote files in/_includes process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:09:27 pshan2] - Error in reading remote files in/_includes/php process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:09:27 pshan2] - Error in reading remote files in/_includes/css process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:09:27 pshan2] - Error in reading remote files in/_includes/documents process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:09:27 pshan2] - Error in reading remote files in/_includes/fonts process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:09:27 pshan2] - Error in reading remote files in/_includes/images process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:09:27 pshan2] - Error in reading remote files in/_includes/js/rev-slider process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:09:27 pshan2] - Error in reading remote files in/_includes/js process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:11:58 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 2:11:58 pshan2] - Error in reading remote files in/_includes/documents process: TypeError: Cannot read property 'message' of undefined
+[2017-08-28 2:11:58 pshan2] - Error in reading remote files in/_includes/images process: TypeError: Cannot read property 'message' of undefined
+[2017-08-28 2:11:58 pshan2] - Error in reading remote files in/_includes/php process: TypeError: Cannot read property 'message' of undefined
+[2017-08-28 2:11:58 pshan2] - Error in reading remote files in/_includes/css process: TypeError: Cannot read property 'message' of undefined
+[2017-08-28 2:11:58 pshan2] - Error in reading remote files in/_includes/js process: TypeError: Cannot read property 'message' of undefined
+[2017-08-28 2:11:58 pshan2] - Error in reading remote files in/_includes/fonts process: TypeError: Cannot read property 'message' of undefined
+[2017-08-28 2:11:58 pshan2] - Error in reading remote files in/_includes/js/rev-slider process: TypeError: Cannot read property 'message' of undefined
+[2017-08-28 2:11:58 pshan2] - Error in reading remote files in/_includes process: TypeError: Cannot read property 'length' of undefined
+[2017-08-28 2:14:05 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 2:14:05 pshan2] - Error in reading remote files in/_includes/php process: TypeError: Cannot read property 'message' of undefined
+[2017-08-28 2:14:05 pshan2] - Error in reading remote files in/_includes/documents process: TypeError: Cannot read property 'message' of undefined
+[2017-08-28 2:14:05 pshan2] - Error in reading remote files in/_includes/js process: TypeError: Cannot read property 'message' of undefined
+[2017-08-28 2:14:05 pshan2] - Error in reading remote files in/_includes/fonts process: TypeError: Cannot read property 'message' of undefined
+[2017-08-28 2:14:05 pshan2] - Error in reading remote files in/_includes process: TypeError: Cannot read property 'message' of undefined
+[2017-08-28 2:14:05 pshan2] - Error in reading remote files in/_includes/images process: TypeError: Cannot read property 'message' of undefined
+[2017-08-28 2:14:05 pshan2] - Error in reading remote files in/_includes/css process: TypeError: Cannot read property 'message' of undefined
+[2017-08-28 2:14:05 pshan2] - Error in reading remote files in/_includes/js/rev-slider process: TypeError: Cannot read property 'message' of undefined
+[2017-08-28 2:17:06 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 3:21:32 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 3:22:27 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 3:25:19 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 3:25:57 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 3:28:13 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 3:29:02 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 3:30:03 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 3:31:11 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 3:34:58 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 3:43:41 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 3:53:16 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 3:56:05 pshan2] - pshan2 start updating files in JSTest---------------
+[2017-08-28 3:56:06 pshan2] - [object Object] have been removed to temporary deletion folder

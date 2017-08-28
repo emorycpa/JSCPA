@@ -10,29 +10,46 @@ class Site {
     constructor() {
         this.hostname = sitedata.hostname;
         this.sitename = sitedata.sitename;
+        this.siteid = '';
+    }
+    setSiteId(siteId) {
+        this.siteid = siteId;
     }
 }
 
 class cascade_Base extends Site {
-    constructor(path, localStatus, remoteStatus) {
+    constructor(path, localStatus, remoteStatus, additionalData) {
         super();
         this.path = path;
         this.status = { 'local': localStatus, 'remote': remoteStatus };
+        this.additionalData = additionalData;
+        this.id = '';
+        this.recycle = false;
     }
-    getFolderName() {
-        return this.path.substring(0, this.path.lastIndexOf('/'));
+    getRemotePath(dest) {
+        return this.path.substring(dest.length);
     }
-    getFileName() {
-        return this.path.substring(this.path.lastIndexOf('/') + 1);
+    setId(id) {
+        this.id = id;
+    }
+    setRecycle(recyleStatus) {
+        this.recycle = recyle;
+    }
+}
+
+class cascade_Folder extends cascade_Base {
+    constructor(path, localStatus, remoteStatus) {
+        super(path, localStatus, localStatus);
+        this.attribute = 'folder';
     }
 }
 
 class cascade_File extends cascade_Base {
-    constructor(path, localStatus, remoteStatus, type, contenttype, api) {
+    constructor(path, localStatus, remoteStatus, type, contenttype) {
         super(path, localStatus, localStatus);
         this.type = type;
         this.contenttype = contenttype;
-        this.api = api;
+        this.attribute = 'file';
     }
     getContent() {
         if (this.contenttype == 'buffer') {
@@ -47,28 +64,36 @@ class cascade_File extends cascade_Base {
             });
         }
     }
-    generateAsset(partentFolderResponse) {
-        return {
-            "asset": {
-                "scriptFormat": {
-                    "parentFolderId": partentFolderResponse.data.asset.folder.id,
-                    "siteId": partentFolderResponse.data.asset.folder.siteId,
-                    "name": this.getFileName()
+    getFolderName() {
+        return this.getRemotePath().substring(0, this.path.lastIndexOf('/'));
+    }
+    getFileName() {
+            return this.getRemotePath().substring(this.path.lastIndexOf('/') + 1);
+        }
+        /*
+        generateAsset(partentFolderResponse) {
+            return {
+                "asset": {
+                    "scriptFormat": {
+                        "parentFolderId": partentFolderResponse.data.asset.folder.id,
+                        "siteId": partentFolderResponse.data.asset.folder.siteId,
+                        "name": this.getFileName()
+                    }
                 }
             }
         }
-    }
-    generateFolerAsset(folderCreateResponse) {
-        return {
-            "asset": {
-                "folder": {
-                    "siteId": folderCreateResponse.data.asset.folder.siteId,
-                    "name": this.getFolderName(),
-                    "parentFolderId": folderCreateResponse.data.asset.folder.id
+        generateFolerAsset(folderCreateResponse) {
+            return {
+                "asset": {
+                    "folder": {
+                        "siteId": folderCreateResponse.data.asset.folder.siteId,
+                        "name": this.getFolderName(),
+                        "parentFolderId": folderCreateResponse.data.asset.folder.id
+                    }
                 }
             }
         }
-    }
+        */
 }
 
 const initAPI = function(hostname, username, password, config) {
@@ -80,5 +105,6 @@ module.exports = {
     initAPI: initAPI,
     Site: Site,
     cascadeBase: cascade_Base,
+    cascadeFolder: cascade_Folder,
     cascadeFile: cascade_File
 }

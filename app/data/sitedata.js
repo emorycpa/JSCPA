@@ -1,10 +1,21 @@
 /*This file contains all site-specific data, such as site name, site metadata, etc */
 
 
-/*Site Constants Setting */
+/*Site Constants and Dirctory Setting */
 exports.sitedata = function() {
-    return { 'sitename': 'JSTest', 'hostname': 'qa.cascade.emory.edu' };
-}
+        return {
+            'sitename': 'JSTest',
+            'hostname': 'qa.cascade.emory.edu',
+            'baseSrc': 'src',
+            'resourceSrc': '_includes',
+            'cmsSrc': '_cms',
+            'dest': 'dest'
+        }
+
+    }
+    /**
+     * Fixed Constants
+     */
 
 
 /**
