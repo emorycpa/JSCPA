@@ -1,8 +1,9 @@
 var Promise = require("bluebird");
+var cascadeObject = require("../data/object.js");
 
 var init = function(cascadeClient) {
 
-    var requiredMethods = ["readPromise", "createPromise", "editPromise", "deletePromise"]
+    var requiredMethods = ["readPromise", "createPromise", "movePromise", "editPromise", "deletePromise"]
 
     requiredMethods.forEach(function(method) {
         if (!cascadeClient[method]) {
@@ -11,27 +12,44 @@ var init = function(cascadeClient) {
     });
 
     cascadeClient.registerMethod("file", "read", function(client) {
-        return function(siteName, path) {
+        return function(cascadeFile) {
             return client.readPromise({
                 "identifier": {
                     "type": "file",
                     "path": {
-                        "siteName": siteName,
-                        "path": path
+                        "siteName": cascadeFile.sitename,
+                        "path": cascadeFile.path
                     }
                 }
             });
-        }
+        };
+
     });
 
     cascadeClient.registerMethod("file", "delete", function(client) {
-        return function(siteName, path) {
+        return function(cascadeFile) {
             return client.deletePromise({
                 "identifier": {
                     "type": "file",
                     "path": {
-                        "siteName": siteName,
-                        "path": path
+                        "siteName": cascadeFile.sitename,
+                        "path": cascadeFile.path
+                    }
+                }
+            });
+        };
+    });
+
+
+    //Move parameter? https://qa.cascade.emory.edu/ws/services/AssetOperationService?wsdl
+    cascadeClient.registerMethod("file", "move", function(client) {
+        return function(cascadeFile) {
+            return client.movePromise({
+                "identifier": {
+                    "type": "file",
+                    "path": {
+                        "siteName": cascadeFile.sitename,
+                        "path": cascadeFile.path
                     }
                 }
             });
@@ -39,15 +57,15 @@ var init = function(cascadeClient) {
     });
 
     cascadeClient.registerMethod("file", "write", function(client) {
-        return function(siteName, path, dataToWrite, additionalData) {
+        return function(cascadeFile) {
             var pathPartsArray = path.split("/");
             var fileName = pathPartsArray.pop();
             return client.readPromise({
                 "identifier": {
                     "type": "file",
                     "path": {
-                        "siteName": siteName,
-                        "path": path
+                        "siteName": cascadeFile.sitename,
+                        "path": cascadeFile.path
                     }
                 }
             }).then(function(requestReturn) {
@@ -62,14 +80,14 @@ var init = function(cascadeClient) {
                         }
                     };
 
-                    if (Buffer.isBuffer(dataToWrite)) {
-                        editAssetObj.asset.file["data"] = Array.from((new Int8Array(dataToWrite)));
+                    if (Buffer.isBuffer(cascadeFile.getContent().data)) {
+                        editAssetObj.asset.file["data"] = Array.from((new Int8Array(cascadeFile.getContent().data)));
                     } else {
-                        editAssetObj.asset.file["text"] = dataToWrite;
+                        editAssetObj.asset.file["text"] = cascadeFile.getContent().data;
                     }
 
-                    if (additionalData === Object(additionalData)) {
-                        Object.assign(editAssetObj.asset.file, additionalData);
+                    if (cascadeFile.additionalData === Object(cascadeFile.additionalData)) {
+                        Object.assign(editAssetObj.asset.file, cascadeFile.additionalData);
                     }
 
 
@@ -92,8 +110,8 @@ var init = function(cascadeClient) {
                             "identifier": {
                                 "type": "folder",
                                 "path": {
-                                    "siteName": siteName,
-                                    "path": folderPath
+                                    "siteName": cascadeFile.sitename,
+                                    "path": cascadeFile.path
                                 }
                             }
                         }).then(function(folderReadRequestReturn) {
@@ -108,8 +126,8 @@ var init = function(cascadeClient) {
                                     "identifier": {
                                         "type": "folder",
                                         "path": {
-                                            "siteName": siteName,
-                                            "path": parentFolderPath
+                                            "siteName": cascadeFile.sitename,
+                                            "path": cascadeFile.path
                                         }
                                     }
                                 }).then(function(folderReadCreateRequestReturn) {
@@ -131,12 +149,11 @@ var init = function(cascadeClient) {
                             "identifier": {
                                 "type": "folder",
                                 "path": {
-                                    "siteName": siteName,
+                                    "siteName": cascadeFile.sitename,
                                     "path": folderPath
                                 }
                             }
                         }).then(function(partentFolderRequestReturn) {
-
                             var createAssetObj = {
                                 "asset": {
                                     "file": {
@@ -147,16 +164,20 @@ var init = function(cascadeClient) {
                                 }
                             };
 
-                            if (additionalData === Object(additionalData)) {
+                            if (cascadeFile.additionalData === Object(cascadeFile.additionalData)) {
                                 Object.assign(createAssetObj.asset.file, additionalData);
                             }
 
-                            if (Buffer.isBuffer(dataToWrite)) {
-                                createAssetObj.asset.file["data"] = Array.from((new Int8Array(dataToWrite)));
+                            if (Buffer.isBuffer(cascadeFile.getContent().data)) {
+                                editAssetObj.asset.file["data"] = Array.from((new Int8Array(cascadeFile.getContent().data)));
                             } else {
-                                createAssetObj.asset.file["text"] = dataToWrite;
+                                editAssetObj.asset.file["text"] = cascadeFile.getContent().data;
                             }
-                            return client.createPromise(createAssetObj);
+
+                            if (cascadeFile.additionalData === Object(cascadeFile.additionalData)) {
+                                Object.assign(editAssetObj.asset.file, cascadeFile.additionalData);
+                            }
+
                         })
                     });
                 }

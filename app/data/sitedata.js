@@ -9,7 +9,8 @@ exports.sitedata = function() {
             'baseSrc': 'src',
             'resourceSrc': '_includes',
             'cmsSrc': '_cms',
-            'dest': 'dest'
+            'dest': 'dest',
+            'tempDelete': 'tempDeletion'
         }
 
     }

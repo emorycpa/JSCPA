@@ -8,92 +8,98 @@ const sitedata = {
 
 class Site {
     constructor() {
-        this.hostname = sitedata.hostname;
-        this.sitename = sitedata.sitename;
-        this.siteid = '';
+        this._hostname = sitedata.hostname;
+        this._sitename = sitedata.sitename;
+        this._siteid = '';
     }
-    setSiteId(siteId) {
-        this.siteid = siteId;
+    get siteId() {
+        return this._siteid;
+    }
+    set siteId(siteId) {
+        this._siteid = siteId;
     }
 }
 
 class cascade_Base extends Site {
     constructor(path, localStatus, remoteStatus, additionalData) {
         super();
-        this.path = path;
-        this.status = { 'local': localStatus, 'remote': remoteStatus };
-        this.additionalData = additionalData;
-        this.id = '';
-        this.recycle = false;
+        this._path = path;
+        this._status = { 'local': localStatus, 'remote': remoteStatus };
+        this._additionalData = additionalData;
+        this._id = '';
+        this._recycle = false;
+        this._parentFolderId = '';
+    }
+    get id() {
+        return this._id;
+    }
+    set id(id) {
+        this._id = id;
+    }
+    get additionalData(additionalData) {
+        return this._additionalData;
+    }
+    set additionalData(additionalData) {
+        this._additionalData = additionalData;
+    }
+    get recycle() {
+        return this._recycle;
+    }
+    set recycle(recyleStatus) {
+        this._recycle = recyleStatus;
+    }
+    get parentFolderId() {
+        return this._parentFolderId;
+    }
+    set parentFolderId(parentFolderId) {
+        this._parentFolderId = parentFolderId;
     }
     getRemotePath(dest) {
         return this.path.substring(dest.length);
-    }
-    setId(id) {
-        this.id = id;
-    }
-    setRecycle(recyleStatus) {
-        this.recycle = recyle;
     }
 }
 
 class cascade_Folder extends cascade_Base {
     constructor(path, localStatus, remoteStatus) {
         super(path, localStatus, localStatus);
-        this.attribute = 'folder';
+        this._attribute = 'folder';
+    }
+    get attribute() {
+        return this._attribute;
     }
 }
 
 class cascade_File extends cascade_Base {
-    constructor(path, localStatus, remoteStatus, type, contenttype) {
+    constructor(path, localStatus, remoteStatus) {
         super(path, localStatus, localStatus);
-        this.type = type;
-        this.contenttype = contenttype;
-        this.attribute = 'file';
+        this._attribute = 'file';
+        this._content = '';
+        this._contenttype = '';
     }
-    getContent() {
-        if (this.contenttype == 'buffer') {
-            fs.readFile(this.path, (error, data) => {
-                if (error) return { 'code': 'false', data: error };
-                else return { 'code': 'true', data: data };
-            });
-        } else {
-            fs.readFile(this.path, 'utf8', (error, data) => {
-                if (error) return { 'code': 'false', data: error };
-                else return { 'code': 'true', data: data };
-            });
-        }
+    get content() {
+        return this._content;
+    }
+    set content(content) {
+        this._content = content;
+    }
+    get contenttype() {
+        return this._contenttype;
+    }
+    set contenttype(contenttype) {
+        this._contenttype = contenttype;
+    }
+    get attribute() {
+        return this._attribute;
     }
     getFolderName() {
         return this.getRemotePath().substring(0, this.path.lastIndexOf('/'));
     }
     getFileName() {
-            return this.getRemotePath().substring(this.path.lastIndexOf('/') + 1);
-        }
-        /*
-        generateAsset(partentFolderResponse) {
-            return {
-                "asset": {
-                    "scriptFormat": {
-                        "parentFolderId": partentFolderResponse.data.asset.folder.id,
-                        "siteId": partentFolderResponse.data.asset.folder.siteId,
-                        "name": this.getFileName()
-                    }
-                }
-            }
-        }
-        generateFolerAsset(folderCreateResponse) {
-            return {
-                "asset": {
-                    "folder": {
-                        "siteId": folderCreateResponse.data.asset.folder.siteId,
-                        "name": this.getFolderName(),
-                        "parentFolderId": folderCreateResponse.data.asset.folder.id
-                    }
-                }
-            }
-        }
-        */
+        return this.getRemotePath().substring(this.path.lastIndexOf('/') + 1);
+    }
+    getExtension() {
+        return this.getFileName().substring(this.getFileName().lastIndexOf('.') + 1);
+    }
 }
 
 const initAPI = function(hostname, username, password, config) {

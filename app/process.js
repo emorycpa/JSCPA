@@ -62,7 +62,11 @@ const deleteRemote = (initAPI, localFolder) =>
                 localCollection.push(subLocalFile);
             });
             //console.log(initAPI);
-            readRemote(initAPI, localFolder, localCollection).then(function(remoteItem) {
+            readRemote(initAPI, localFolder, localCollection).then(function(onlyRemoteFiles) {
+                //Method for moving onlyRemote to temporary folder
+                console.log(onlyRemoteFiles);
+                remoteTransfer(onlyRemoteFiles, true);
+
                 /*
                 if (remoteItem.onlyRemote && remoteItem.onlyRemote.length > 0) {
                     deleteCascade(remoteItem.onlyRemote, cascadeTypeAPI, dest).then(function(newResult) {
@@ -126,11 +130,7 @@ const readRemote = (initAPI, localFolder, localCollection) => new Promise(functi
                             o.status.local = false;
                             o.status.remote = true;
                         });
-                        //Method for moving onlyRemote to temporary folder
-                        console.log(onlyRemote);
-
-
-                        const result = { 'code': 'true', 'message': JSON.stringify(onlyRemote) + ' have been removed to temporary deletion folder', 'localCollection': localCollection };
+                        const result = { 'code': 'true', 'message': 'Moving remote files to temporary deletion folder..', 'localCollection': localCollection };
                         cascadeLog.log('info', result.message);
                         resolveItem.onlyRemote = onlyRemote;
                         resolveItem.result = result;
@@ -151,12 +151,25 @@ const readRemote = (initAPI, localFolder, localCollection) => new Promise(functi
 });
 
 
-const deleteCascade = (onlyRemote, cascadeTypeAPI, dest) => new Promise(function(resolve, reject) {
+const remoteTransfer = (remoteFiles, temporaryDeletion) => new Promise(function(resolve, reject) {
+    //Moving files from current folder to temporary deletion folder
+    if (temporaryDeletion) {
+
+
+
+    }
+    //Restore files from temporary deletion folder
+    else {
+
+    }
+});
+
+
+const deleteCascade = (onlyRemote, initAPI) => new Promise(function(resolve, reject) {
     let deleteCascadeResponse;
     onlyRemote.forEach(function(remoteItem) {
-        remoteItem = remoteItem.substring(dest.length);
-        cascadeLog.log('info', 'Begin deleting ' + remoteItem + ' in cascade server');
-        cascadeTypeAPI['delete'](sitedata.sitename, remoteItem)
+        cascadeLog.log('info', 'Begin deleting ' + remoteItem.getFileName() + ' in cascade server');
+        initAPI.file['delete'](remoteItem)
             .then(function(data) {
                     deleteCascadeResponse = { 'code': data.data.success.toString().trim(), 'message': 'Successfully delete ' + remoteItem };
                     if (deleteCascadeResponse.code == 'false') {
@@ -175,62 +188,31 @@ const deleteCascade = (onlyRemote, cascadeTypeAPI, dest) => new Promise(function
 });
 
 
-const writeRemote = (siteName, localCollection, cascadeTypeAPI, fileType, dest) => new Promise(function(resolve, reject) {
+const writeRemote = (initAPI, localCollection) => new Promise(function(resolve, reject) {
     localCollection.forEach(function(localItem) {
-        //cascadeLog.log('debug', alreadyWritten);
         //not process repeating file
-        let testBar = new ProgressBar(colors.blue('Writing ' + localItem + ' [:bar] :percent'), {
-            complete: '+',
-            incomplete: '!',
-            //clear: true,
-            total: 20
-        });
         if (alreadyWritten.indexOf(localItem) < 0) {
-            alreadyWritten.push(localItem);
-            const extention = localItem.substring(localItem.lastIndexOf('.') + 1);
+            const extention = localItem.getExtention();
             //Buffer as file content
             if (remotecontent.buffer.indexOf(extention) >= 0) {
-                testBar.tick();
-                readFile(localItem).then(function(buffer) {
-                        testBar.update(0.5);
-                        localItem = localItem.substring(localItem.indexOf(dest) + dest.length);
-                        cascadeTypeAPI['write'](sitedata.sitename, localItem, buffer).then(function(data) {
-                            writeCascadeResponse = { 'code': data.data.success.toString().trim() };
-                            if (writeCascadeResponse.code == 'false') {
-                                testBar.terminate();
-                                writeCascadeResponse.message = 'Problem in writing ' + localItem + ": " + data.data.message;
-                                cascadeLog.log('error', writeCascadeResponse.message);
-                                cascadeLog.log('alert', localItem + ' is too large that it cannot be uploaded through this tool. Please upload it MANUALLY to ' + sitedata.hostname + '/' + sitedata.sitename);
-                            } else {
-                                testBar.update(1);
-                                writeCascadeResponse.message = 'Successfully write ' + localItem + ' to cascade server.';
-                                cascadeLog.log('info', writeCascadeResponse.message);
-                            }
+                readFile(localItem.path).then(function(buffer) {
+                        localItem.setContent(buffer, extension);
+                        //Need to add other later!
+                        initAPI.file['write'](localItem).then(function(data) {
+                            const writeCascadeResponse = writeResponse(localItem, data);
                             resolve(writeCascadeResponse);
                         }).catch(e => cascadeLog.log('error', 'Problem in writing ' + localItem + ": " + e));
                     },
                     function(error) {
-                        writeCascadeResponse = { 'code': 'false', 'message': localItem + ': ' + error };
+                        const writeCascadeResponse = { 'code': 'false', 'message': localItem + ': ' + error };
                         resolve(writeCascadeResponse);
                     }).catch(e => cascadeLog.log('error', 'Error in writing remote files process: ' + e));
             } else {
                 //String as file content
-                testBar.tick();
-                readFile(localItem, 'utf8').then(function(content) {
-                        testBar.update(0.5);
-                        localItem = localItem.substring(localItem.indexOf(dest) + dest.length);
-                        cascadeTypeAPI['write'](sitedata.sitename, localItem, content).then(function(data) {
-                            writeCascadeResponse = { 'code': data.data.success.toString().trim() };
-                            if (writeCascadeResponse.code == 'false') {
-                                testBar.terminate();
-                                writeCascadeResponse.message = 'Problem in writing ' + localItem + ": " + data.data.message;
-                                cascadeLog.log('error', writeCascadeResponse.message);
-                                cascadeLog.log('alert', localItem + ' is too large that it cannot be uploaded through this tool. Please upload it MANUALLY to ' + sitedata.hostname + '/' + sitedata.sitename);
-                            } else {
-                                testBar.update(1);
-                                writeCascadeResponse.message = 'Successfully write ' + localItem + ' to cascade server.';
-                                cascadeLog.log('info', writeCascadeResponse.message);
-                            }
+                readFile(localItem.path, 'utf8').then(function(content) {
+                        localItem.setContent(content, extension);
+                        initAPI.file['write'](localItem).then(function(data) {
+                            const writeCascadeResponse = writeResponse(localItem, data);
                             resolve(writeCascadeResponse);
                         }).catch(e => {
                             cascadeLog.log('debug', e.toString());
@@ -243,9 +225,23 @@ const writeRemote = (siteName, localCollection, cascadeTypeAPI, fileType, dest) 
                         resolve(writeCascadeResponse);
                     }).catch(e => cascadeLog.log('error', 'Error in writing remote files process: ' + e));
             }
+            alreadyWritten.push(localItem);
         } else {
             writeCascadeResponse = { 'code': 'true', 'message': '---------------------------------------' };
             resolve(writeCascadeResponse);
         }
     });
 });
+
+const writeResponse = function(localItem, responseData) {
+    writeCascadeResponse = { 'code': responseData.data.success.toString().trim() };
+    if (writeCascadeResponse.code == 'false') {
+        writeCascadeResponse.message = 'Problem in writing ' + localItem.getFilename() + ": " + responseData.data.message;
+        cascadeLog.log('error', writeCascadeResponse.message);
+        cascadeLog.log('alert', localItem + ' is too large that it cannot be uploaded through this tool. Please upload it MANUALLY to ' + localItem.getHostName() + '/' + localItem.getSiteName());
+    } else {
+        writeCascadeResponse.message = 'Successfully write ' + localItem.getFilename() + ' to cascade server.';
+        cascadeLog.log('info', writeCascadeResponse.message);
+    }
+    return writeCascadeResponse;
+};
