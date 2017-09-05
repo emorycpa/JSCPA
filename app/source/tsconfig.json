@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "allowJs": true,
+        "rootDirs": ["cascade", "data"],
+        "outDir": "dest"
+    }
+}

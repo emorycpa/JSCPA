@@ -12,7 +12,6 @@ exports.sitedata = function() {
             'dest': 'dest',
             'tempDelete': 'tempDeletion'
         }
-
     }
     /**
      * Fixed Constants

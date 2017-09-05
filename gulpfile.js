@@ -28,7 +28,7 @@ const del = require('del');
 /**
  * Local modules
  */
-const cascadeObject = require('./app/data/object.js');
+const assets = require('./app/data/asset.js');
 const site = require('./app/data/sitedata.js');
 const cascadeFolderAPI = require("./app/cascade/cascade.folder.js");
 const cascadeFileAPI = require("./app/cascade/cascade.file.js");
@@ -136,8 +136,15 @@ gulp.task('cascade', ['local:documents'], function() {
         name: 'password',
         message: 'Please input your cascade password'
     }], function(res) {
-        cascadeLog.user = res.username;
+
+        //Create Authentication Object
+        const auth = new assets.Authentication(rs.password, res.username);
         cascadeLog.log('info', res.username + ' start updating files in ' + sitedata.sitename + '---------------');
+
+
+
+
+
         const initAPI = cascadeObject.initAPI(sitedata.hostname, res.username, res.password);
         dir.paths(dest, function(err, paths) {
             paths.dirs.forEach(function(subdir) {

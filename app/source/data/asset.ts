@@ -3,7 +3,6 @@
  * To compile, make sure this file is activated, then go to Tasks -> Run Task... -> tsconfig.json in command platter
  */
 
-
 /**
  * Development Note: object structure follows https://qa.cascade.emory.edu/ws/services/AssetOperationService?wsdl.
  * On current development stage, some Optional Parameters (in WSDL) are not add as attribute
@@ -20,7 +19,11 @@
  * group
  * *********************************
  */
-class Authentication {
+import SiteData from "data/sitedata";
+import {Cascade} from "cascade/cascade.js";
+console.log(SiteData);
+
+export class Authentication {
 	private _password: string;
 	private _username: string;
 	constructor(password: string, username: string) {
@@ -44,9 +47,13 @@ class Authentication {
 		this._username = value;
 	}
 
+	public authenticate(auth: Authentication, initAPI: Cascade, initialPath: Path){
+		console.log(initAPI);
+		return initAPI.init(SiteData.basicConfig().hostname, auth.username, auth.password);
+	}
 }
 
-const enum EntityTypeString {
+export const enum EntityTypeString {
 	"assetfactory",
 	"assetfactorycontainer",
 	"block",
@@ -101,7 +108,7 @@ const enum EntityTypeString {
 	"workflowdefinitioncontainer"
 }
 
-class Path {
+export class Path {
 	private _siteid: string;
 	private _sitename: string;
 	private _path: string;
@@ -133,7 +140,7 @@ class Path {
 	}
 }
 
-class Identifier {
+export class Identifier {
 	private _id: string;
 	private _path: Path;
 	private _type: EntityTypeString;
@@ -187,7 +194,7 @@ class Identifier {
 /**
  * Base Asset - Base class of all assets
  */
-class BaseAsset {
+export class BaseAsset {
 	private _id: string;
 	constructor(id: string) {
 		this._id = id;
@@ -208,7 +215,7 @@ class BaseAsset {
  * pageConfiguration
  * pageRegion
  */
-class Site extends BaseAsset {
+export class Site extends BaseAsset {
 	private _url: string;
 	private _recycleBinExpiration: boolean;
 	private _unPublishOnExpiration: boolean;
@@ -265,7 +272,7 @@ class Site extends BaseAsset {
 
 }
 
-class PageRegion extends BaseAsset{
+export class PageRegion extends BaseAsset{
 	private _name: string;
 	private _blockId: string;
 	private _blockPath: string;
@@ -353,7 +360,7 @@ class PageRegion extends BaseAsset{
 	}
 }
 
-class NamedAsset extends BaseAsset {
+export class NamedAsset extends BaseAsset {
 	private _name: string;
 	constructor(id: string, name: string) {
 		super(id);
@@ -383,7 +390,7 @@ class NamedAsset extends BaseAsset {
  * Extension of containered-asset:
  * 
  */
-class ContainerAsset extends NamedAsset {
+export class ContainerAsset extends NamedAsset {
 	private _parentFolderId: string;
 	private _parentFolderPath: string;
 	constructor(id: string, name: string) {
@@ -408,7 +415,7 @@ class ContainerAsset extends NamedAsset {
 
 }
 
-class XsltFormat extends ContainerAsset {
+export class XsltFormat extends ContainerAsset {
 	private _xml: string;
 	constructor(id: string, name: string) {
 		super(id, name);
@@ -421,7 +428,7 @@ class XsltFormat extends ContainerAsset {
 	}
 }
 
-class ScriptFormat extends ContainerAsset {
+export class ScriptFormat extends ContainerAsset {
 	private _script: string;
 	constructor(id: string, name: string, ) {
 		super(id, name);
@@ -435,7 +442,7 @@ class ScriptFormat extends ContainerAsset {
 
 }
 
-class Template extends ContainerAsset {
+export class Template extends ContainerAsset {
 	private _targetId: string;
 	private _targetPath: string;
 	private _formatId: string;
@@ -506,7 +513,7 @@ class Template extends ContainerAsset {
 	
 }
 
-class AssetFactory extends ContainerAsset{
+export class AssetFactory extends ContainerAsset{
 	private _assetType: string; //required
 	private _workflowMode: string; //required
 	private _applicableGroup: string;
@@ -660,7 +667,7 @@ END concrete types extending folder-contained-asset
  * role
  * 
  */
-class Workflow extends NamedAsset {
+export class Workflow extends NamedAsset {
 	private _relatedEntity: Identifier;
 	private _currentStep: string;
 	constructor(id: string, name: string, relatedEntity: Identifier, currentStep: string) {
