@@ -21,6 +21,7 @@ const print = require('gulp-print');
 const ProgressBar = require('progress');
 const moment = require('moment');
 const del = require('del');
+const ts = require('gulp-typescript');
 
 
 
@@ -28,24 +29,34 @@ const del = require('del');
 /**
  * Local modules
  */
-const assets = require('./app/data/asset.js');
-const site = require('./app/data/sitedata.js');
-const cascadeFolderAPI = require("./app/cascade/cascade.folder.js");
-const cascadeFileAPI = require("./app/cascade/cascade.file.js");
-const cascadeScriptFormatAPI = require("./app/cascade/cascade.scriptFormat.js");
-const cascadeXSLTFormatAPI = require("./app/cascade/cascade.xsltFormat.js");
+
+const cascadeFolderAPI = require("./app/target/cascade/cascade.folder.js");
+const cascadeFileAPI = require("./app/target/cascade/cascade.file.js");
+const cascadeScriptFormatAPI = require("./app/target/cascade/cascade.scriptFormat.js");
+const cascadeXSLTFormatAPI = require("./app/target/cascade/cascade.xsltFormat.js");
 const process = require('./app/process.js');
 const cascadeLog = require('./app/log/logger.js');
+/*
 const sitedata = site.sitedata();
 const dest = sitedata.dest;
 const cmsSrc = sitedata.cmsSrc;
 const baseSrc = sitedata.baseSrc;
 const resourceSrc = sitedata.resourceSrc;
 const foldertype = site.foldertype();
+*/
 
 /**
  * Local File Process
  */
+
+//Typescript File Parse
+gulp.task('local:typescript', () => {
+    var tsProject = ts.createProject('app/parse/tsconfig.json');
+    var tsResult = tsProject.src().pipe(tsProject());
+    return tsResult.js.pipe(gulp.dest('app/target'));
+});
+
+//Reminder for starting process
 gulp.task('local:reminder', () => {
     const question = {
         message: 'Have you update your changes with Github? If not, please type no and update it.',
@@ -136,10 +147,13 @@ gulp.task('cascade', ['local:documents'], function() {
         name: 'password',
         message: 'Please input your cascade password'
     }], function(res) {
+        const assets = require('./app/target/data/asset.js');
+        const site = require('./app/target/data/sitedata.js');
 
         //Create Authentication Object
-        const auth = new assets.Authentication(rs.password, res.username);
-        cascadeLog.log('info', res.username + ' start updating files in ' + sitedata.sitename + '---------------');
+        const auth = new assets.Authentication(res.password, res.username);
+        console.log(auth);
+        cascadeLog.log('info', auth.username + ' start updating files in ' + sitedata.sitedata.basicConfig.sitename + '---------------');
 
 
 

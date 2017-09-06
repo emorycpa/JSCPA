@@ -1,4 +1,4 @@
-export default class SiteData {
+class SiteData {
     private _basicConfig: any;
     private _folderType: any;
     private _remoteType: any;
@@ -8,7 +8,7 @@ export default class SiteData {
         this._basicConfig = {
             sitename: 'JSTest',
             hostname: 'qa.cascade.emory.edu',
-            baseSrc: 'src',
+            baseSrc: 'source',
             resourceSrc: '_includes',
             cmsSrc: '_cms',
             dest: 'dest',
@@ -58,3 +58,6 @@ export default class SiteData {
 	}
 
 }
+const sitedata = new SiteData();
+
+export {sitedata};

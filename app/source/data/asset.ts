@@ -19,9 +19,8 @@
  * group
  * *********************************
  */
-import SiteData from "data/sitedata";
-import {Cascade} from "cascade/cascade.js";
-console.log(SiteData);
+import * as sitedata from "../data/sitedata";
+import {Cascade} from "../cascade/cascade.js";
 
 export class Authentication {
 	private _password: string;
@@ -48,8 +47,7 @@ export class Authentication {
 	}
 
 	public authenticate(auth: Authentication, initAPI: Cascade, initialPath: Path){
-		console.log(initAPI);
-		return initAPI.init(SiteData.basicConfig().hostname, auth.username, auth.password);
+		return initAPI.init(sitedata.sitedata.basicConfig.hostname, auth.username, auth.password);
 	}
 }
 
