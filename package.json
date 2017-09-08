@@ -23,6 +23,7 @@
   "author": "Pengyin Shan",
   "license": "ISC",
   "dependencies": {
+    "@types/bluebird-global": "^3.5.3",
     "bluebird": "^3.4.7",
     "del": "^3.0.0",
     "github-api": "^3.0.0",
